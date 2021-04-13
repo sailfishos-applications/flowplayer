@@ -161,37 +161,7 @@ void WebThread::checkAll()
     url += "&artist="+QUrl::toPercentEncoding(artist)+"&album="+QUrl::toPercentEncoding(album)+"&search=Search";
 
 
-    // AMAZON
-    /*QDateTime st(QDate(1970,1,1), QTime(0,0,0));
-    int t = st.secsTo(QDateTime::currentDateTimeUtc());
-    QString data = "GET\necs.amazonaws.com\n/onca/xml\n";
-    data += "AWSAccessKeyId=AKIAJE5RREZVAVXFGJKA";
-    data += "&Artist=" + QUrl::toPercentEncoding(artist);
-    data += "&Keywords=" + QUrl::toPercentEncoding(album);
-    data += "&Operation=ItemSearch";
-    data += "&ResponseGroup=Images";
-    data += "&SearchIndex=Music";
-    data += "&Service=AWSECommerceService";
-    data += "&Timestamp=" + QString::number(t);
-    qDebug() << data;
-    QString sign = hmacSha1("UbwTqL5ax2g1Dqx5swPhNcIsvtuhM6DToi5L4Tmi", data.toUtf8());
-    sign.replace("+", "%2B");
-    sign.replace("=", "%3D");
-
-
-    QString url = "http://ecs.amazonaws.com/onca/xml?";
-    url += "AWSAccessKeyId=AKIAJE5RREZVAVXFGJKA";
-    url += "&Artist=" + QUrl::toPercentEncoding(artist);
-    url += "&Keywords=" + QUrl::toPercentEncoding(album);
-    url += "&Operation=ItemSearch";
-    url += "&ResponseGroup=Images";
-    url += "&SearchIndex=Music";
-    url += "&Service=AWSECommerceService";
-    url += "&Timestamp=" + QString::number(t);
-    url += "&Signature=" + sign;
-
-    qDebug() << url;*/
-
+ 
     //AMAZON - SIMPLE
     //QString url = "http://www.amazon.com/gp/search?search-alias=popular";
     //url += "&field-artist="+QUrl::toPercentEncoding(artist)+"&field-title="+QUrl::toPercentEncoding(album)+"&sort=relevancerank";
