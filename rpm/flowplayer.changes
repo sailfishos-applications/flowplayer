@@ -14,7 +14,7 @@
 
 * Mon Sep 14 2015 Matias Perez <cepiperez@gmail.com> - 0.1-7
 - Gapless playback
-- Favorites songs
+- Favourite songs
 - Bluetooth headset support
 - Fixed position slider timestamps
 - Fixed duplicate songs in database
