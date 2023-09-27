@@ -108,3 +108,4 @@ desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/application
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
+
