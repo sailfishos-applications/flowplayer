@@ -8,7 +8,7 @@
 - Fixed shuffle list order
 
 * Wed Oct 07 2015 Matias Perez <cepiperez@gmail.com> - 0.1-8
-- New start page with dinamic images
+- New start page with dynamic images
 - Use folder.jpg for album cover
 - Enabled all orientations
 
@@ -26,7 +26,7 @@
 
 * Wed Sep 09 2015 Matias Perez <cepiperez@gmail.com> - 0.1-5
 - Changed player from QtMultimedia to gstreamer
-- Added 10-bands equalizer
+- Added 10-band equalizer
 - Prevent download existing artist image
 - Fixed various artists management
 - Added cover search in album view
