@@ -4,7 +4,7 @@ You can help localising FlowPlayer to your language using [Transifex](https://ap
 
 Note that for FlowPlayer principally translations designated with a country code only (e.g., `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g., `nl_BE`).
 
-[Transifex](https://app.transifex.com/olf/flowplayer) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
+[Transifex](https://app.transifex.com/olf/flowplayer-1) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
 
 If you do not want to use Atlassian's Transifex, alternatives are [Qt Linguist](https://doc.qt.io/qt-5/linguist-translators.html) or to perform this manually, which is tediously and error prone, hence only suitable for small changes.  The resulting changes must be submitted as a pull request.
 
