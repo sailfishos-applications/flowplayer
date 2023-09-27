@@ -1,15 +1,18 @@
-* Fri Nov 06 2015 Matias Perez <cepiperez@gmail.com> 0.1-9
+* Mon Sep 18 2023 olf <Olf0@users.noreply.github.com> - 0.1-10
+- 
+
+* Fri Nov 06 2015 Matias Perez <cepiperez@gmail.com> - 0.1-9
 - Added search artist image option
 - Added active cover options
 - Fixed lyrics search option
 - Fixed shuffle list order
 
-* Wed Oct 07 2015 Matias Perez <cepiperez@gmail.com> 0.1-8
+* Wed Oct 07 2015 Matias Perez <cepiperez@gmail.com> - 0.1-8
 - New start page with dinamic images
 - Use folder.jpg for album cover
 - Enabled all orientations
 
-* Mon Sep 14 2015 Matias Perez <cepiperez@gmail.com> 0.1-7
+* Mon Sep 14 2015 Matias Perez <cepiperez@gmail.com> - 0.1-7
 - Gapless playback
 - Favorites songs
 - Bluetooth headset support
@@ -18,10 +21,10 @@
 - Fixed remove folders issue
 - Fixes for compilations albums
 
-* Thu Sep 10 2015 Matias Perez <cepiperez@gmail.com> 0.1-6
+* Thu Sep 10 2015 Matias Perez <cepiperez@gmail.com> - 0.1-6
 - Fixed special chars in filenames (not playing issue)
 
-* Wed Sep 09 2015 Matias Perez <cepiperez@gmail.com> 0.1-5
+* Wed Sep 09 2015 Matias Perez <cepiperez@gmail.com> - 0.1-5
 - Changed player from QtMultimedia to gstreamer
 - Added 10-bands equalizer
 - Prevent download existing artist image
@@ -29,21 +32,25 @@
 - Added cover search in album view
 - Sailfish 1.1.9.28 fixes
 
-* Wed Aug 12 2015 Matias Perez <cepiperez@gmail.com> 0.1-4
+* Wed Aug 12 2015 Matias Perez <cepiperez@gmail.com> - 0.1-4
 - Added songs panel
 - Added mod/xm support (mod support package is required)
 - Improved playlists management
 - Added music folders management
 - Improved collection update
 
-* Fri Jul 31 2015 Matias Perez <cepiperez@gmail.com> 0.1-3
+* Fri Jul 31 2015 Matias Perez <cepiperez@gmail.com> - 0.1-3
 - Fixed missing library
 
-* Thu Jul 30 2015 Matias Perez <cepiperez@gmail.com> 0.1-2
+* Thu Jul 30 2015 Matias Perez <cepiperez@gmail.com> - 0.1-2
 - Added internet radio
 - Added artists view
 - Added m4a and wma support
 - Added artist info (from last.fm)
 - UI fixes
 
+* Sat Jul 11 2015 Matias Perez <cepiperez@gmail.com> - 0.1-1
+- Initial release
+
+# Changelog format: https://lists.fedoraproject.org/archives/list/devel@lists.fedoraproject.org/thread/SF4VVE4NBEDQJDJZ4DJ6YW2DTGMWP23E/#6O6DFC6GDOLCU7QC3QJKJ3VCUGAOTD24
 
