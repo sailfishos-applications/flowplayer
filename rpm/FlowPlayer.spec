@@ -38,7 +38,6 @@ Source0:    %{url}/archive/%{version}-%{release}/%{name}-%{version}.tar.gz
 # Note that the rpmlintrc file MUST be named exactly so according to
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:   %{name}.rpmlintrc
-
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
@@ -53,12 +52,12 @@ FlowPlayer is a music player for SailfishOS with lyrics support, online radio an
 %setup -q
 
 %build
-%qtc_qmake5 
+%qtc_qmake5 VERSION=%{version}
 %qtc_make %{?_smp_mflags}
 
 %install
 %qmake5_install
-desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications  \
+desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications \
    %{buildroot}%{_datadir}/applications/*.desktop
 
 %files
@@ -67,4 +66,3 @@ desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/application
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/86x86/apps/%{name}.png
-
