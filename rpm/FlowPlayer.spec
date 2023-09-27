@@ -58,7 +58,7 @@ FlowPlayer is a music player for SailfishOS with lyrics support, online radio an
 %install
 %qmake5_install
 desktop-file-install --delete-original --dir %{buildroot}%{_datadir}/applications \
-   %{buildroot}%{_datadir}/applications/*.desktop
+   %{buildroot}%{_datadir}/applications/%{name}.desktop
 
 %files
 %defattr(-,root,root,-)
