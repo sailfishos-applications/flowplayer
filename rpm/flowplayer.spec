@@ -72,14 +72,14 @@ Custom:
   Repo: %{url}
 PackageIcon: %{url}/raw/master/flowplayer.png
 Screenshots:
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134236.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134124.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134427.jpg
- - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg
  - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134510.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134427.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134124.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134236.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg
 Links:
   Homepage: https://openrepos.net/content/olf/flowplayer
   Help: %{url}/issues
