@@ -4,3 +4,6 @@ X-Nemo-Application-Type=silica-qt5
 Icon=flowplayer
 Exec=flowplayer
 Name=FlowPlayer
+
+[X-Sailjail]
+Sandboxing=Disabled
