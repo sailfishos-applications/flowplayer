@@ -54,16 +54,16 @@ FlowPlayer is a music player for SailfishOS with lyrics support, online radio an
 Title: FlowPlayer for SailfishOS
 Type: desktop-application
 Categories:
- - System
- - Utility
+ - AudioVideo
+ - Audio
  - Network
  - Compression
+ - Database
  - FileManager
  - Filesystem
- - FileTools
- - FileTransfer
+ - Music
+ - Player
  - Qt
- - TextEditor
  - Viewer
 DeveloperName: Matias Perez (CepiPerez), olf (Olf0)
 Custom:
