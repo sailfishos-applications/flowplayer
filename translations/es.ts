@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="es_AR">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="es">
 <context>
     <name>AboutPage</name>
     <message>
@@ -1273,6 +1271,16 @@
         <translation>Canciones</translation>
     </message>
     <message>
+        <location filename="../qml/pages/SongsPage.qml" line="119"/>
+        <source>Edit metadata</source>
+        <translation>Editar etiquetas</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/SongsPage.qml" line="130"/>
+        <source>Add to playlist</source>
+        <translation>Agregar a lista de reproducción</translation>
+    </message>
+    <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
         <source>Remove from favorites</source>
         <translation>Eliminar de favoritos</translation>
@@ -1286,16 +1294,6 @@
         <location filename="../qml/pages/SongsPage.qml" line="182"/>
         <source>No music</source>
         <translation>No hay música</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SongsPage.qml" line="119"/>
-        <source>Edit metadata</source>
-        <translation>Editar etiquetas</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/SongsPage.qml" line="130"/>
-        <source>Add to playlist</source>
-        <translation>Agregar a lista de reproducción</translation>
     </message>
 </context>
 <context>
@@ -1326,11 +1324,6 @@
         <translation>Canciones</translation>
     </message>
     <message>
-        <location filename="../qml/pages/StartPage.qml" line="206"/>
-        <source>Equalizer</source>
-        <translation>Equalizador</translation>
-    </message>
-    <message>
         <location filename="../qml/pages/StartPage.qml" line="300"/>
         <source>Playlists</source>
         <translation>Listas de reproducción</translation>
@@ -1349,6 +1342,11 @@
         <location filename="../qml/pages/StartPage.qml" line="199"/>
         <source>Settings</source>
         <translation>Configuración</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/StartPage.qml" line="206"/>
+        <source>Equalizer</source>
+        <translation>Equalizador</translation>
     </message>
 </context>
 <context>
