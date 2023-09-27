@@ -45,8 +45,50 @@ BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
+# This description section includes metadata for SailfishOS:Chum, see
+# https://github.com/sailfishos-chum/main/blob/main/Metadata.md
 %description
 FlowPlayer is a music player for SailfishOS with lyrics support, online radio and 10-band equalizer.
+
+%if 0%{?_chum}
+Title: FlowPlayer for SailfishOS
+Type: desktop-application
+Categories:
+ - System
+ - Utility
+ - Network
+ - Compression
+ - FileManager
+ - Filesystem
+ - FileTools
+ - FileTransfer
+ - Qt
+ - TextEditor
+ - Viewer
+DeveloperName: Matias Perez (CepiPerez), olf (Olf0)
+Custom:
+  Repo: %{url}
+PackageIcon: %{url}/raw/master/flowplayer.png
+Screenshots:
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134236.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134124.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134427.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg
+ - %{url}/raw/master/.xdata/screenshots/screenshot-20150711134510.jpg
+Links:
+  Homepage: https://openrepos.net/content/olf/flowplayer
+  Help: %{url}/issues
+  Bugtracker: %{url}/issues
+  Donation: https://openrepos.net/donate
+%endif
+
+# Define (S)RPM compression sensibly, taking compatibility into account, see
+# https://github.com/sailfishos-patches/patchmanager/pull/417#issuecomment-1429068156
+%define _source_payload w6.gzdio
+%define _binary_payload w2.xzdio
 
 %prep
 %setup -q
