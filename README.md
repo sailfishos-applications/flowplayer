@@ -14,10 +14,16 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 
 ## Screenshots of FlowPlayer
 
-|     |     |     |     |
-| --- | --- | --- | --- |
+|       |       |       |       |
+| :---: | :---: | :---: | :---: |
+|       |       |       |       |
 | ![Music Player](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134510.jpg) | ![Song list (album)](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134427.jpg) | ![Album covers](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134124.jpg) | ![Albums by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134236.jpg) |
-| ![Covers by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg) | ![Playlists](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg) | ![FileCase cover](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg) | ![Lyrics](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg)
+| <sub>Music Player</sub> | <sub>Song list (album)</sub> | <sub>Album covers</sub> | <sub>Albums by artist</sub> |
+|       |       |       |       |
+|       |       |       |       |
+| ![Covers by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg) | ![Playlists](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg) | ![FileCase's cover](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg) | ![Lyrics](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg)
+| <sub>Covers by artist</sub> | <sub>Playlists</sub> | <sub>FileCase's cover</sub> | <sub>Lyrics</sub> |
+|       |       |       |       |
 
 ## History of FlowPlayer
 
