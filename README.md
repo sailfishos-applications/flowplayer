@@ -22,7 +22,7 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 |       |       |       |       |
 |       |       |       |       |
 | ![Covers by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg) | ![Playlists](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg) | ![FileCase's cover](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg) | ![Lyrics](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg)
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Covers by artist&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| &nbsp;&nbsp;Covers&nbsp;by&nbsp;artist&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's&nbsp;cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |       |       |       |       |
 
 ## History of FlowPlayer
