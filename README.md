@@ -17,11 +17,11 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 |       |       |       |       |
 | :---: | :---: | :---: | :---: |
 |       |       |       |       |
-| ![Music Player](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134510.jpg) | ![Song list (album)](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134427.jpg) | ![Album covers](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134124.jpg) | ![Albums by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134236.jpg) |
+| ![Music Player](./.xdata/screenshots/screenshot-20150711134510.jpg?raw=true) | ![Song list (album)](./.xdata/screenshots/screenshot-20150711134427.jpg?raw=true) | ![Album covers](./.xdata/screenshots/screenshot-20150711134124.jpg?raw=true) | ![Albums by artist](./.xdata/screenshots/screenshot-20150711134236.jpg?raw=true) |
 | Music Player | Song list (album) | Album covers | Albums by artist |
 |       |       |       |       |
 |       |       |       |       |
-| ![Covers by artist](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134206.jpg) | ![Playlists](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134443.jpg) | ![FileCase's cover](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150711134615.jpg) | ![Lyrics](https://github.com/sailfishos-applications/flowplayer/raw/master/.xdata/screenshots/screenshot-20150701221204.jpg)
+| ![Covers by artist](./.xdata/screenshots/screenshot-20150711134206.jpg?raw=true) | ![Playlists](./.xdata/screenshots/screenshot-20150711134443.jpg?raw=true) | ![FileCase's cover](./.xdata/screenshots/screenshot-20150711134615.jpg?raw=true) | ![Lyrics](./.xdata/screenshots/screenshot-20150701221204.jpg?raw=true)
 | &nbsp;&nbsp;Covers&nbsp;by&nbsp;artist&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's&nbsp;cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |       |       |       |       |
 
