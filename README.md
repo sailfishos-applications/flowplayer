@@ -3,7 +3,7 @@
 **FlowPlayer is a music player with lyrics support, online radio and 10-band equalizer.**
 
 Features:
-- *FlowPlayer must be migrated from* ***gstreamer*** */* ***gstreamer-devel-0.10*** *to* ***gstreamer1.0*** */* ***gstreamer1.0-devel**, first!*  *See also [PR #17](https://github.com/sailfishos-applications/flowplayer/pull/17).*
+- *[FlowPlayer must be migrated from **gstreamer** / **gstreamer-devel-0.10** to **gstreamer1.0** / **gstreamer1.0-devel**](https://github.com/sailfishos-applications/flowplayer/issues/11), first!*  *See also [PR #17](https://github.com/sailfishos-applications/flowplayer/pull/17).*
 
 <sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/)) due to API changes on recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
