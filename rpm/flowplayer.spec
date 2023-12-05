@@ -43,8 +43,7 @@ BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
-# `BuildRequires:  pkgconfig(gstreamer1.0)` does not seem to work in contrast to `BuildRequires:  gstreamer1.0-devel`
-BuildRequires:  gstreamer1.0-devel
+BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  desktop-file-utils
 
 # This description section includes metadata for SailfishOS:Chum, see
