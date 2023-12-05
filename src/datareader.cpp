@@ -1,21 +1,21 @@
 #include "datareader.h"
 
-#include "taglib/mpeg/mpegfile.h"
-#include "taglib/flac/flacfile.h"
-#include "taglib/toolkit/tlist.h"
-#include "taglib/ogg/vorbis/vorbisfile.h"
-#include "taglib/mp4/mp4file.h"
-#include "taglib/riff/wav/wavfile.h"
-#include "taglib/ogg/speex/speexfile.h"
-#include "taglib/ogg/flac/oggflacfile.h"
-#include "taglib/riff/aiff/aifffile.h"
-#include "taglib/wavpack/wavpackfile.h"
-#include "taglib/trueaudio/trueaudiofile.h"
-#include "taglib/asf/asffile.h"
-#include "taglib/ape/apefile.h"
-#include "taglib/mpc/mpcfile.h"
-#include "taglib/mod/modfile.h"
-#include "taglib/xm/xmfile.h"
+#include <mpegfile.h>
+#include <flacfile.h>
+#include <tlist.h>
+#include <vorbisfile.h>
+#include <mp4file.h>
+#include <wavfile.h>
+#include <speexfile.h>
+#include <oggflacfile.h>
+#include <aifffile.h>
+#include <wavpackfile.h>
+#include <trueaudiofile.h>
+#include <asffile.h>
+#include <apefile.h>
+#include <mpcfile.h>
+#include <modfile.h>
+#include <xmfile.h>
 
 
 #include <QDir>

@@ -9,6 +9,7 @@
 #include <QStringList>
 #include <QXmlStreamReader>
 #include <QSettings>
+#include <QStandardPaths>
 
 bool namefileLess(const QStringList &d1, const QStringList &d2)
 {
@@ -17,7 +18,7 @@ bool namefileLess(const QStringList &d1, const QStringList &d2)
 
 QString Missing::getThumbnail(QString data)
 {
-    QString th2 = "/home/nemo/.cache/flowplayer/62/album-"+ data + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+ data + ".jpeg";
     if ( QFileInfo(th2).exists() )
     {
         return "file://" + th2;
@@ -77,10 +78,10 @@ void Missing::loadData()
 
         if (dato1!=tr("Unknown album") && dato2!=tr("Unknown artist"))
         {
-            QString th2 = "/home/nemo/.cache/media-art/album-"+ doubleHash(dato2, dato1) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(dato2, dato1) + ".jpeg";
             if ( ! QFileInfo(th2).exists() )
             {
-                QString th3 = "/home/nemo/.cache/media-art/album-"+ doubleHash(dato1, dato1); + ".jpeg";
+                QString th3 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(dato1, dato1); + ".jpeg";
                 if ( ! QFileInfo(th3).exists() )
                 {
                     //qDebug() << dato1 << " doesn't exist. Adding to list";
@@ -242,7 +243,7 @@ void Missing::reloadImage(int index)
     QString tmp = doubleHash(d->items.at(index)->artist, d->items.at(index)->title);
     d->items.at(index)->coverart = "";
     emit(d->q->dataChanged(d->q->index(index) , d->q->index(index)));
-    d->items.at(index)->coverart = "file:///home/nemo/.cache/flowplayer/62/album-"+tmp+".jpeg";
+    d->items.at(index)->coverart = "file://" + QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+tmp+".jpeg";
     emit(d->q->dataChanged(d->q->index(index) , d->q->index(index)));
 }
 

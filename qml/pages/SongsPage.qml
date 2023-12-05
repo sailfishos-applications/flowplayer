@@ -91,7 +91,7 @@ Page {
                     anchors.rightMargin: Theme.paddingMedium
                     height: Theme.itemSizeExtraSmall
                     width: height
-                    icon.source: enableSearch && searchInput2.text!==""? "image://theme/icon-m-search" : "image://theme/icon-l-cancel"
+                    icon.source: enableSearch && searchInput2.text!==""? "image://theme/icon-m-search" : "image://theme/icon-m-cancel"
                     icon.height: height -Theme.paddingMedium
                     icon.width: icon.height
                     enabled: searchInput2.text!=="" || searchValue!==""
