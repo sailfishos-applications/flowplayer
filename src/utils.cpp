@@ -2,6 +2,7 @@
 #include <QString>
 #include <QFileInfo>
 #include <QDir>
+#include <QImage>
 #include <QNetworkConfigurationManager>
 #include <QSettings>
 //#include <MGConfItem>
