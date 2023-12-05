@@ -3,7 +3,7 @@ TARGET = flowplayer
 QT += core network sql xml
 
 CONFIG += link_pkgconfig
-PKGCONFIG += gstreamer1.0 libresource libresource-glib
+PKGCONFIG += gstreamer-1.0 libresource libresource-glib
 
 LIBS += -L"$$_PRO_FILE_PWD_/lib" -lmytaglib
 
