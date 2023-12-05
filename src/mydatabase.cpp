@@ -1,6 +1,8 @@
 #include "mydatabase.h"
 
 #include <QDebug>
+#include <QDir>
+#include <QStandardPaths>
 
 extern bool isDBOpened;
 extern bool databaseWorking;
@@ -14,14 +16,18 @@ void openDatabase()
 
     if (!database.connectionNames().join("-").contains("flowplayer")) {
         database = QSqlDatabase::addDatabase("QSQLITE", "flowplayer");
-        QString path("/home/nemo/.config/cepiperez/flowplayer.db");
+        QString path(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.db");
         qDebug() << "Database: " << path;
         database.setDatabaseName(path);
     }
+    QDir d;
+    d.mkpath(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
 
     if (database.open()) {
         isDBOpened = true;
         executeQuery("alter table tracks add fav integer");
+    } else {
+        qWarning() << "cannot open database" << database.databaseName() << database.lastError().text();
     }
 }
 

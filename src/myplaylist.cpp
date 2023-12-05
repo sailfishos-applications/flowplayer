@@ -9,6 +9,7 @@
 #include <QStringList>
 #include <QCryptographicHash>
 #include <QXmlStreamReader>
+#include <QStandardPaths>
 
 extern bool isDBOpened;
 
@@ -127,7 +128,7 @@ QString MyPlaylist::getThumbnail(QString artist, QString album)
     QByteArray ba2 = clear(alb).toUtf8();
     md2.addData(ba2);
 
-    QString th1 = "/home/nemo/.cache/flowplayer/62/album-" + QString(md.result().toHex().constData()) + "-" + QString(md2.result().toHex().constData()) + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-" + QString(md.result().toHex().constData()) + "-" + QString(md2.result().toHex().constData()) + ".jpeg";
 
     if ( QFileInfo(th1).exists() )
         return "file://" + th1;

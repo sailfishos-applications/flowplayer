@@ -86,7 +86,7 @@ Page {
                     height: Theme.itemSizeExtraSmall
                     width: height
                     opacity: !searching? 1 : 0.5
-                    icon.source: searching? "image://theme/icon-l-cancel" : "image://theme/icon-m-search"
+                    icon.source: searching? "image://theme/icon-m-cancel" : "image://theme/icon-m-search"
                     icon.height: height -Theme.paddingMedium
                     icon.width: icon.height
                     onClicked: {

@@ -6,6 +6,7 @@
 #include <QStringList>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QStandardPaths>
 
 #define BING_ID "A16EECFD14108C2794E4BC29D4DE59C308685B4A"
 
@@ -295,7 +296,7 @@ void CoverSearch::downloaded(QNetworkReply *respuesta)
     else if ( d->searchTry == 3 )
     {
         QImage image = QImage::fromData(reply->readAll());
-        QString path = "/home/nemo/.cache/flowplayer/" + hash(d->foundedCovers.at(0)) + ".jpeg";
+        QString path = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/" + hash(d->foundedCovers.at(0)) + ".jpeg";
         image.save(path, "JPEG");
         d->items.at(d->curDown)->art = path;
         emit(d->q->dataChanged(d->q->index(d->curDown) , d->q->index(d->curDown)));
@@ -352,7 +353,7 @@ void CoverSearch::paintImg(QString image, int index)
 
 void CoverSearch::saveImage(QString artist, QString album, QString imagepath)
 {
-    QString th2 = "/home/nemo/.cache/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
 
     QImage image(imagepath);
     image.save(th2, "JPEG");
@@ -362,7 +363,7 @@ void CoverSearch::saveImage(QString artist, QString album, QString imagepath)
 
 void CoverSearch::saveArtistImage(QString artist, QString imagepath)
 {
-    QString th2 = "/home/nemo/.cache/flowplayer/artist-" + hash(artist) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist) + ".jpeg";
 
     QImage image(imagepath);
     image.save(th2, "JPEG");

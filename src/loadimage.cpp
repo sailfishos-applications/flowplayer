@@ -8,6 +8,7 @@
 #include <QImage>
 #include <QSettings>
 #include <QDebug>
+#include <QStandardPaths>
 
 Thread::Thread()
 {
@@ -62,6 +63,6 @@ void Thread::processImage(QString filename, QString destname, int size)
     {
         result = img;
     }
-    result.save("/home/nemo/.cache/flowplayer/" + QString::number(size) + "/album-"+ destname + ".jpeg", "JPEG");
+    result.save(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/" + QString::number(size) + "/album-"+ destname + ".jpeg", "JPEG");
 
 }
