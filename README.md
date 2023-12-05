@@ -5,7 +5,7 @@
 Features:
 - *<ToDo: A pull request providing a list of features will be very welcome>*
 
-<sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/) ‒ currently nothing) due to API changes on recent SailfishOS releases.</sup><br />
+<sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/) ‒ currently nothing) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
 
 ## Translating FlowPlayer (l10n / i18n)
