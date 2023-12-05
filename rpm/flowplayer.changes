@@ -1,5 +1,20 @@
-* Mon Sep 18 2023 olf <Olf0@users.noreply.github.com> - 0.1-10
-- 
+* Tue Dec 05 2023 olf <Olf0@users.noreply.github.com> - 0.3.0
+- Create README
+- Add screenshots (#3 etc.)
+- Overhaul RPM related files (#4 etc.)
+- Clean up thoroughly (#5, #6 etc.)
+- Add GitHub-workflows (#8 etc.)
+- Create TEMPLATES (#9)
+- Update translations (#12, #13, #14, #15, #16)
+- Omit hardcoded paths to `/home/nemo` and use available icons sizes (#21) by @dcaliste
+- Use GStreamer 1.0 and fix compiling (#19) by @dcaliste
+- Remove taglib and mytaglib (#22)
+
+* Sat Apr 30 2016 Matias Perez <cepiperez@gmail.com> - 0.2-1
+- Lost commits, only binary RPM file for armv7hl still exists.
+
+* Sun Feb 21 2016 Matias Perez <cepiperez@gmail.com> - 0.2-0
+- Lost commits, only binary RPM file for armv7hl still exists.
 
 * Fri Nov 06 2015 Matias Perez <cepiperez@gmail.com> - 0.1-9
 - Added search artist image option
