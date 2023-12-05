@@ -411,7 +411,7 @@ Page {
             anchors.right: parent.right
             //anchors.rightMargin: Theme.paddingMedium
             anchors.bottom: bigCoverList.bottom
-            icon.source: "image://theme/icon-l-down"
+            icon.source: "image://theme/icon-m-down"
             onClicked: pageStack.pop()
         }*/
 
@@ -599,7 +599,7 @@ Page {
             anchors.bottom: parent.bottom
             anchors.bottomMargin: -Theme.paddingSmall
             anchors.horizontalCenter: parent.horizontalCenter
-            icon.source: "image://theme/icon-l-up"
+            icon.source: "image://theme/icon-m-up"
             icon.height: Theme.itemSizeMedium/2
             icon.width: icon.height
             onClicked: dockPanel.open = false

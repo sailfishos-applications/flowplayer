@@ -57,7 +57,7 @@ Dialog {
             anchors.verticalCenter: header2.verticalCenter
             anchors.left: parent.left
             anchors.leftMargin: Theme.paddingMedium
-            icon.source: "image://theme/icon-l-up"
+            icon.source: "image://theme/icon-m-up"
             onClicked: {
                 foldersModel.clear()
                 utils.getFolderItemsUp(currentPath);
