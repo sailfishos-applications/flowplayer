@@ -3,6 +3,7 @@
 - Add screenshots (#3 etc.)
 - Overhaul RPM related files (#4 etc.)
 - Clean up thoroughly (#5, #6 etc.)
+- Add Transifex integration (#7)
 - Add GitHub-workflows (#8 etc.)
 - Create TEMPLATES (#9)
 - Update translations (#12, #13, #14, #15, #16)
