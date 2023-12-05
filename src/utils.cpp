@@ -4,6 +4,7 @@
 #include <QDir>
 #include <QNetworkConfigurationManager>
 #include <QSettings>
+#include <QStandardPaths>
 //#include <MGConfItem>
 
 QString albumArtUrl, albumArtArtist, albumArtAlbum;
@@ -83,7 +84,7 @@ void Utils::readLyrics(QString artist, QString song)
     QString sng = cleanItem(song);
     if ( ( art!="" ) && ( sng!="" ) )
     {
-        QString th1 = "/home/nemo/.cache/lyrics/"+art+"-"+sng+".txt";
+        QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
         if ( QFileInfo(th1).exists() )
         {
@@ -116,10 +117,10 @@ QString Utils::thumbnail(QString artist, QString album, QString count)
     QString art = count=="1"? artist : album;
     QString alb = album;
 
-    QString th1 = "/home/nemo/.cache/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
 
     if (!QFileInfo(th1).exists()) {
-        QString th2 = "/home/nemo/.cache/media-art/album-"+ doubleHash(alb, alb) + ".jpeg";
+        QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(alb, alb) + ".jpeg";
         if (QFileInfo(th2).exists())
             return th2;
     }
@@ -129,7 +130,7 @@ QString Utils::thumbnail(QString artist, QString album, QString count)
 
 QString Utils::thumbnailArtist(QString artist)
 {
-    QString th1 = "/home/nemo/.cache/flowplayer/artist-"+ hash(artist) + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-"+ hash(artist) + ".jpeg";
     return th1;
 }
 
@@ -355,11 +356,11 @@ void Utils::downloaded(QNetworkReply *respuesta)
 void Utils::saveLyrics(QString artist, QString song, QString lyrics)
 {
     QDir d;
-    d.mkdir("/home/nemo/.cache/lyrics");
+    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics");
 
     QString art = cleanItem(artist);
     QString sng = cleanItem(song);
-    QString f = "/home/nemo/.cache/lyrics/"+art+"-"+sng+".txt";
+    QString f = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
     if ( QFileInfo(f).exists() )
         QFile::remove(f);
@@ -377,11 +378,11 @@ void Utils::saveLyrics(QString artist, QString song, QString lyrics)
 void Utils::saveLyrics2(QString artist, QString song, QString lyrics)
 {
     QDir d;
-    d.mkdir("/home/nemo/.cache/lyrics");
+    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics");
 
     QString art = cleanItem(artist);
     QString sng = cleanItem(song);
-    QString f = "/home/nemo/.cache/lyrics/"+art+"-"+sng+".txt";
+    QString f = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
     if ( QFileInfo(f).exists() )
         QFile::remove(f);
@@ -421,10 +422,10 @@ void Utils::Finished(int requestId, bool)
             QImage img;
             img.loadFromData(bytes);
 
-            QString th1 = "/home/nemo/.cache/media-art/album-" + doubleHash(albumArtArtist, albumArtAlbum) + ".jpeg";
-            if ( QFileInfo("/home/nemo/.cache/media-art/preview.jpeg").exists() )
+            QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-" + doubleHash(albumArtArtist, albumArtAlbum) + ".jpeg";
+            if ( QFileInfo(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg").exists() )
                 removePreview();
-            img.save("/home/nemo/.cache/media-art/preview.jpeg");
+            img.save(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg");
             downloadedAlbumArt = th1;
             emit coverDownloaded();
         }
@@ -434,7 +435,7 @@ void Utils::Finished(int requestId, bool)
 
 void Utils::removePreview()
 {
-    QFile f("/home/nemo/.cache/media-art/preview.jpeg");
+    QFile f(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg");
     f.remove();
 }
 
@@ -610,12 +611,12 @@ QString Utils::reemplazar2(QString data)
 void Utils::createAlbumArt(QString imagepath)
 {
     removeAlbumArt();
-    QFile::link(imagepath, "/home/nemo/.cache/currentAlbumArt.jpeg");
+    QFile::link(imagepath, QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "currentAlbumArt.jpeg");
 }
 
 void Utils::removeAlbumArt()
 {
-    QFile::remove("/home/nemo/.cache/currentAlbumArt.jpeg");
+    QFile::remove(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "currentAlbumArt.jpeg");
 }
 
 void Utils::getFolders()

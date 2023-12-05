@@ -7,6 +7,7 @@
 //#include <QTextEdit>
 #include <QSettings>
 #include <QDateTime>
+#include <QStandardPaths>
 
 //#include <meegotouch/MLocale>
 
@@ -266,7 +267,7 @@ void LFM::downloaded3(QNetworkReply *respuesta)
 void LFM::getBio(QString artist)
 {
     artistImage = "";
-    QString th2 = "/home/nemo/.cache/flowplayer/artist-" + hash(artist.toLower()) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist.toLower()) + ".jpeg";
     if (QFileInfo(th2).exists())
         artistImage = th2;
 
@@ -288,7 +289,7 @@ void LFM::getBio(QString artist)
 
 QString LFM::offlineBioImg(QString artist)
 {
-    QString th2 = "/home/nemo/.cache/flowplayer/artist-" + hash(artist.toLower()) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist.toLower()) + ".jpeg";
     if (QFileInfo(th2).exists())
         return th2;
     else
@@ -523,7 +524,7 @@ void LFM::downloaded6(QNetworkReply *respuesta)
 
 void LFM::saveImage(QString artist)
 {
-    QString th2 = "/home/nemo/.cache/flowplayer/artist-" + hash(artist) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist) + ".jpeg";
 
     QImage image = QImage::fromData(reply1->readAll());
     image.save(th2, "JPEG");
@@ -535,7 +536,7 @@ void LFM::saveImage(QString artist)
 
 void LFM::removeImage(QString artist)
 {
-    QString th2 = "/home/nemo/.cache/flowplayer/artist-" + hash(artist) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist) + ".jpeg";
     if (QFileInfo(th2).exists())
         QFile::remove(th2);
 

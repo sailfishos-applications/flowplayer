@@ -10,6 +10,7 @@
 #include <QStringList>
 #include <QXmlStreamReader>
 #include <QSettings>
+#include <QStandardPaths>
 
 extern bool databaseWorking;
 extern bool isDBOpened;
@@ -28,9 +29,9 @@ bool namefileLessThan(const QStringList &d1, const QStringList &d2)
 
 QString Datos::getThumbnail(QString data, int index)
 {
-    QString th1 = "/home/nemo/.cache/media-art/album-"+ data + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ data + ".jpeg";
 
-    /*QString th2 = "/home/nemo/.cache/flowplayer/62/album-"+ data + ".jpeg";
+    /*QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/flowplayer/62/album-"+ data + ".jpeg";
 
     QString th3 = data;
 
@@ -258,7 +259,7 @@ void Datos::addFilterToQueue()
 void Datos::addData(QString artist, QString title, QString acount, QString band, QString songs)
 {
 
-        //if ( url.contains("/home/nemo/MyDocs/Music/") )
+        //if ( url.contains(QStandardPaths::writableLocation(QStandardPaths::HomeLocation) + "/MyDocs/Music/") )
         //{
             QStringList l1;
             l1.clear();
@@ -319,12 +320,12 @@ void Datos::DatosPrivate::populateItems()
                 item->band = q->listado[i][3];
                 item->songs = q->listado[i][4];
                 item->hash = doubleHash(item->acount=="1"? item->artist : item->title, item->title);
-                item->coverart =  "/home/nemo/.cache/media-art/album-"+ item->hash + ".jpeg";
+                item->coverart = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ item->hash + ".jpeg";
                 item->isSelected = false;
             } else if (groupFilter=="artist") {
                 item->artist = q->listado[i][1]=="1"? tr("1 album") : tr("%1 albums").arg( q->listado[i][1].toInt());
                 item->hash = hash(item->title.toLower());
-                item->coverart =  "/home/nemo/.cache/flowplayer/artist-"+ item->hash + ".jpeg";
+                item->coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-"+ item->hash + ".jpeg";
             } else {
                 item->artist = q->listado[i][1];
                 item->album = q->listado[i][2];
@@ -338,7 +339,7 @@ void Datos::DatosPrivate::populateItems()
     }
 
     QDir d;
-    d.mkdir("/home/nemo/.cache/flowplayer");
+    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
 
     //q->endInsertRows();
     emit q->countChanged();
@@ -423,7 +424,7 @@ QString Datos::getArtistsCovers()
     QStringList dato1;
 
     while( query.next() ) {
-        QString coverart =  "/home/nemo/.cache/flowplayer/artist-" + hash(query.value(0).toString()) + ".jpeg";
+        QString coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(query.value(0).toString()) + ".jpeg";
         if (QFileInfo(coverart).exists())
             dato1.append(coverart);
     }
@@ -456,7 +457,7 @@ QString Datos::getAlbumsCovers()
     while( query.next() ) {
         QString hash = doubleHash(query.value(2).toString()=="1"? query.value(0).toString() :
                                                                   query.value(1).toString(), query.value(1).toString());
-        QString coverart =  "/home/nemo/.cache/media-art/album-"+ hash + ".jpeg";
+        QString coverart = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ hash + ".jpeg";
 
         if (QFileInfo(coverart).exists())
             dato1.append(coverart);
@@ -517,7 +518,7 @@ void Datos::setRoleNames(const QHash<int, QByteArray>& roles) {
 
 void Datos::paintImg(QString image, int index)
 {
-    d->items.at(index)->coverart = "file:///home/nemo/.cache/flowplayer/62/album-"+image+".jpeg";
+    d->items.at(index)->coverart = "file://" + QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+image+".jpeg";
     emit(d->q->dataChanged(d->q->index(index) , d->q->index(index)));
 }
 
@@ -528,9 +529,9 @@ void Datos::reloadAll()
         if (d->items.at(i)->coverart == "qrc:/images/nocover.jpg")
         {
             QString tmp = doubleHash(d->items.at(i)->artist, d->items.at(i)->title);
-            if ( QFileInfo("/home/nemo/.cache/flowplayer/62/album-"+tmp+".jpeg").exists() )
+            if ( QFileInfo(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+tmp+".jpeg").exists() )
             {
-                d->items.at(i)->coverart = "file:///home/nemo/.cache/flowplayer/62/album-"+tmp+".jpeg";
+                d->items.at(i)->coverart = "file://" + QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+tmp+".jpeg";
                 emit(d->q->dataChanged(d->q->index(i) , d->q->index(i)));
             }
         }
@@ -542,7 +543,7 @@ void Datos::reloadImage(int index)
     QString tmp = doubleHash(d->items.at(index)->artist, d->items.at(index)->title);
     d->items.at(index)->coverart = "qrc:/images/nocover.jpg";
     emit(d->q->dataChanged(d->q->index(index) , d->q->index(index)));
-    d->items.at(index)->coverart = "file:///home/nemo/.cache/flowplayer/62/album-"+tmp+".jpeg";
+    d->items.at(index)->coverart = "file://" + QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/62/album-"+tmp+".jpeg";
     emit(d->q->dataChanged(d->q->index(index) , d->q->index(index)));
 }
 
