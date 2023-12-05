@@ -4,23 +4,9 @@ QT += core network sql xml
 
 
 CONFIG += link_pkgconfig
-PKGCONFIG += gstreamer-1.0 libresource libresource-glib
+PKGCONFIG += gstreamer-1.0 libresource libresource-glib taglib
 
-LIBS += -L"$$_PRO_FILE_PWD_/lib" -lmytaglib
-
-INCLUDEPATH += src/taglib \
-               src/taglib/taglib \
-               src/taglib/taglib/toolkit \
-               src/taglib/taglib/ogg \
-               src/taglib/taglib/riff \
-               src/taglib/taglib/mpeg/id3v1 \
-               src/taglib/taglib/mpeg/id3v2 \
-               src/taglib/taglib/mpeg/id3v2/frames \
-               src/taglib/taglib/flac \
-               src/taglib/taglib/mod \
-               src/taglib/taglib/xm \
-
-CONFIG += sailfishapp #taglib
+CONFIG += sailfishapp
 
 SOURCES += src/FlowPlayer.cpp \
     src/utils.cpp \
@@ -130,8 +116,3 @@ HEADERS += \
     src/player.h \
     src/audioresource.h \
     src/audioresourceqt.h
-
-tag.files = lib/libmytaglib.so.1
-tag.path = /usr/share/flowplayer/lib
-
-INSTALLS += tag
