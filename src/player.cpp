@@ -57,7 +57,7 @@ static void prepare_next_stream(GstElement *obj, gpointer data) {
 
 }
 
-static void audio_changed(GstElement *obj, gpointer data) {
+static void audio_changed(GstElement * playbin, GstElement *obj, gpointer data) {
     qDebug() << "AUDIO CHANGED";
     Player *self = (Player*) data;
 
@@ -67,7 +67,8 @@ static void audio_changed(GstElement *obj, gpointer data) {
     self->m_position = 0;
     emit self->durationChanged();
     emit self->positionChanged();
-    self->timer->start(1000);
+    QMetaObject::invokeMethod(self->timer, "start", Qt::QueuedConnection,
+                              Q_ARG(int, 1000));
 }
 
 gboolean Player::handleBusMessage (GstBus *, GstMessage *msg)
@@ -139,7 +140,7 @@ void Player::backend_init (int *argc,
 
     loadEqualizer();
 
-    pipeline = gst_element_factory_make ("playbin2", "player");
+    pipeline = gst_element_factory_make ("playbin3", "player");
 
     equalizer = gst_element_factory_make ("equalizer-10bands", "equalizer");
     convert = gst_element_factory_make ("audioconvert", "convert");
@@ -165,7 +166,7 @@ void Player::backend_init (int *argc,
     g_signal_connect(pipeline, "about-to-finish",
             G_CALLBACK(prepare_next_stream), this);
 
-    g_signal_connect(pipeline, "audio-changed",
+    g_signal_connect(pipeline, "source-setup",
             G_CALLBACK(audio_changed), this);
 
     GstBus *bus;
@@ -374,7 +375,7 @@ void Player::backend_seek(gint value)
     gst_element_seek (pipeline, 1.0,
                       GST_FORMAT_TIME,
                       (GstSeekFlags)(GST_SEEK_FLAG_FLUSH | GST_SEEK_FLAG_ACCURATE),
-                      GST_SEEK_TYPE_CUR, value * GST_SECOND,
+                      GST_SEEK_TYPE_SET, (m_position + value) * GST_SECOND,
                       GST_SEEK_TYPE_NONE, GST_CLOCK_TIME_NONE);
 }
 
@@ -393,8 +394,8 @@ guint64 Player::backend_query_position()
     gint64 cur;
     gboolean result;
 
-    result = gst_element_query_position (pipeline, &format, &cur);
-    if (!result || format != GST_FORMAT_TIME)
+    result = gst_element_query_position (pipeline, format, &cur);
+    if (!result)
         return GST_CLOCK_TIME_NONE;
 
     return cur;
@@ -406,8 +407,8 @@ guint64 Player::backend_query_duration()
     gint64 cur;
     gboolean result;
 
-    result = gst_element_query_duration (pipeline, &format, &cur);
-    if (!result || format != GST_FORMAT_TIME)
+    result = gst_element_query_duration (pipeline, format, &cur);
+    if (!result)
         return GST_CLOCK_TIME_NONE;
 
     return cur;
