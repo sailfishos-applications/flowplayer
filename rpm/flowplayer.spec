@@ -44,6 +44,7 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(gstreamer-1.0)
+BuildRequires:  pkgconfig(libresource)
 BuildRequires:  desktop-file-utils
 
 # This description section includes metadata for SailfishOS:Chum, see
