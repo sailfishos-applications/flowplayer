@@ -39,6 +39,7 @@ Source0:    %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:   %{name}.rpmlintrc
 Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   qml(org.nemomobile.mpris)
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
