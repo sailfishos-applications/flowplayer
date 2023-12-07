@@ -2,6 +2,7 @@
 
 //#include <QDeclarativeView>
 #include <QDebug>
+#include <QDir>
 #include <QString>
 #include <QStringList>
 #include <QJsonDocument>
@@ -39,6 +40,9 @@ CoverSearch::CoverSearchPrivate::CoverSearchPrivate(CoverSearch * parent) : q(pa
     //q->pepe = new WebThread();
     //connect (q->pepe, SIGNAL(imgLoaded(QString,int)), parent, SLOT(paintImg(QString,int)) );
 
+    // Ensure that download destination exists.
+    QDir d;
+    d.mkpath(QStandardPaths::writableLocation(QStandardPaths::CacheLocation));
 }
 
 CoverSearch::CoverSearchPrivate::~CoverSearchPrivate()
