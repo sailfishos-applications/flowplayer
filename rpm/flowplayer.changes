@@ -1,5 +1,7 @@
-* Thu Dec 07 2023 olf <Olf0@users.noreply.github.com> - 0.3.1
-- Set vendor to `meego`
+* Thu Dec 08 2023 olf <Olf0@users.noreply.github.com> - 0.3.1
+- Add missing QML dependencies (PRs #27, #28)
+- Fix various ways of album cover download (PR #31) by @dcaliste (closes issue #30)
+- Set hardcoded version number in About page to 0.3.1 (PR #25)
 
 * Tue Dec 05 2023 olf <Olf0@users.noreply.github.com> - 0.3.0
 - Create README
