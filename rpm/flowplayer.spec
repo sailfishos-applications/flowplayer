@@ -9,7 +9,7 @@ Name:       flowplayer
 
 Summary:    Music Player for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
-# reasons due to its use for `qmake5` in line 56.  See https://semver.org/
+# reasons due to its use for `qmake5` in line 104.  See https://semver.org/
 Version:    0.3.1
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additionally be
@@ -21,7 +21,7 @@ Version:    0.3.1
 # build at GitHub and OBS, when configured accordingly; mind the sorting
 # (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Release:    1
+Release:    rc2
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:      Applications/Multimedia
@@ -72,7 +72,7 @@ Categories:
  - Player
  - Qt
  - Viewer
-DeveloperName: Matias Perez (CepiPerez), olf (Olf0)
+DeveloperName: Matias Perez (CepiPerez), olf (Olf0), Damien Caliste (dcaliste)
 Custom:
   Repo: %{url}
 PackageIcon: %{url}/raw/master/flowplayer.png
