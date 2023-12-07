@@ -40,6 +40,9 @@ Source0:    %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 Source99:   %{name}.rpmlintrc
 Requires:   sailfishsilica-qt5 >= 0.10.9
 Requires:   qml(org.nemomobile.mpris)
+Requires:   qml(org.nemomobile.policy)
+Requires:   qml(org.nemomobile.thumbnailer)
+Requires:   qml(com.jolla.mediaplayer)
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
