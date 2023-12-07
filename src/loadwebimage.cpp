@@ -158,9 +158,8 @@ void WebThread::checkAll()
     //QString url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f338c7458e7d1a9a6204221ff904ba1";
 
     // QUASAR
-    QString url = "http://coverart.katastrophos.net/index.php?";
-    url += "&artist="+QUrl::toPercentEncoding(artist)+"&album="+QUrl::toPercentEncoding(album)+"&search=Search";
-
+    QString url = "https://coverart.katastrophos.net/query.php?";
+    url += "&artist="+QUrl::toPercentEncoding(artist)+"&album="+QUrl::toPercentEncoding(album)+"&mode=imageurls&limit=1";
 
  
     //AMAZON - SIMPLE
@@ -211,16 +210,9 @@ void WebThread::downloaded(QNetworkReply *respuesta)
 
             QString tmp = datos1;
 
-
             //QUASAR
-            if (tmp.contains("<ul title=\"Cover Arts\">"))
+            if (tmp.startsWith("http"))
             {
-                int x = tmp.indexOf("<li><a href=\"");
-                tmp.remove(0,x+13);
-                x = tmp.indexOf("\">");
-                tmp.remove(x,tmp.length()-x);
-                tmp = tmp.trimmed();
-
                 qDebug() << "Link for" << files[0][0] << files[0][1] << tmp;
 
                 downloadImage(tmp);
