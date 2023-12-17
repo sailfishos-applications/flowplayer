@@ -1382,7 +1382,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/flowplayer.qml" line="321"/>
+        <location filename="../qml/flowplayer.qml" line="322"/>
         <source>Cover not found</source>
         <translation type="unfinished"></translation>
     </message>

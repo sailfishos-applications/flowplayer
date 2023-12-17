@@ -1380,7 +1380,7 @@
         <translation>(radio)</translation>
     </message>
     <message>
-        <location filename="../qml/flowplayer.qml" line="321"/>
+        <location filename="../qml/flowplayer.qml" line="322"/>
         <source>Cover not found</source>
         <translation>Pochette non trouvée</translation>
     </message>
