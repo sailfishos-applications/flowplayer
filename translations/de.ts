@@ -28,39 +28,6 @@
     </message>
 </context>
 <context>
-    <name>AddFolder</name>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="38"/>
-        <source>Done</source>
-        <translation>Fertig</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="39"/>
-        <source>Cancel</source>
-        <translation>Abbrechen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="51"/>
-        <source>Select folder</source>
-        <translation>Ordner auswählen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="85"/>
-        <source>Deleting</source>
-        <translation>Löschen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="96"/>
-        <source>Remove</source>
-        <translation>Entfernen</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AddFolder.qml" line="136"/>
-        <source>No items</source>
-        <translation>Keine Einträge vorhanden</translation>
-    </message>
-</context>
-<context>
     <name>AddRadio</name>
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="29"/>
@@ -237,17 +204,17 @@
 <context>
     <name>Datos</name>
     <message>
-        <location filename="../src/datos.cpp" line="145"/>
+        <location filename="../src/datos.cpp" line="146"/>
         <source>Various artists</source>
         <translation>Diverse Künstler</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="325"/>
+        <location filename="../src/datos.cpp" line="326"/>
         <source>1 album</source>
         <translation>1 Album</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="325"/>
+        <location filename="../src/datos.cpp" line="326"/>
         <source>%1 albums</source>
         <translation>%1 Alben</translation>
     </message>
@@ -338,48 +305,48 @@
 <context>
     <name>LFM</name>
     <message>
-        <location filename="../src/lfm.cpp" line="46"/>
-        <location filename="../src/lfm.cpp" line="106"/>
+        <location filename="../src/lfm.cpp" line="48"/>
+        <location filename="../src/lfm.cpp" line="108"/>
         <source>Error fetching artist information</source>
         <translation>Fehler beim Abruf der Künstlerinformationen</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="58"/>
+        <location filename="../src/lfm.cpp" line="60"/>
         <source>The artist could not be found</source>
         <translation>Der Künstler konnte nicht gefunden werden</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="123"/>
+        <location filename="../src/lfm.cpp" line="125"/>
         <source>Error fetching album information</source>
         <translation>Fehler beim Abruf der Albuminformationen</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="135"/>
+        <location filename="../src/lfm.cpp" line="137"/>
         <source>The album could not be found</source>
         <translation>Das Album konnte nicht gefunden werden</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="162"/>
+        <location filename="../src/lfm.cpp" line="164"/>
         <source>No album information available</source>
         <translation>Keine Informationen zum Album verfügbar</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="198"/>
+        <location filename="../src/lfm.cpp" line="200"/>
         <source>Error fetching track information</source>
         <translation>Fehler beim Abruf der Titelinformationen</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="212"/>
+        <location filename="../src/lfm.cpp" line="214"/>
         <source>The track could not be found</source>
         <translation>Der Titel konnte nicht gefunden werden</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="237"/>
+        <location filename="../src/lfm.cpp" line="239"/>
         <source>No track information available</source>
         <translation>Keine Titelinformationen verfügbar</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="280"/>
+        <location filename="../src/lfm.cpp" line="282"/>
         <source>Fetching artist information</source>
         <translation>Hole Künstlerinformationen</translation>
     </message>
@@ -589,29 +556,34 @@
 <context>
     <name>ManageFolders</name>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="44"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="45"/>
         <source>Add folder</source>
         <translation>Ordner hinzufügen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="50"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="51"/>
         <source>Manage folders</source>
         <translation>Ordner verwalten</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="61"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="62"/>
         <source>Deleting</source>
         <translation>Löschen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="72"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="73"/>
         <source>Remove</source>
         <translation>Entfernen</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="118"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="119"/>
         <source>No folders</source>
         <translation>Keine Ordner vorhanden</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/ManageFolders.qml" line="125"/>
+        <source>Select folder</source>
+        <translation type="unfinished">Ordner auswählen</translation>
     </message>
 </context>
 <context>
@@ -677,17 +649,17 @@
 <context>
     <name>Missing</name>
     <message>
-        <location filename="../src/missing.cpp" line="74"/>
+        <location filename="../src/missing.cpp" line="75"/>
         <source>Various artists</source>
         <translation>Diverse Künstler</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="78"/>
+        <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown album</source>
         <translation>Unbekanntes Album</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="78"/>
+        <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown artist</source>
         <translation>Unbekannter Künstler</translation>
     </message>
@@ -709,12 +681,12 @@
 <context>
     <name>MyPlaylist</name>
     <message>
-        <location filename="../src/myplaylist.cpp" line="70"/>
+        <location filename="../src/myplaylist.cpp" line="71"/>
         <source>Unknown artist</source>
         <translation>Unbekannter Künstler</translation>
     </message>
     <message>
-        <location filename="../src/myplaylist.cpp" line="72"/>
+        <location filename="../src/myplaylist.cpp" line="73"/>
         <source>Unknown album</source>
         <translation>Unbekanntes Album</translation>
     </message>
@@ -1357,22 +1329,22 @@
 <context>
     <name>Utils</name>
     <message>
-        <location filename="../src/utils.cpp" line="104"/>
-        <location filename="../src/utils.cpp" line="256"/>
-        <location filename="../src/utils.cpp" line="283"/>
-        <location filename="../src/utils.cpp" line="291"/>
-        <location filename="../src/utils.cpp" line="320"/>
-        <location filename="../src/utils.cpp" line="344"/>
+        <location filename="../src/utils.cpp" line="106"/>
+        <location filename="../src/utils.cpp" line="258"/>
+        <location filename="../src/utils.cpp" line="285"/>
+        <location filename="../src/utils.cpp" line="293"/>
+        <location filename="../src/utils.cpp" line="322"/>
+        <location filename="../src/utils.cpp" line="346"/>
         <source>No lyrics founded</source>
         <translation>Keine Songtexte gefunden</translation>
     </message>
     <message>
-        <location filename="../src/utils.cpp" line="209"/>
+        <location filename="../src/utils.cpp" line="211"/>
         <source>Error fetching lyrics</source>
         <translation>Fehler beim Abruf der Songtexte</translation>
     </message>
     <message>
-        <location filename="../src/utils.cpp" line="235"/>
+        <location filename="../src/utils.cpp" line="237"/>
         <source>Album cover not founded</source>
         <translation>Albumcover nicht gefunden</translation>
     </message>

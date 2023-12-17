@@ -635,50 +635,6 @@ void Utils::getFolders()
     }
 }
 
-void Utils::getFolderItemsUp(QString path)
-{
-    if (path.endsWith("/"))
-        path.chop(1);
-    int i = path.lastIndexOf("/");
-    path = path.left(i);
-    if (path=="") path = "/";
-    getFolderItems(path);
-}
-
-void Utils::getFolderItems(QString path)
-{
-    qDebug() << "Loading folder: " << path;
-
-    if (!QFileInfo(path).exists())
-        return;
-
-    QDir dir (path);
-    QStringList data;
-    //data << ".mp3" << "*.m4a" << "*.wma" << "*.flac" << "*.ogg" << "*.wav" << "*.asf";
-    //dir.setNameFilters(data);
-
-    QFileInfoList entries;
-    entries = dir.entryInfoList(QDir::AllEntries | QDir::System | QDir::NoDotAndDotDot ,
-                                QDir::Name | QDir::IgnoreCase | QDir::DirsFirst);
-
-
-    QListIterator<QFileInfo> entriesIterator (entries);
-    while(entriesIterator.hasNext())
-    {
-        QFileInfo fileInfo = entriesIterator.next();
-
-        if (fileInfo.isDir())
-            emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "folder");
-        else if (fileInfo.fileName().endsWith(".mp3") || fileInfo.fileName().endsWith(".m4a") ||
-                 fileInfo.fileName().endsWith(".wma") || fileInfo.fileName().endsWith(".ogg") ||
-                 fileInfo.fileName().endsWith(".flac") || fileInfo.fileName().endsWith(".wav") ||
-                 fileInfo.fileName().endsWith(".asf"))
-            emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "sounds");
-    }
-
-    emit appendFilesDone(path);
-}
-
 void Utils::addFolderToList(QString path)
 {
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
