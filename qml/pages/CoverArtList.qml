@@ -66,7 +66,9 @@ BackgroundItem
     Connections {
         target: coversearch
         onImageChanged: {
-            if ((artist===dartist && album==dalbum) || (album===dartist && album==dalbum)) {
+            if ((artist===dartist && album==dalbum)
+                || (album===dartist && album==dalbum)
+                || (album===dartist && !dalbum)) {
                 console.log("Updated: " + artist + " - " + album)
                 reload()
             }
@@ -113,9 +115,9 @@ BackgroundItem
 
     Label {
         id: vtext
-        anchors.verticalCenter: coverImg.status!=Image.Error && textvisible? undefined : parent.verticalCenter
-        anchors.bottom: coverImg.status!=Image.Error && textvisible? parent.bottom : undefined
-        anchors.bottomMargin: coverImg.status!=Image.Error && textvisible? Theme.paddingSmall : undefined
+        y: coverImg.status!=Image.Error && textvisible
+            ? parent.height - height - Theme.paddingSmall
+            : (parent.height - height) / 2
         anchors.left: parent.left
         anchors.leftMargin: Theme.paddingMedium
         width: parent.width - Theme.paddingMedium*2
