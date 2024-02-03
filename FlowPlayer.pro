@@ -2,6 +2,7 @@ TARGET = flowplayer
 
 QT += core network sql xml
 
+DEFINES += VERSION=\\\"$${VERSION}\\\"
 
 CONFIG += link_pkgconfig
 PKGCONFIG += gstreamer-1.0 libresource libresource-glib taglib

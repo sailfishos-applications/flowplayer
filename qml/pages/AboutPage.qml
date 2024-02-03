@@ -49,7 +49,7 @@ Page {
 
                     Label {
                         color: Theme.secondaryHighlightColor
-                        text: "version 0.3.1"
+                        text: "version " + appVersion
                         font.pixelSize: Theme.fontSizeSmall
                     }
                 }
