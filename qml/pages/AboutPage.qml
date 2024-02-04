@@ -58,7 +58,31 @@ Page {
 
             Label {
                 color: Theme.secondaryColor
-                text: "(C) 2015-2016 Matias Perez (CepiPerez)"
+                text: qsTr("Original author:")
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Label {
+                color: Theme.secondaryColor
+                text: "(C) 2015-2021 Matias Perez (CepiPerez)"
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Separator {
+                width: parent.width
+                color: Theme.secondaryColor
+            }
+
+            Label {
+                color: Theme.secondaryColor
+                text: qsTr("Contributors:")
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Label {
+                color: Theme.secondaryColor
+                text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
+                      "(C) 2023-2024 Damien Caliste (dcaliste)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
