@@ -44,7 +44,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Search artist image")
-                enabled: artist!==qsTr("Unknown artist") && artistcount==="1"
+                enabled: artist!==qsTr("Unknown artist")
                 onClicked: {
                     coversearch.clearData()
                     pageStack.push ("CoverDownload.qml", {"artist":artist, "searchingArtist":true, "album":""})

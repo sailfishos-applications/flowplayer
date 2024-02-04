@@ -9,8 +9,8 @@ Name:       flowplayer
 
 Summary:    Music Player for SailfishOS
 # The <version> tag must adhere to semantic versioning: Among multiple other
-# reasons due to its use for `qmake5` in line 56.  See https://semver.org/
-Version:    0.3.0
+# reasons due to its use for `qmake5` in line 104.  See https://semver.org/
+Version:    0.3.1
 # The <release> tag comprises one of {alpha,beta,rc,release} postfixed with a
 # natural number greater or equal to 1 (e.g., "beta3") and may additionally be
 # postfixed with a plus character ("+"), the name of the packager and a release
@@ -21,7 +21,7 @@ Version:    0.3.0
 # build at GitHub and OBS, when configured accordingly; mind the sorting
 # (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Release:    rc1
+Release:    rc2
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:      Applications/Multimedia
@@ -39,6 +39,10 @@ Source0:    %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:   %{name}.rpmlintrc
 Requires:   sailfishsilica-qt5 >= 0.10.9
+Requires:   qml(org.nemomobile.mpris)
+Requires:   qml(org.nemomobile.policy)
+Requires:   qml(org.nemomobile.thumbnailer)
+Requires:   qml(com.jolla.mediaplayer)
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -68,7 +72,7 @@ Categories:
  - Player
  - Qt
  - Viewer
-DeveloperName: Matias Perez (CepiPerez), olf (Olf0)
+DeveloperName: Matias Perez (CepiPerez), olf (Olf0), Damien Caliste (dcaliste)
 Custom:
   Repo: %{url}
 PackageIcon: %{url}/raw/master/flowplayer.png
@@ -85,7 +89,7 @@ Links:
   Homepage: https://openrepos.net/content/olf/flowplayer
   Help: %{url}/issues
   Bugtracker: %{url}/issues
-  Donation: https://openrepos.net/donate
+  Donation: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WTLJLQP2CSM7S
 %endif
 
 # Define (S)RPM compression sensibly, taking compatibility into account, see

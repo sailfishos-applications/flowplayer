@@ -59,6 +59,7 @@ int main(int argc, char *argv[])
     window->setTitle("FlowPlayer");
 
     window->engine()->addImportPath("/usr/share/flowplayer/qml");
+    window->rootContext()->setContextProperty("appVersion", VERSION);
 
     qmlRegisterType<Utils>("FlowPlayer", 1, 0, "Utils");
     qmlRegisterType<CoverSearch>("FlowPlayer", 1, 0, "CoverSearch");

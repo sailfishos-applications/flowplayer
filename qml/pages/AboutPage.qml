@@ -49,7 +49,7 @@ Page {
 
                     Label {
                         color: Theme.secondaryHighlightColor
-                        text: "version 0.1-9"
+                        text: "version " + appVersion
                         font.pixelSize: Theme.fontSizeSmall
                     }
                 }
@@ -58,7 +58,7 @@ Page {
 
             Label {
                 color: Theme.secondaryColor
-                text: "(C) 2015 Matias Perez (CepiPerez)"
+                text: "(C) 2015-2016 Matias Perez (CepiPerez)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
