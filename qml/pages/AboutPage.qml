@@ -102,9 +102,8 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("If your language is not available you can contribute here:") + "<br>" +
-                      "<a href='https://www.transifex.com/projects/p/flowplayer/'>" +
-                      "www.transifex.com/projects/p/flowplayer</a>"
+                text: colored + qsTr("If you want to create a new translation or improve an extant one:") + "<br>" +
+                      "<a href='https://app.transifex.com/olf/flowplayer/'>" + "Transifex - FlowPlayer</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeSmall
                 textFormat: Text.RichText
@@ -118,7 +117,7 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("You can contribute to keep this project alive making a small donation")
+                text: colored + qsTr("You can support the original author of FlowPlayer by donating:")
                 font.pixelSize: Theme.fontSizeSmall
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
@@ -126,7 +125,7 @@ Page {
             }
 
             Image {
-                source: "../paypal.png"
+                source: "file:///usr/share/flowplayer/icons/paypal.png"
                 height: Theme.itemSizeMedium
                 fillMode: Image.PreserveAspectFit
                 smooth: true
@@ -140,6 +139,5 @@ Page {
         }
 
     }
-
 
 }
