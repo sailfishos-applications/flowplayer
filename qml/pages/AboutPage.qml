@@ -34,7 +34,7 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Image {
-                    source: "file://usr/share/icons/hicolor/86x86/apps/flowplayer.png"
+                    source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
                 }
 
                 Column {
@@ -92,7 +92,7 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("Taglib is used for reading, writing and manipulating audio file tags") +
+                text: colored + qsTr("Taglib is used for reading, writing and manipulating audio file tags:") +
                       "<br><a href='https://taglib.github.io/'>taglib.github.io</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeSmall
