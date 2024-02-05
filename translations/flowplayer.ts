@@ -9,18 +9,28 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
+        <location filename="../qml/pages/AboutPage.qml" line="61"/>
+        <source>Original author:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <source>Contributors:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
         <source>Taglib is used for reading, writing and manipulating audio file tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
-        <source>If your language is not available you can contribute here:</source>
+        <location filename="../qml/pages/AboutPage.qml" line="105"/>
+        <source>If you want to create a new translation or improve an extant one:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
-        <source>You can contribute to keep this project alive making a small donation</source>
+        <location filename="../qml/pages/AboutPage.qml" line="120"/>
+        <source>You can support the original author of FileCase by donating:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
