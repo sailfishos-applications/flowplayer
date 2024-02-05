@@ -20,7 +20,7 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
-        <source>Taglib is used for reading, writing and manipulating audio file tags</source>
+        <source>Taglib is used for reading, writing and manipulating audio file tags:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
