@@ -20,16 +20,11 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="95"/>
-        <source>Taglib is used for reading, writing and manipulating audio file tags:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/AboutPage.qml" line="105"/>
         <source>If you want to create a new translation or improve an extant one:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="120"/>
+        <location filename="../qml/pages/AboutPage.qml" line="110"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
         <translation type="unfinished"></translation>
     </message>
