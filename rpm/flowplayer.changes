@@ -1,3 +1,6 @@
+* Wed Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
+- 
+
 * Sun Feb 04 2024 olf <Olf0@users.noreply.github.com> - 0.3.1
 - Add missing QML dependencies (PRs #27, #28)
 - Fix various ways of album cover download (PR #31) by @dcaliste (closes issue #30)
