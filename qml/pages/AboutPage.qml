@@ -92,16 +92,6 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("Taglib is used for reading, writing and manipulating audio file tags:") +
-                      "<br><a href='https://taglib.github.io/'>taglib.github.io</a>"
-                onLinkActivated: Qt.openUrlExternally(link)
-                font.pixelSize: Theme.fontSizeSmall
-                textFormat: Text.RichText
-                wrapMode: Text.WordWrap
-                width: parent.width
-            }
-
-            Label {
                 text: colored + qsTr("If you want to create a new translation or improve an extant one:") + "<br>" +
                       "<a href='https://app.transifex.com/olf/flowplayer/'>" + "Transifex - FlowPlayer</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
