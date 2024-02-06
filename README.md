@@ -25,6 +25,10 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 | &nbsp;&nbsp;Covers&nbsp;by&nbsp;artist&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's&nbsp;cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |       |       |       |       |
 
+## Migrating from FlowPlayer 0.1.x / 0.2.x to 0.3.x
+
+A [draft of a migration guide](./migrating-to-v0.3.x.md) was contributed; PRs to enhance it are very welcome.
+
 ## History of FlowPlayer
 
 The original [FlowPlayer for SailfishOS (2015 - 2016)](https://openrepos.net/content/cepiperez/flowplayer-0#content) started as a port of [FlowPlayer for MeeGo-Harmattan (2014)](https://openrepos.net/content/cepiperez/flowplayer#content).  Both were solely written by [Matias Perez (CepiPerez)](https://github.com/CepiPerez).  In 2021 Matias [released the source code of FlowPlayer](https://github.com/sailfishos-applications/flowplayer/commits/master?after=c4f36e1cb3a80b7c7b220a379c9bdaca3a300113+49) by creating this git repository at GitHub.
