@@ -30,7 +30,7 @@
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="120"/>
-        <source>You can support the original author of FileCase by donating:</source>
+        <source>You can support the original author of FlowPlayer by donating:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
