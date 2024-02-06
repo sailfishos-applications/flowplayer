@@ -8,9 +8,13 @@ Features:
 <sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/) ‒ currently nothing) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
 
+<br />
+
 ## Translating FlowPlayer (l10n / i18n)
 
 If you want to translate FlowPlayer to a language it does not support yet or improve an extant translation, please [read the translations-README](./translations#readme).
+
+<br />
 
 ## Screenshots of FlowPlayer
 
@@ -24,10 +28,13 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 | ![Covers by artist](./.xdata/screenshots/screenshot-20150711134206.jpg?raw=true) | ![Playlists](./.xdata/screenshots/screenshot-20150711134443.jpg?raw=true) | ![FileCase's cover](./.xdata/screenshots/screenshot-20150711134615.jpg?raw=true) | ![Lyrics](./.xdata/screenshots/screenshot-20150701221204.jpg?raw=true)
 | &nbsp;&nbsp;Covers&nbsp;by&nbsp;artist&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's&nbsp;cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |       |       |       |       |
+<br />
 
 ## Migrating from FlowPlayer 0.1.x / 0.2.x to 0.3.x
 
 A [draft of a migration guide](./migrating-to-v0.3.x.md) was contributed; PRs to enhance it are very welcome.
+
+<br />
 
 ## History of FlowPlayer
 
@@ -35,12 +42,14 @@ The original [FlowPlayer for SailfishOS (2015 - 2016)](https://openrepos.net/con
 
 In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects, such as this README, a [new OpenRepos page](https://openrepos.net/content/olf/flowplayer#content), the [Transifex integration](https://github.com/sailfishos-applications/flowplayer/pull/7), making the spec file suitable for [the Sailfish-OBS](https://build.sailfishos.org/) and [the SailfishOS:Chum community repository](https://build.sailfishos.org/project/show/sailfishos:chum) etc.
 
+<br />
+
 ## Credits
 #### Original author
 [Matias Perez (CepiPerez)](https://github.com/CepiPerez)
 #### Contributors
-- [olf (Olf0)](https://github.com/Olf0)
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
+- [olf (Olf0)](https://github.com/Olf0)
 <br />
 
 ### License: [MPL 2.0](https://spdx.org/licenses/MPL-2.0-no-copyleft-exception.html)
