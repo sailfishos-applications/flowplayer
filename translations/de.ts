@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="de">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="de">
 <context>
     <name>AboutPage</name>
     <message>
@@ -9,19 +7,24 @@
         <translation>Über</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
-        <source>Taglib is used for reading, writing and manipulating audio file tags</source>
-        <translation>Taglib wird verwendet, um die Metadaten der Audiodateien zu lesen und verändern:</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="61"/>
+        <source>Original author:</source>
+        <translation>Ursprünglicher Autor:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
-        <source>If your language is not available you can contribute here:</source>
-        <translation>Wenn deine Sprache nicht verfügbar ist, kannst du hier zur Übersetzung beitragen:</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <source>Contributors:</source>
+        <translation>Beitragende:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
-        <source>You can contribute to keep this project alive making a small donation</source>
-        <translation>Du kannst mit einer kleinen Spende dazu beitragen dieses Projekt am Leben zu erhalten:</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <source>If you want to create a new translation or improve an extant one:</source>
+        <translation>Wenn Du eine neue Übersetzung erstellen oder eine bestehende verbessern möchtest:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <source>You can support the original author of FlowPlayer by donating:</source>
+        <translation>Du kannst den ursprünglichen Autor von FlowPlayer durch eine Spende unterstützen:</translation>
     </message>
 </context>
 <context>
