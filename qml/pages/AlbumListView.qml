@@ -95,7 +95,7 @@ Page {
                     onClicked: {
                         helperList.clear()
                         myplaylistmanager.loadAlbum(model.artist, model.album, "1")
-                        meta.setFile(decodeURIComponent(helperList.get(0).url))
+                        meta.setFile(helperList.get(0).url)
                         helperList2.clear()
                         for ( var i=0; i<helperList.count; ++i )
                             helperList2.append(helperList.get(i))

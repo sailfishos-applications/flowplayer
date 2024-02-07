@@ -18,7 +18,7 @@ Dialog {
         //meta.setData(titleField.text, artistField.text, albumField.text, yearField.text)
         for ( var i=0; i<helperList2.count; ++i )
         {
-            meta.setFile(decodeURIComponent(helperList2.get(i).url),"false")
+            meta.setFile(helperList2.get(i).url,"false")
             console.log("TAG: " + artistField.text + " - " + albumField.text + " - " + yearField.text)
             meta.setAlbumData(artistField.text, albumField.text, yearField.text)
         }

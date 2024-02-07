@@ -119,7 +119,7 @@ Page {
                     text: qsTr("Edit metadata")
                     onClicked: {
                         console.log("METADATA: " + model.url)
-                        meta.setFile(decodeURIComponent(model.url))
+                        meta.setFile(model.url)
                         pageStack.push ("Metadata.qml", {"artist": model.artist,
                                             "album": model.album,
                                             "title": model.title
