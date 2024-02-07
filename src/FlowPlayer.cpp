@@ -60,6 +60,11 @@ int main(int argc, char *argv[])
 
     window->engine()->addImportPath("/usr/share/flowplayer/qml");
     window->rootContext()->setContextProperty("appVersion", VERSION);
+    bool hasPickers = false;
+    for (const QString &path : window->engine()->importPathList()) {
+        hasPickers = hasPickers || QFile::exists(path + "/Sailfish/Pickers");
+    }
+    window->rootContext()->setContextProperty("hasPickers", hasPickers);
 
     qmlRegisterType<Utils>("FlowPlayer", 1, 0, "Utils");
     qmlRegisterType<CoverSearch>("FlowPlayer", 1, 0, "CoverSearch");

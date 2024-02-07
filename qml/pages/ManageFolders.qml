@@ -42,7 +42,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Add folder")
-                onClicked: pageStack.push("AddFolder.qml")
+                onClicked: pageStack.push(hasPickers ? "PickFolder.qml" : "AddFolder.qml")
             }
         }
 
