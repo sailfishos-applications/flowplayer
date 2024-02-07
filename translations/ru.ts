@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="ru">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru">
 <context>
     <name>AboutPage</name>
     <message>
@@ -22,6 +20,39 @@
         <location filename="../qml/pages/AboutPage.qml" line="97"/>
         <source>You can contribute to keep this project alive making a small donation</source>
         <translation>Вы можете внести свой вклад в жизнь проекта, сделав небольшое пожертвование</translation>
+    </message>
+</context>
+<context>
+    <name>AddFolder</name>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="38"/>
+        <source>Done</source>
+        <translation>Готово</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="39"/>
+        <source>Cancel</source>
+        <translation>Отмена</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="51"/>
+        <source>Select folder</source>
+        <translation>Выбрать папку</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="85"/>
+        <source>Deleting</source>
+        <translation>Удаление</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="96"/>
+        <source>Remove</source>
+        <translation>Удалить</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AddFolder.qml" line="136"/>
+        <source>No items</source>
+        <translation>Нет файлов</translation>
     </message>
 </context>
 <context>
@@ -201,17 +232,17 @@
 <context>
     <name>Datos</name>
     <message>
-        <location filename="../src/datos.cpp" line="146"/>
+        <location filename="../src/datos.cpp" line="145"/>
         <source>Various artists</source>
         <translation>Различные исполнители</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="326"/>
+        <location filename="../src/datos.cpp" line="325"/>
         <source>1 album</source>
         <translation>1 альбом</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="326"/>
+        <location filename="../src/datos.cpp" line="325"/>
         <source>%1 albums</source>
         <translation>%1 альбомов</translation>
     </message>
@@ -302,48 +333,48 @@
 <context>
     <name>LFM</name>
     <message>
-        <location filename="../src/lfm.cpp" line="48"/>
-        <location filename="../src/lfm.cpp" line="108"/>
+        <location filename="../src/lfm.cpp" line="46"/>
+        <location filename="../src/lfm.cpp" line="106"/>
         <source>Error fetching artist information</source>
         <translation>Ошибка при получении сведений об исполнителе</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="60"/>
+        <location filename="../src/lfm.cpp" line="58"/>
         <source>The artist could not be found</source>
         <translation>Исполнитель не может быть найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="125"/>
+        <location filename="../src/lfm.cpp" line="123"/>
         <source>Error fetching album information</source>
         <translation>Ошибка при получении информации об альбоме</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="137"/>
+        <location filename="../src/lfm.cpp" line="135"/>
         <source>The album could not be found</source>
         <translation>Альбом не найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="164"/>
+        <location filename="../src/lfm.cpp" line="162"/>
         <source>No album information available</source>
         <translation>Нет информации об альбоме</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="200"/>
+        <location filename="../src/lfm.cpp" line="198"/>
         <source>Error fetching track information</source>
         <translation>Ошибка при получении информации о треке</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="214"/>
+        <location filename="../src/lfm.cpp" line="212"/>
         <source>The track could not be found</source>
         <translation>Трек не найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="239"/>
+        <location filename="../src/lfm.cpp" line="237"/>
         <source>No track information available</source>
         <translation>Нет информации о треке</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="282"/>
+        <location filename="../src/lfm.cpp" line="280"/>
         <source>Fetching artist information</source>
         <translation>Поиск сведений об исполнителе</translation>
     </message>
@@ -553,34 +584,29 @@
 <context>
     <name>ManageFolders</name>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="45"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="44"/>
         <source>Add folder</source>
         <translation>Добавить папку</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="51"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="50"/>
         <source>Manage folders</source>
         <translation>Управление папками</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="62"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="61"/>
         <source>Deleting</source>
         <translation>Удаление</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="73"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="72"/>
         <source>Remove</source>
         <translation>Удалить</translation>
     </message>
     <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="119"/>
+        <location filename="../qml/pages/ManageFolders.qml" line="118"/>
         <source>No folders</source>
         <translation>Папок нет</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/ManageFolders.qml" line="125"/>
-        <source>Select folder</source>
-        <translation type="unfinished">Выбрать папку</translation>
     </message>
 </context>
 <context>
@@ -646,17 +672,17 @@
 <context>
     <name>Missing</name>
     <message>
-        <location filename="../src/missing.cpp" line="75"/>
+        <location filename="../src/missing.cpp" line="74"/>
         <source>Various artists</source>
         <translation>Различные исполнители</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="79"/>
+        <location filename="../src/missing.cpp" line="78"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="79"/>
+        <location filename="../src/missing.cpp" line="78"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
@@ -678,12 +704,12 @@
 <context>
     <name>MyPlaylist</name>
     <message>
-        <location filename="../src/myplaylist.cpp" line="71"/>
+        <location filename="../src/myplaylist.cpp" line="70"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
     <message>
-        <location filename="../src/myplaylist.cpp" line="73"/>
+        <location filename="../src/myplaylist.cpp" line="72"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
@@ -1326,22 +1352,22 @@
 <context>
     <name>Utils</name>
     <message>
-        <location filename="../src/utils.cpp" line="106"/>
-        <location filename="../src/utils.cpp" line="258"/>
-        <location filename="../src/utils.cpp" line="285"/>
-        <location filename="../src/utils.cpp" line="293"/>
-        <location filename="../src/utils.cpp" line="322"/>
-        <location filename="../src/utils.cpp" line="346"/>
+        <location filename="../src/utils.cpp" line="104"/>
+        <location filename="../src/utils.cpp" line="256"/>
+        <location filename="../src/utils.cpp" line="283"/>
+        <location filename="../src/utils.cpp" line="291"/>
+        <location filename="../src/utils.cpp" line="320"/>
+        <location filename="../src/utils.cpp" line="344"/>
         <source>No lyrics founded</source>
         <translation>Текст песни не найден</translation>
     </message>
     <message>
-        <location filename="../src/utils.cpp" line="211"/>
+        <location filename="../src/utils.cpp" line="209"/>
         <source>Error fetching lyrics</source>
         <translation>Ошибка при получении текста</translation>
     </message>
     <message>
-        <location filename="../src/utils.cpp" line="237"/>
+        <location filename="../src/utils.cpp" line="235"/>
         <source>Album cover not founded</source>
         <translation>Обложка альбома не найдена</translation>
     </message>

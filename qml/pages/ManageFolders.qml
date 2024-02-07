@@ -1,6 +1,5 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import Sailfish.Pickers 1.0
 import FlowPlayer 1.0
 
 Page {
@@ -43,7 +42,7 @@ Page {
         PullDownMenu {
             MenuItem {
                 text: qsTr("Add folder")
-                onClicked: pageStack.push(folderPickerPage)
+                onClicked: pageStack.push(hasPickers ? "PickFolder.qml" : "AddFolder.qml")
             }
         }
 
@@ -119,16 +118,6 @@ Page {
             text: qsTr("No folders")
         }
 
-        Component {
-            id: folderPickerPage
-            FolderPickerPage {
-                dialogTitle: qsTr("Select folder")
-                showSystemFiles: false
-                onSelectedPathChanged: {
-                    utils.addFolderToList(selectedPath)
-                }
-            }
-        }
     }
 
 

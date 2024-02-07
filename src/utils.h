@@ -113,6 +113,8 @@ public slots:
     void removeAlbumArt();
 
     void getFolders();
+    void getFolderItems(QString path);
+    void getFolderItemsUp(QString path);
     void addFolderToList(QString path);
     void removeFolder(QString path);
 
