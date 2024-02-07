@@ -31,7 +31,7 @@ Dialog {
         onAppendFilesDone: currentPath = path
     }
 
-    property string currentPath: "/home/nemo"
+    property string currentPath
 
     DialogHeader {
         id: header
