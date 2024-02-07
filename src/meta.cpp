@@ -1,5 +1,6 @@
 #include "meta.h"
 #include <QFileInfo>
+#include <QUrl>
 
 #include <mpegfile.h>
 #include <flacfile.h>
@@ -27,14 +28,15 @@ Meta::Meta(QQuickItem *parent)
 
 void Meta::setFile(QString file, QString update)
 {
+    QString path = file.startsWith(QString::fromLatin1("file://")) ? QUrl(file).toLocalFile() : file;
     //QString f = file.remove("file://");
     //tagFile = new TagLib::FileRef(f.toUtf8());
 
-    TagLib::File* tf = getFileByMimeType(file.remove("file://"));
+    TagLib::File* tf = getFileByMimeType(path);
 
     if(!tf) return;
 
-    currentFile = reemplazar1(file.remove("file://"));
+    currentFile = reemplazar1(path);
 
     tagFile = new TagLib::FileRef(tf);
 
@@ -44,7 +46,7 @@ void Meta::setFile(QString file, QString update)
         m_album = QString::fromUtf8(tagFile->tag()->album().toCString(true));
         m_artist = QString::fromUtf8(tagFile->tag()->artist().toCString(true));
         m_year = QString::number(tagFile->tag()->year());
-        m_filename = QFileInfo(file.remove("file://")).filePath().remove("/home/nemo/"); + "/" + QFileInfo(file.remove("file://")).fileName();
+        m_filename = path;
         emit dataChanged();
     }
 }

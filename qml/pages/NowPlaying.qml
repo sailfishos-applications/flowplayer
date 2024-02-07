@@ -268,7 +268,7 @@ Page {
                     nppOpened = true
                     helperList2.clear()
                     helperList2.append({"url":bigCoverList.currentItem.myData.url})
-                    meta.setFile(decodeURIComponent(helperList2.get(0).url))
+                    meta.setFile(helperList2.get(0).url)
                     pageStack.push ("Metadata.qml", {"artist":bigCoverList.currentItem.myData.artist,
                                         "album":bigCoverList.currentItem.myData.album,
                                         "title":bigCoverList.currentItem.myData.title
