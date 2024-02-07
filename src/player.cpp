@@ -20,7 +20,7 @@ static gboolean bus_cb (GstBus *bus, GstMessage *msg, gpointer data)
 static void prepare_next_stream(GstElement *obj, gpointer data) {
     qDebug() << "ABOUT TO FINISH";
 
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     if (sets.value("GaplessPlayback", "no").toString()=="no")
         return;
 
@@ -421,7 +421,7 @@ void Player::backend_deinit()
 void Player::setEq(bool enabled)
 {
     qDebug() << "Setting eq: " << enabled;
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     sets.setValue("Equalizer", enabled? "Yes" : "No");
     sets.sync();
 
@@ -472,7 +472,7 @@ void Player::setEqualizerReal(int band, int value)
 
 void Player::loadEqualizer()
 {
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     m_eqenabled = sets.value("Equalizer", "No").toString()=="Yes";
     emit eqEnabledChanged();
 

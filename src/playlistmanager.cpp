@@ -8,8 +8,6 @@
 extern bool databaseWorking;
 extern bool isDBOpened;
 
-QSettings pmsets("cepiperez", "flowplayer");
-
 PlaylistManager::PlaylistManager(QQuickItem *parent)
     : QQuickItem(parent)
 {
@@ -91,7 +89,7 @@ void PlaylistManager::addAlbumToList(QString list, QString artist, QString album
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";
@@ -433,7 +431,7 @@ void PlaylistManager::loadAlbum(QString artist, QString album, QString various)
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";

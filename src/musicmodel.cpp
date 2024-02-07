@@ -57,7 +57,7 @@ void MusicModel::loadData(QString artist, QString album, QString various)
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";

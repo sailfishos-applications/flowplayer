@@ -31,7 +31,7 @@ LFM::LFM(QQuickItem *parent)
     //connect(datos5, SIGNAL(finished(QNetworkReply*)), this, SLOT(downloaded5(QNetworkReply*)));
     //connect(datos6, SIGNAL(finished(QNetworkReply*)), this, SLOT(downloaded6(QNetworkReply*)));
 
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     lang = sets.value("LastFMlang", "en").toString();
 }
 
@@ -277,7 +277,7 @@ void LFM::getBio(QString artist)
 
     //if ( reply1 && reply1->isRunning() )
     //    reply1->abort();
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     lang = sets.value("Language", "en").toString();
     artistInfo = tr("Fetching artist information");
     artistInfoLarge = "";
@@ -301,7 +301,7 @@ void LFM::getAlbumBio(QString artist, QString album)
 {
     /*if ( reply2 && reply2->isRunning() )
         reply2->abort();
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     lang = sets.value("LastFMlang", "en").toString();
     albumInfo = tr("Fetching album information");
     albumInfoLarge = "";
@@ -316,7 +316,7 @@ void LFM::getSongBio(QString artist, QString song)
 {
     /*if ( reply3 && reply3->isRunning() )
         reply3->abort();
-    QSettings sets("cepiperez", "flowplayer");
+    QSettings sets;
     lang = sets.value("LastFMlang", "en").toString();
     songInfo = tr("Fetching track information");
     songInfoLarge = "";

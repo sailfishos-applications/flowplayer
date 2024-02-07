@@ -28,13 +28,13 @@ int main(int argc, char *argv[])
     QTextCodec::setCodecForLocale(linuxCodec);
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
-    app->setOrganizationName("flowplayer");
+    app->setOrganizationName("sailfishos-applications");
     app->setApplicationName("flowplayer");
 
     QString lang;
     QTranslator translator;
 
-    QSettings settings("cepiperez", "flowplayer");
+    QSettings settings;
     lang = settings.value("Language", "undefined").toString();
 
     if (lang=="undefined")

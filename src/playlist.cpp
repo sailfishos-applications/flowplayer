@@ -5,7 +5,7 @@
 #include <QXmlStreamReader>
 #include <QDir>
 
-QSettings sets("cepiperez", "flowplayer");
+QSettings sets;
 QList<int> randomlist;
 int currentItem, currentRandom;
 

@@ -12,7 +12,7 @@ QString albumArtUrl, albumArtArtist, albumArtAlbum;
 QString currentArtist, currentSong;
 QString searchServer;
 
-QSettings settings("cepiperez", "flowplayer");
+QSettings settings;
 
 //extern bool isDBOpened;
 
