@@ -237,7 +237,7 @@ void DataReader::run()
     favFiles.clear();
     map.clear();
 
-    QSettings settings("cepiperez", "flowplayer");
+    QSettings settings;
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
 
