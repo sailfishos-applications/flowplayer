@@ -2,7 +2,9 @@
 
 **FlowPlayer is a music player with lyrics support, online radio and 10-band equalizer.**
 
-Features:
+<br />
+
+#### Features:
 - *<ToDo: A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a list of features will be much appreciated.>*
 
 <sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/) ‒ currently nothing) due to API changes in recent SailfishOS releases.</sup><br />
@@ -28,12 +30,6 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 | ![Covers by artist](./.xdata/screenshots/screenshot-20150711134206.jpg?raw=true) | ![Playlists](./.xdata/screenshots/screenshot-20150711134443.jpg?raw=true) | ![FileCase's cover](./.xdata/screenshots/screenshot-20150711134615.jpg?raw=true) | ![Lyrics](./.xdata/screenshots/screenshot-20150701221204.jpg?raw=true)
 | &nbsp;&nbsp;Covers&nbsp;by&nbsp;artist&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Playlists&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | FlowPlayer's&nbsp;cover | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lyrics&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
 |       |       |       |       |
-<br />
-
-## Migrating from FlowPlayer 0.1.x / 0.2.x to 0.3.x
-
-A [draft of a migration guide](./migrating-to-v0.3.x.md) was contributed; PRs to enhance it are very welcome.
-
 <br />
 
 ## History of FlowPlayer
