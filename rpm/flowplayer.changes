@@ -1,4 +1,4 @@
-* Wed Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
+* Thu Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
 - Use Sailfish.Pickers.FolderPickerPage to configure music directories (#33) by @smokku
 - Enhance AboutPage.qml (#37, #44)
 - Translation updates for DE & SV (#45, #46)
