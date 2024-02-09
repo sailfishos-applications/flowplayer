@@ -7,19 +7,24 @@
         <translation>Om</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
-        <source>Taglib is used for reading, writing and manipulating audio file tags</source>
-        <translation>Taglib används för att läsa, skriva och manipulera ljudfilstaggar</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="61"/>
+        <source>Original author:</source>
+        <translation>Ursprunglig utvecklare:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
-        <source>If your language is not available you can contribute here:</source>
-        <translation>Om ditt språk inte finns tillgängligt kan du bidra här:</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="78"/>
+        <source>Contributors:</source>
+        <translation>Bidragande parter:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
-        <source>You can contribute to keep this project alive making a small donation</source>
-        <translation>Du kan bidra till att hålla igång det här projektet, med en liten donation</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <source>If you want to create a new translation or improve an extant one:</source>
+        <translation>Om du vill skapa en ny översättning eller förbättra en befintlig:</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="110"/>
+        <source>You can support the original author of FlowPlayer by donating:</source>
+        <translation>Du kan stödja den ursprungliga utvecklaren av FlowPlayer genom att donera:</translation>
     </message>
 </context>
 <context>

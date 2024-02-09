@@ -12,7 +12,7 @@ QString albumArtUrl, albumArtArtist, albumArtAlbum;
 QString currentArtist, currentSong;
 QString searchServer;
 
-QSettings settings("cepiperez", "flowplayer");
+QSettings settings;
 
 //extern bool isDBOpened;
 
@@ -647,6 +647,9 @@ void Utils::getFolderItemsUp(QString path)
 
 void Utils::getFolderItems(QString path)
 {
+    if (path.isEmpty()) {
+        path = QDir::homePath();
+    }
     qDebug() << "Loading folder: " << path;
 
     if (!QFileInfo(path).exists())

@@ -34,7 +34,7 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Image {
-                    source: "file://usr/share/icons/hicolor/86x86/apps/flowplayer.png"
+                    source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
                 }
 
                 Column {
@@ -58,7 +58,13 @@ Page {
 
             Label {
                 color: Theme.secondaryColor
-                text: "(C) 2015-2016 Matias Perez (CepiPerez)"
+                text: qsTr("Original author:")
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Label {
+                color: Theme.secondaryColor
+                text: "(C) 2015-2021 Matias Perez (CepiPerez)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -68,19 +74,26 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("Taglib is used for reading, writing and manipulating audio file tags") +
-                      "<br><a href='https://taglib.github.io/'>taglib.github.io</a>"
-                onLinkActivated: Qt.openUrlExternally(link)
+                color: Theme.secondaryColor
+                text: qsTr("Contributors:")
                 font.pixelSize: Theme.fontSizeSmall
-                textFormat: Text.RichText
-                wrapMode: Text.WordWrap
-                width: parent.width
             }
 
             Label {
-                text: colored + qsTr("If your language is not available you can contribute here:") + "<br>" +
-                      "<a href='https://www.transifex.com/projects/p/flowplayer/'>" +
-                      "www.transifex.com/projects/p/flowplayer</a>"
+                color: Theme.secondaryColor
+                text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
+                      "(C) 2023-2024 Damien Caliste (dcaliste)"
+                font.pixelSize: Theme.fontSizeSmall
+            }
+
+            Separator {
+                width: parent.width
+                color: Theme.secondaryColor
+            }
+
+            Label {
+                text: colored + qsTr("If you want to create a new translation or improve an extant one:") + "<br>" +
+                      "<a href='https://app.transifex.com/olf/flowplayer/'>" + "Transifex - FlowPlayer</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeSmall
                 textFormat: Text.RichText
@@ -94,7 +107,7 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("You can contribute to keep this project alive making a small donation")
+                text: colored + qsTr("You can support the original author of FlowPlayer by donating:")
                 font.pixelSize: Theme.fontSizeSmall
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
@@ -102,7 +115,7 @@ Page {
             }
 
             Image {
-                source: "../paypal.png"
+                source: "file:///usr/share/flowplayer/icons/paypal.png"
                 height: Theme.itemSizeMedium
                 fillMode: Image.PreserveAspectFit
                 smooth: true
@@ -116,6 +129,5 @@ Page {
         }
 
     }
-
 
 }

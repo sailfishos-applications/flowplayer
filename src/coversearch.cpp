@@ -165,7 +165,7 @@ void CoverSearch::remove(const QString &file)
     QString nf = file;
     if ( nf.startsWith("//") )
         nf.remove(0, 1);
-    QSettings settings("cepiperez", "flowplayer");
+    QSettings settings;
     QStringList entries = settings.value("CoverSearch","").toStringList();
     QStringList newfiles;
     for (int i=0; i< entries.count(); ++i)
