@@ -1,11 +1,14 @@
 * Wed Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
-- 
+- Enhance AboutPage.qml (#37, #44)
+- Translation updates for DE & SV (#45, #46)
+- Try harder to get rid of hardcoded home paths (#48)
+- Change the organisation name (#51)
 
 * Sun Feb 04 2024 olf <Olf0@users.noreply.github.com> - 0.3.1
-- Add missing QML dependencies (PRs #27, #28)
-- Fix various ways of album cover download (PR #31) by @dcaliste (closes issue #30)
-- Use version number from the RPM spec file (PR #32) by @dcaliste (closes issue #29)
-- Fix building at SFOS-OBS (PR #40), closes issue #39
+- Add missing QML dependencies (#27, #28)
+- Fix various ways of album cover download (#31) by @dcaliste (closes issue #30)
+- Use version number from the RPM spec file (#32) by @dcaliste (closes issue #29)
+- Fix building at SFOS-OBS (#40), closes issue #39
 
 * Tue Dec 05 2023 olf <Olf0@users.noreply.github.com> - 0.3.0
 - Create README
