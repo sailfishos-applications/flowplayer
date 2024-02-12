@@ -49,7 +49,7 @@ Page {
 
                     Label {
                         color: Theme.secondaryHighlightColor
-                        text: "version " + appVersion
+                        text: "Version " + appVersion
                         font.pixelSize: Theme.fontSizeSmall
                     }
                 }
@@ -68,9 +68,10 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
             }
 
-            Separator {
-                width: parent.width
+            Label {
                 color: Theme.secondaryColor
+                text: "&nbsp;"
+                font.pixelSize: Theme.fontSizeSmall
             }
 
             Label {
@@ -82,7 +83,8 @@ Page {
             Label {
                 color: Theme.secondaryColor
                 text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
-                      "(C) 2023-2024 Damien Caliste (dcaliste)"
+                      "(C) 2023, 2024 Damien Caliste (dcaliste)" + "<br />" +
+                      "(C) 2024 Tomasz Sterna (smokku)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -92,10 +94,17 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("If you want to create a new translation or improve an extant one:") + "<br>" +
-                      "<a href='https://app.transifex.com/olf/flowplayer/'>" + "Transifex - FlowPlayer</a>"
-                onLinkActivated: Qt.openUrlExternally(link)
+                text: colored + qsTr("If you want to create a new translation or improve an extant one:")
                 font.pixelSize: Theme.fontSizeSmall
+                textFormat: Text.RichText
+                wrapMode: Text.WordWrap
+                width: parent.width
+            }
+
+            Label {
+                text: colored + "<a href='https://app.transifex.com/olf/flowplayer/'>" + "FlowPlayer at Transifex</a>"
+                onLinkActivated: Qt.openUrlExternally(link)
+                font.pixelSize: Theme.fontSizeLarge
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
                 width: parent.width
