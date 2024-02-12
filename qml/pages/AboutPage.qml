@@ -115,7 +115,7 @@ Page {
             }
 
             Image {
-                source: "file:///usr/share/flowplayer/icons/paypal.png"
+                source: "file://../paypal.png"
                 height: Theme.itemSizeMedium
                 fillMode: Image.PreserveAspectFit
                 smooth: true
