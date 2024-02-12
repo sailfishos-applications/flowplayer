@@ -34,7 +34,7 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Image {
-                    source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
+                    source: "file://../../icons/hicolor/86x86/apps/flowplayer.png"
                 }
 
                 Column {
