@@ -14,12 +14,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="79"/>
+        <location filename="../qml/pages/AboutPage.qml" line="80"/>
         <source>Contributors:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
+        <location filename="../qml/pages/AboutPage.qml" line="98"/>
         <source>If you want to create a new translation or improve an extant one:</source>
         <translation type="unfinished"></translation>
     </message>
