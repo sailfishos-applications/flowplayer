@@ -34,7 +34,7 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Image {
-                    source: "../../icons/hicolor/86x86/apps/flowplayer.png"
+                    source: "../../../icons/hicolor/86x86/apps/flowplayer.png"
                 }
 
                 Column {
@@ -64,7 +64,7 @@ Page {
 
             Label {
                 color: Theme.secondaryColor
-                text: "(C) 2015-2021 Matias Perez (CepiPerez)" + "<br />&nbsp;"
+                text: "(C) 2015-2021 Matias Perez (CepiPerez)"
                 textFormat: Text.RichText
                 font.pixelSize: Theme.fontSizeSmall
             }
@@ -119,7 +119,7 @@ Page {
             }
 
             Image {
-                source: "../flowplayer/qml/paypal.png"
+                source: "../paypal.png"
                 height: Theme.itemSizeMedium
                 fillMode: Image.PreserveAspectFit
                 smooth: true
