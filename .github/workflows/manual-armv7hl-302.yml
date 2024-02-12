@@ -52,3 +52,4 @@ jobs:
       with:
         name: RPM-build-results_SFOS${{ env.RELEASE }}+
         path: RPMS/
+
