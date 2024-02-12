@@ -46,6 +46,7 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 #### Contributors
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
 - [olf (Olf0)](https://github.com/Olf0)
+- [Tomasz Sterna (smokku)](https://github.com/smokku)
 <br />
 
 ### License: [MPL 2.0](https://spdx.org/licenses/MPL-2.0-no-copyleft-exception.html)
