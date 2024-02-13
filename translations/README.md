@@ -14,7 +14,7 @@ To compile a translation file for testing, use the `lrelease` command to convert
 ```
 lrelease flowplayer.ts
 ```
-If you want to test your translation before publishing, you should compile it and copy the resulting `.qm` file(s) to (requires root privileges)
+If you want to test your translation before publishing, you should compile it and copy the resulting `.qm` file(s) to (requires root privileges):
 ```
  /usr/share/flowplayer/translations
 ```
