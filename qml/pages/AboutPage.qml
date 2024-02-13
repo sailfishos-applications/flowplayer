@@ -99,7 +99,7 @@ Page {
 
             Label {
                 text: colored + 
-                      "<a href='https://github.com/sailfishos-applications/flowplayer/blob/master/translations/README.md#translations-l10n--i18n'>" + 
+                      "<a href='https://github.com/sailfishos-applications/flowplayer/tree/master/translations#readme'>" + 
                       "<b>Translations README</b></a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeLarge
