@@ -44,8 +44,8 @@ Page {
                     Label {
                         id: main
                         color: Theme.highlightColor
-                        text: "FlowPlayer"
-                        fontFamily: Theme.fontFamilyHeading
+                        text: "<b>FlowPlayer</b>"
+                        textFormat: Text.RichText
                         font.pixelSize: Theme.fontSizeMedium
                     }
 
@@ -67,7 +67,6 @@ Page {
             Label {
                 color: Theme.secondaryColor
                 text: "(C) 2015-2021 Matias Perez (CepiPerez)"
-                textFormat: Text.RichText
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -101,11 +100,10 @@ Page {
             Label {
                 text: colored + 
                       "<a href='https://github.com/sailfishos-applications/flowplayer/blob/master/translations/README.md#translations-l10n--i18n'>" + 
-                      "Translations README</a>"
+                      "<b>Translations README</b></a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeLarge
                 textFormat: Text.RichText
-                fontFamily: Theme.fontFamilyHeading
                 anchors.horizontalCenter: parent.horizontalCenter
             }
 
