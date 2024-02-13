@@ -2,7 +2,7 @@
 
 You can help localising FlowPlayer to your language using [Transifex](https://app.transifex.com/olf/flowplayer-1) or [Qt Linguist](https://doc.qt.io/qt-5/qtlinguist-index.html).
 
-Note that for FlowPlayer principally translations designated with a country code only (e.g., `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g., `nl_BE`).
+Note that for FlowPlayer principally translations designated with a country code only (e.g. `pt`) shall be created and maintained.  Only if a complete and well maintained translation for the sole country code exists, a country specific variant with a locale will be accepted (e.g. `nl_BE`).
 
 [Transifex](https://app.transifex.com/olf/flowplayer-1) is the preferred way of submitting translations.  Please do not send pull requests (PRs) with translations directly to GitHub, if you have a Transifex account.
 
@@ -25,5 +25,5 @@ export LANG=sv; flowplayer
 
 ### Updating the source `.ts` file with source strings from source code 
 
-Developers and release managers can use the `lupdate` process, either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html) (mind to [include all files with translatable strings](https://github.com/storeman-developers/harbour-storeman/pull/431#issuecomment-1659024529), e.g., by `lupdate qml/ src/ *.desktop -ts translations/flowplayer.ts`), or tediously perform this manually, which hence is only suitable for small changes.
+Developers and release managers can use the `lupdate` process, either from [within Qt Linguist](https://doc.qt.io/qtcreator/creator-editor-external.html) or directly [at the command line](https://doc.qt.io/qt-5/linguist-manager.html) (mind to [include all files with translatable strings](https://github.com/storeman-developers/harbour-storeman/pull/431#issuecomment-1659024529), e.g. by `lupdate qml/ src/ *.desktop -ts translations/flowplayer.ts`), or tediously perform this manually, which hence is only suitable for small changes.
 
