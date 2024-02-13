@@ -103,7 +103,7 @@ Page {
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
                 width: parent.width
-                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
             Separator {
@@ -121,10 +121,10 @@ Page {
 
             Image {
                 source: "../paypal.png"
-                height: Theme.iconSizeExtraLarge
+                height: Theme.itemSizeHuge
                 fillMode: Image.PreserveAspectFit
                 smooth: true
-                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
 
                 MouseArea {
                     anchors.fill: parent
