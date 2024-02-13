@@ -99,7 +99,9 @@ Page {
             }
 
             Label {
-                text: colored + "<a href='https://app.transifex.com/olf/flowplayer/'>" + "FlowPlayer@Transifex</a>"
+                text: colored + 
+                      "<a href='https://github.com/sailfishos-applications/flowplayer/blob/master/translations/README.md#translations-l10n--i18n'>" + 
+                      "Translations README</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeLarge
                 textFormat: Text.RichText
