@@ -9,22 +9,22 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="61"/>
+        <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Original author:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="80"/>
+        <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>Contributors:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="98"/>
+        <location filename="../qml/pages/AboutPage.qml" line="93"/>
         <source>If you want to create a new translation or improve an extant one:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="119"/>
+        <location filename="../qml/pages/AboutPage.qml" line="116"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
         <translation type="unfinished"></translation>
     </message>
