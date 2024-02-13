@@ -1,3 +1,7 @@
+* Sat Feb 10 2024 olf <Olf0@users.noreply.github.com> - 0.3.3
+- Slightly overhaul `AboutPage.qml` (#58, #59)
+- 
+
 * Thu Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
 - Use Sailfish.Pickers.FolderPickerPage to configure music directories (#33) by @smokku
 - Enhance AboutPage.qml (#37, #44)

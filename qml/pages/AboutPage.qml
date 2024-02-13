@@ -34,7 +34,7 @@ Page {
                 spacing: Theme.paddingLarge
 
                 Image {
-                    source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
+                    source: "../../../icons/hicolor/86x86/apps/flowplayer.png"
                 }
 
                 Column {
@@ -44,12 +44,14 @@ Page {
                     Label {
                         id: main
                         color: Theme.highlightColor
-                        text: "FlowPlayer"
+                        text: "<b>FlowPlayer</b>"
+                        font.pixelSize: Theme.fontSizeMedium
+                        textFormat: Text.RichText
                     }
 
                     Label {
                         color: Theme.secondaryHighlightColor
-                        text: "version " + appVersion
+                        text: "Version " + appVersion
                         font.pixelSize: Theme.fontSizeSmall
                     }
                 }
@@ -68,11 +70,6 @@ Page {
                 font.pixelSize: Theme.fontSizeSmall
             }
 
-            Separator {
-                width: parent.width
-                color: Theme.secondaryColor
-            }
-
             Label {
                 color: Theme.secondaryColor
                 text: qsTr("Contributors:")
@@ -82,7 +79,8 @@ Page {
             Label {
                 color: Theme.secondaryColor
                 text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
-                      "(C) 2023-2024 Damien Caliste (dcaliste)"
+                      "(C) 2023, 2024 Damien Caliste (dcaliste)" + "<br />" +
+                      "(C) 2024 Tomasz Sterna (smokku)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -92,13 +90,21 @@ Page {
             }
 
             Label {
-                text: colored + qsTr("If you want to create a new translation or improve an extant one:") + "<br>" +
-                      "<a href='https://app.transifex.com/olf/flowplayer/'>" + "Transifex - FlowPlayer</a>"
-                onLinkActivated: Qt.openUrlExternally(link)
+                text: colored + qsTr("If you want to create a new translation or improve an extant one:")
                 font.pixelSize: Theme.fontSizeSmall
                 textFormat: Text.RichText
                 wrapMode: Text.WordWrap
                 width: parent.width
+            }
+
+            Label {
+                text: colored + 
+                      "<a href='https://github.com/sailfishos-applications/flowplayer/blob/master/translations/README.md#translations-l10n--i18n'>" + 
+                      "<b>Translations README</b></a>"
+                onLinkActivated: Qt.openUrlExternally(link)
+                font.pixelSize: Theme.fontSizeLarge
+                textFormat: Text.RichText
+                anchors.horizontalCenter: parent.horizontalCenter
             }
 
             Separator {
@@ -115,10 +121,11 @@ Page {
             }
 
             Image {
-                source: "file:///usr/share/flowplayer/icons/paypal.png"
-                height: Theme.itemSizeMedium
+                source: "../paypal.png"
+                height: Theme.itemSizeHuge
                 fillMode: Image.PreserveAspectFit
                 smooth: true
+                anchors.horizontalCenter: parent.horizontalCenter
 
                 MouseArea {
                     anchors.fill: parent
