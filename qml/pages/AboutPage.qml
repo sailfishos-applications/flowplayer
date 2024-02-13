@@ -120,7 +120,7 @@ Page {
 
             Image {
                 source: "../paypal.png"
-                height: Theme.itemSizeMedium
+                height: Theme.itemSizeLarge
                 fillMode: Image.PreserveAspectFit
                 smooth: true
 
