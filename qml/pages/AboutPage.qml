@@ -101,8 +101,8 @@ Page {
             Label {
                 text: colored + "<a href='https://app.transifex.com/olf/flowplayer/'>" + "FlowPlayer@Transifex</a>"
                 onLinkActivated: Qt.openUrlExternally(link)
-                textFormat: Text.RichText
                 font.pixelSize: Theme.fontSizeLarge
+                textFormat: Text.RichText
                 fontFamily: Theme.fontFamilyHeading
                 anchors.horizontalCenter: parent.horizontalCenter
             }
