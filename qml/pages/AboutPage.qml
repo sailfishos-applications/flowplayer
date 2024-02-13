@@ -45,8 +45,8 @@ Page {
                         id: main
                         color: Theme.highlightColor
                         text: "<b>FlowPlayer</b>"
-                        textFormat: Text.RichText
                         font.pixelSize: Theme.fontSizeMedium
+                        textFormat: Text.RichText
                     }
 
                     Label {
