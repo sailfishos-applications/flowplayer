@@ -73,7 +73,7 @@ Categories:
  - Player
  - Qt
  - Viewer
-DeveloperName: CepiPerez, dcaliste, olf, smokku
+DeveloperName: CepiPerez, olf, dcaliste, smokku, flypig
 Custom:
   Repo: %{url}
 PackageIcon: %{url}/raw/master/flowplayer.png
