@@ -12,8 +12,6 @@ QString albumArtUrl, albumArtArtist, albumArtAlbum;
 QString currentArtist, currentSong;
 QString searchServer;
 
-QSettings settings;
-
 //extern bool isDBOpened;
 
 Utils::Utils(QQuickItem *parent)
@@ -442,68 +440,81 @@ void Utils::removePreview()
 
 void Utils::setSettings(QString set, QString val)
 {
+    QSettings settings;
     settings.setValue(set, val);
     settings.sync();
 }
 
 QString Utils::readSettings(QString set, QString val)
 {
+    QSettings settings;
     return settings.value(set, val).toString();
 }
 
 QString Utils::showReflection()
 {
+    QSettings settings;
     return settings.value("ShowReflection", "true").toString();
 }
 
 QString Utils::viewmode() const
 {
+    QSettings settings;
     return settings.value("ViewMode", "grid").toString();
 }
 
 QString Utils::paging() const
 {
+    QSettings settings;
     return settings.value("Paging", "multiple").toString();
 }
 
 QString Utils::scrobble() const
 {
+    QSettings settings;
     return settings.value("Scrobble", "false").toString();
 }
 
 QString Utils::order() const
 {
+    QSettings settings;
     return settings.value("SortOrder", "album").toString();
 }
 
 QString Utils::lang() const
 {
+    QSettings settings;
     return settings.value("LastFMlang", "en").toString();
 }
 
 QString Utils::updatestart() const
 {
+    QSettings settings;
     return settings.value("UpdateOnStartup", "no").toString();
 }
 
 QString Utils::autosearch() const
 {
+    QSettings settings;
     return settings.value("AutoSearchLyrics", "yes").toString();
 }
 
 QString Utils::cleanqueue() const
 {
+    QSettings settings;
     return settings.value("CleanQueue", "yes").toString();
 }
 
 QString Utils::workoffline() const
 {
+    QSettings settings;
     return settings.value("WorkOffline", "no").toString();
 }
 
 
 void Utils::setViewMode(QString val)
 {
+    QSettings settings;
     settings.setValue("ViewMode", val);
     settings.sync();
     emit viewmodeChanged();
@@ -511,6 +522,7 @@ void Utils::setViewMode(QString val)
 
 void Utils::setPaging(QString val)
 {
+    QSettings settings;
     settings.setValue("Paging", val);
     settings.sync();
     emit pagingChanged();
@@ -518,6 +530,7 @@ void Utils::setPaging(QString val)
 
 void Utils::setScrobble(QString val)
 {
+    QSettings settings;
     settings.setValue("Scrobble", val);
     settings.sync();
     emit scrobbleChanged();
@@ -525,6 +538,7 @@ void Utils::setScrobble(QString val)
 
 void Utils::setOrder(QString val)
 {
+    QSettings settings;
     settings.setValue("SortOrder", val);
     settings.sync();
     emit orderChanged();
@@ -532,6 +546,7 @@ void Utils::setOrder(QString val)
 
 void Utils::setLang(QString val)
 {
+    QSettings settings;
     settings.setValue("LastFMlang", val);
     settings.sync();
     emit langChanged();
@@ -539,6 +554,7 @@ void Utils::setLang(QString val)
 
 void Utils::setUpdateStart(QString val)
 {
+    QSettings settings;
     settings.setValue("UpdateOnStartup", val);
     settings.sync();
     emit updateChanged();
@@ -546,6 +562,7 @@ void Utils::setUpdateStart(QString val)
 
 void Utils::setAutoSearch(QString val)
 {
+    QSettings settings;
     settings.setValue("AutoSearchLyrics", val);
     settings.sync();
     emit autosearchChanged();
@@ -553,6 +570,7 @@ void Utils::setAutoSearch(QString val)
 
 void Utils::setCleanQueue(QString val)
 {
+    QSettings settings;
     settings.setValue("CleanQueue", val);
     settings.sync();
     emit queueChanged();
@@ -560,6 +578,7 @@ void Utils::setCleanQueue(QString val)
 
 void Utils::setWorkOffline(QString val)
 {
+    QSettings settings;
     settings.setValue("WorkOffline", val);
     settings.sync();
     emit workofflineChanged();
@@ -567,11 +586,13 @@ void Utils::setWorkOffline(QString val)
 
 QString Utils::orientation() const
 {
+    QSettings settings;
     return settings.value("Orientation", "auto").toString();
 }
 
 void Utils::setOrientation(QString val)
 {
+    QSettings settings;
     settings.setValue("Orientation", val);
     settings.sync();
     emit orientationChanged();
@@ -586,6 +607,7 @@ QString Utils::plainLyrics(QString text)
 
 QString Utils::version()
 {
+    QSettings settings;
     return settings.value("Firmware", "PR10").toString();
 }
 
@@ -622,6 +644,7 @@ void Utils::removeAlbumArt()
 
 void Utils::getFolders()
 {
+    QSettings settings;
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
 
@@ -684,6 +707,7 @@ void Utils::getFolderItems(QString path)
 
 void Utils::addFolderToList(QString path)
 {
+    QSettings settings;
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
     folders.append(path);
@@ -695,6 +719,7 @@ void Utils::addFolderToList(QString path)
 
 void Utils::removeFolder(QString path)
 {
+    QSettings settings;
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
     folders.removeAll(path);
