@@ -6,7 +6,7 @@
 * Thu Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2
 - Use `Sailfish.Pickers.FolderPickerPage` to configure music directories (#33) by @smokku
 - Enhance `AboutPage.qml` (#37, #44)
-- Translation updates for DE & SV (#45, #46)
+- Translation updates for DE & SV (#45, #46) by @Olf0 & @eson57
 - Try harder to get rid of hardcoded home paths (#48) by @dcaliste
 - Change the organisation name (#51) by @dcaliste
 
