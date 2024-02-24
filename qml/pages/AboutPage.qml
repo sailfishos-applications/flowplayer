@@ -80,7 +80,8 @@ Page {
                 color: Theme.secondaryColor
                 text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
                       "(C) 2023, 2024 Damien Caliste (dcaliste)" + "<br />" +
-                      "(C) 2024 Tomasz Sterna (smokku)"
+                      "(C) 2024 Tomasz Sterna (smokku)" + "<br />" +
+                      "(C) 2024 David Llewellyn-Jones (llewelld / flypig)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
