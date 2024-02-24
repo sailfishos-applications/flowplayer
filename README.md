@@ -45,6 +45,7 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 [Matias Perez (CepiPerez)](https://github.com/CepiPerez)
 #### Contributors
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
+- [David Llewellyn-Jones (llewelld / flypig)](https://github.com/llewelld)
 - [olf (Olf0)](https://github.com/Olf0)
 - [Tomasz Sterna (smokku)](https://github.com/smokku)
 <br />
