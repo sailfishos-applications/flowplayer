@@ -5,7 +5,6 @@
 #include <QXmlStreamReader>
 #include <QDir>
 
-QSettings sets;
 QList<int> randomlist;
 int currentItem, currentRandom;
 
@@ -25,12 +24,14 @@ int Playlist::current()
 
 QString Playlist::active() const
 {
+    QSettings sets;
     QString t = sets.value("Active", "false").toString();
     return t;
 }
 
 QString Playlist::unknown() const
 {
+    QSettings sets;
     QString t = sets.value("Unknown", "false").toString();
     return t;
 }
@@ -415,6 +416,7 @@ void Playlist::changeUnknown(bool active)
 {
     //qDebug() << "CHANGING UKNOWN: " << active;
 
+    QSettings sets;
     sets.setValue("Unknown", active);
     sets.sync();
 }
@@ -423,6 +425,7 @@ void Playlist::changeMode(QString mode)
 {
     //qDebug() << "CHANGING MODE: " << mode;
 
+    QSettings sets;
     sets.setValue("Mode", mode);
     sets.sync();
 }
