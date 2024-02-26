@@ -5,9 +5,9 @@
 <br />
 
 #### Features:
-- *<ToDo: A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a list of features will be much appreciated.>*
+- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a list of features will be much appreciated.*
 
-<sup>Note that the ability to ... may be broken (this is [known for XXX](https://github.com/sailfishos-applications/flowplayer/issues/) ‒ currently nothing) due to API changes in recent SailfishOS releases.</sup><br />
+<sup>Note that the functionality and / or ability to … may be broken (this is [known for internet radio](https://github.com/sailfishos-applications/flowplayer/issues/62)) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
 
 <br />
@@ -45,6 +45,7 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 [Matias Perez (CepiPerez)](https://github.com/CepiPerez)
 #### Contributors
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
+- [David Llewellyn-Jones (llewelld / flypig)](https://github.com/llewelld)
 - [olf (Olf0)](https://github.com/Olf0)
 - [Tomasz Sterna (smokku)](https://github.com/smokku)
 <br />

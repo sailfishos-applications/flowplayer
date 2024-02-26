@@ -80,7 +80,8 @@ Page {
                 color: Theme.secondaryColor
                 text: "(C) 2022-2024 olf (Olf0)" + "<br />" +
                       "(C) 2023, 2024 Damien Caliste (dcaliste)" + "<br />" +
-                      "(C) 2024 Tomasz Sterna (smokku)"
+                      "(C) 2024 Tomasz Sterna (smokku)" + "<br />" +
+                      "(C) 2024 David Llewellyn-Jones (llewelld / flypig)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
@@ -99,7 +100,7 @@ Page {
 
             Label {
                 text: colored + 
-                      "<a href='https://github.com/sailfishos-applications/flowplayer/blob/master/translations/README.md#translations-l10n--i18n'>" + 
+                      "<a href='https://github.com/sailfishos-applications/flowplayer/tree/master/translations#readme'>" + 
                       "<b>Translations README</b></a>"
                 onLinkActivated: Qt.openUrlExternally(link)
                 font.pixelSize: Theme.fontSizeLarge

@@ -21,7 +21,7 @@ Version:    0.3.3
 # build at GitHub and OBS, when configured accordingly; mind the sorting
 # (`adud` < `alpha`).  For details and reasons, see
 # https://github.com/storeman-developers/harbour-storeman/wiki/Git-tag-format
-Release:    1
+Release:    release1
 # The Group tag should comprise one of the groups listed here:
 # https://github.com/mer-tools/spectacle/blob/master/data/GROUPS
 Group:      Applications/Multimedia
@@ -51,6 +51,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  pkgconfig(gstreamer-1.0)
 BuildRequires:  pkgconfig(libresource)
 BuildRequires:  pkgconfig(taglib)
+BuildRequires:  qt5-qttools-linguist
 BuildRequires:  desktop-file-utils
 
 # This description section includes metadata for SailfishOS:Chum, see
@@ -73,7 +74,7 @@ Categories:
  - Player
  - Qt
  - Viewer
-DeveloperName: Matias Perez (CepiPerez), olf (Olf0), Damien Caliste (dcaliste)
+DeveloperName: CepiPerez, olf, dcaliste, smokku, flypig
 Custom:
   Repo: %{url}
 PackageIcon: %{url}/raw/master/flowplayer.png
