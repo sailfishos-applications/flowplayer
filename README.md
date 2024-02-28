@@ -47,6 +47,7 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
 - [David Llewellyn-Jones (llewelld / flypig)](https://github.com/llewelld)
 - [olf (Olf0)](https://github.com/Olf0)
+- [Ruben de Smet (rubdos)](https://github.com/rubdos)
 - [Tomasz Sterna (smokku)](https://github.com/smokku)
 <br />
 
