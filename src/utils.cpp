@@ -697,6 +697,7 @@ void Utils::getFolderItems(QString path)
             emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "folder");
         else if (fileInfo.fileName().endsWith(".mp3") || fileInfo.fileName().endsWith(".m4a") ||
                  fileInfo.fileName().endsWith(".wma") || fileInfo.fileName().endsWith(".ogg") ||
+                 fileInfo.fileName().endsWith(".opus") ||
                  fileInfo.fileName().endsWith(".flac") || fileInfo.fileName().endsWith(".wav") ||
                  fileInfo.fileName().endsWith(".asf"))
             emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "sounds");

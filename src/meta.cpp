@@ -6,6 +6,7 @@
 #include <flacfile.h>
 #include <tlist.h>
 #include <vorbisfile.h>
+#include <opusfile.h>
 #include <mp4file.h>
 #include <wavfile.h>
 #include <speexfile.h>
@@ -137,6 +138,8 @@ TagLib::File* Meta::getFileByMimeType(QString file)
         return new TagLib::FLAC::File(file.toUtf8());
     } else if(str.endsWith(".ogg")) {
         return new TagLib::Ogg::Vorbis::File(file.toUtf8());
+    } else if(str.endsWith(".opus")) {
+        return new TagLib::Ogg::Opus::File(file.toUtf8());
     } else if(str.endsWith(".wav")) {
         return new TagLib::RIFF::WAV::File(file.toUtf8());
     } else if(str.endsWith(".m4a")) {
