@@ -1,4 +1,5 @@
 #include "datareader.h"
+#include "globalutils.h"
 
 #include <mpegfile.h>
 #include <flacfile.h>
@@ -19,12 +20,15 @@
 #include <xmfile.h>
 
 
+#include <QCryptographicHash>
 #include <QDir>
+#include <QImage>
 #include <QDirIterator>
 #include <QString>
 #include <QStringList>
 #include <QSettings>
 #include <QDebug>
+#include <QStandardPaths>
 
 extern bool databaseWorking;
 extern bool isDBOpened;
@@ -185,6 +189,8 @@ TagLib::File* DataReader::getFileByMimeType(QString file)
 
 void DataReader::readFile(QString file)
 {
+    QString oFile = file;
+
     file.remove("file://");
     TagLib::File* tf = getFileByMimeType(file);
 
@@ -202,6 +208,25 @@ void DataReader::readFile(QString file)
             m_tracknum = QString::number(tagFile->tag()->track());
 
             if (m_title=="") m_title = QFileInfo(file).baseName();
+
+            // if we have artist and album, we check for a cover image.
+            if (m_artist != "" && m_album != "") {
+                QFileInfo info(file);
+                QDirIterator iterator(info.dir().path(), QDirIterator::Subdirectories);
+                while (iterator.hasNext()) {
+                    iterator.next();
+                    if (!iterator.fileInfo().isDir()) {
+                        if (  iterator.filePath().toLower().endsWith(".jpg") ||
+                              iterator.filePath().toLower().endsWith(".jpeg") )
+                        {
+                            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(m_artist, m_album) + ".jpeg";
+                            qDebug() << "PROCESSING FILE: " << iterator.filePath() ;
+                            QFile::copy(iterator.filePath(), th2 );
+                        }
+                    }
+                }
+            }
+
             if (m_artist=="") m_artist = tr("Unknown artist");
             if (m_album=="") m_album = tr("Unknown album");
 

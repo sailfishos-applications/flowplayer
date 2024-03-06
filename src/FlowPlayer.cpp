@@ -75,6 +75,11 @@ static void migrateCache()
         }
         QDir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)).rmdir("flowplayer");
     }
+    // if the media-art directory does not exist, make it.
+    if (!QFileInfo(newCache).isDir()) {
+        QDir().mkpath( newCache );
+        QDir().mkpath( newCache + "/media-art" );
+    }
 }
 
 int main(int argc, char *argv[])

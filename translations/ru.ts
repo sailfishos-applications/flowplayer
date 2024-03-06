@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="ru">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ru">
 <context>
     <name>AboutPage</name>
     <message>
@@ -7,19 +9,24 @@
         <translation>О программе</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="71"/>
-        <source>Taglib is used for reading, writing and manipulating audio file tags</source>
-        <translation>Taglib используется для чтения и записи тегов аудиофайлов</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="63"/>
+        <source>Original author:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="81"/>
-        <source>If your language is not available you can contribute here:</source>
-        <translation>Если ваш язык недоступен, вы можете помочь в переводе здесь:</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="75"/>
+        <source>Contributors:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="97"/>
-        <source>You can contribute to keep this project alive making a small donation</source>
-        <translation>Вы можете внести свой вклад в жизнь проекта, сделав небольшое пожертвование</translation>
+        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <source>If you want to create a new translation or improve an extant one:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <source>You can support the original author of FlowPlayer by donating:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -219,12 +226,12 @@
 <context>
     <name>DataReader</name>
     <message>
-        <location filename="../src/datareader.cpp" line="202"/>
+        <location filename="../src/datareader.cpp" line="230"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
     <message>
-        <location filename="../src/datareader.cpp" line="203"/>
+        <location filename="../src/datareader.cpp" line="231"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
@@ -232,17 +239,17 @@
 <context>
     <name>Datos</name>
     <message>
-        <location filename="../src/datos.cpp" line="145"/>
+        <location filename="../src/datos.cpp" line="146"/>
         <source>Various artists</source>
         <translation>Различные исполнители</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="325"/>
+        <location filename="../src/datos.cpp" line="326"/>
         <source>1 album</source>
         <translation>1 альбом</translation>
     </message>
     <message>
-        <location filename="../src/datos.cpp" line="325"/>
+        <location filename="../src/datos.cpp" line="326"/>
         <source>%1 albums</source>
         <translation>%1 альбомов</translation>
     </message>
@@ -333,48 +340,48 @@
 <context>
     <name>LFM</name>
     <message>
-        <location filename="../src/lfm.cpp" line="46"/>
-        <location filename="../src/lfm.cpp" line="106"/>
+        <location filename="../src/lfm.cpp" line="48"/>
+        <location filename="../src/lfm.cpp" line="108"/>
         <source>Error fetching artist information</source>
         <translation>Ошибка при получении сведений об исполнителе</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="58"/>
+        <location filename="../src/lfm.cpp" line="60"/>
         <source>The artist could not be found</source>
         <translation>Исполнитель не может быть найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="123"/>
+        <location filename="../src/lfm.cpp" line="125"/>
         <source>Error fetching album information</source>
         <translation>Ошибка при получении информации об альбоме</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="135"/>
+        <location filename="../src/lfm.cpp" line="137"/>
         <source>The album could not be found</source>
         <translation>Альбом не найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="162"/>
+        <location filename="../src/lfm.cpp" line="164"/>
         <source>No album information available</source>
         <translation>Нет информации об альбоме</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="198"/>
+        <location filename="../src/lfm.cpp" line="200"/>
         <source>Error fetching track information</source>
         <translation>Ошибка при получении информации о треке</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="212"/>
+        <location filename="../src/lfm.cpp" line="214"/>
         <source>The track could not be found</source>
         <translation>Трек не найден</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="237"/>
+        <location filename="../src/lfm.cpp" line="239"/>
         <source>No track information available</source>
         <translation>Нет информации о треке</translation>
     </message>
     <message>
-        <location filename="../src/lfm.cpp" line="280"/>
+        <location filename="../src/lfm.cpp" line="282"/>
         <source>Fetching artist information</source>
         <translation>Поиск сведений об исполнителе</translation>
     </message>
@@ -612,12 +619,12 @@
 <context>
     <name>Meta</name>
     <message>
-        <location filename="../src/meta.cpp" line="60"/>
+        <location filename="../src/meta.cpp" line="63"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
     <message>
-        <location filename="../src/meta.cpp" line="61"/>
+        <location filename="../src/meta.cpp" line="64"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
@@ -672,17 +679,17 @@
 <context>
     <name>Missing</name>
     <message>
-        <location filename="../src/missing.cpp" line="74"/>
+        <location filename="../src/missing.cpp" line="75"/>
         <source>Various artists</source>
         <translation>Различные исполнители</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="78"/>
+        <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
     <message>
-        <location filename="../src/missing.cpp" line="78"/>
+        <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
@@ -704,12 +711,12 @@
 <context>
     <name>MyPlaylist</name>
     <message>
-        <location filename="../src/myplaylist.cpp" line="70"/>
+        <location filename="../src/myplaylist.cpp" line="71"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
     <message>
-        <location filename="../src/myplaylist.cpp" line="72"/>
+        <location filename="../src/myplaylist.cpp" line="73"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
@@ -842,14 +849,22 @@
     </message>
 </context>
 <context>
+    <name>PickFolder</name>
+    <message>
+        <location filename="../qml/pages/PickFolder.qml" line="7"/>
+        <source>Select folder</source>
+        <translation type="unfinished">Выбрать папку</translation>
+    </message>
+</context>
+<context>
     <name>Playlist</name>
     <message>
-        <location filename="../src/playlist.cpp" line="158"/>
+        <location filename="../src/playlist.cpp" line="159"/>
         <source>Unknown artist</source>
         <translation>Неизвестный исполнитель</translation>
     </message>
     <message>
-        <location filename="../src/playlist.cpp" line="160"/>
+        <location filename="../src/playlist.cpp" line="161"/>
         <source>Unknown album</source>
         <translation>Неизвестный альбом</translation>
     </message>
@@ -857,7 +872,7 @@
 <context>
     <name>PlaylistManager</name>
     <message>
-        <location filename="../src/playlistmanager.cpp" line="347"/>
+        <location filename="../src/playlistmanager.cpp" line="345"/>
         <source>Custom playlists</source>
         <translation>Собственные плейлисты</translation>
     </message>
