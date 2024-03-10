@@ -215,9 +215,15 @@ void DataReader::readFile(QString file)
                 QDirIterator iterator(info.dir().path(), QDirIterator::Subdirectories);
                 while (iterator.hasNext()) {
                     iterator.next();
-                    if (!iterator.fileInfo().isDir()) {
-                        if (  iterator.filePath().toLower().endsWith(".jpg") ||
-                              iterator.filePath().toLower().endsWith(".jpeg") )
+                    // we are explicit about two common factors,
+                    // suffix jpg or png, basename cover or folder
+                    if (iterator.fileInfo().isFile()) {
+                        if (  ( iterator.fileInfo().suffix() == "jpg"  ||
+                                iterator.fileInfo().suffix() == "jpeg" ||
+                                iterator.fileInfo().suffix() == "png"     )   &&
+                              ( iterator.fileInfo().baseName() == "cover" ||
+                                iterator.fileInfo().baseName() == "folder" )
+                              )
                         {
                             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(m_artist, m_album) + ".jpeg";
                             qDebug() << "PROCESSING FILE: " << iterator.filePath() ;
