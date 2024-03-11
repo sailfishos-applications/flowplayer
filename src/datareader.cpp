@@ -228,7 +228,7 @@ void DataReader::readFile(QString file)
                         {
                             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(m_artist, m_album) + ".jpeg";
                             qDebug() << "PROCESSING FILE: " << iterator.filePath() ;
-                            QFile::copy(iterator.filePath(), th2 );
+                            QFile::copy(iterator.filePath(), th2);
                         }
                     }
                 }
