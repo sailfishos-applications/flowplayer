@@ -215,7 +215,7 @@ void DataReader::readFile(QString file)
                 while (iterator.hasNext()) {
                     iterator.next();
                     // we are explicit about two common factors, the suffix .jpeg (ToDo: add .jpg and .png
-                    //  throughout all source code), and basename cover or folder
+                    // throughout all C++ source code files), and basename cover or folder
                     if (iterator.fileInfo().isFile()) {
                         if (  iterator.fileInfo().suffix() == "jpeg" &&
                               // (… || iterator.fileInfo().suffix() == "jpg" || iterator.fileInfo().suffix() == "png") &&
