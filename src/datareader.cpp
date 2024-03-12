@@ -218,13 +218,15 @@ void DataReader::readFile(QString file)
                     // throughout all C++ source files), and basename cover or folder
                     if (iterator.fileInfo().isFile()) {
                         if (  iterator.fileInfo().suffix() == "jpeg" &&
-                              // See ToDo above: (… || iterator.fileInfo().suffix() == "jpg" || iterator.fileInfo().suffix() == "png") &&
+                              // See ToDo above: (… || iterator.fileInfo().suffix() == "jpg" || \
+                              //                  iterator.fileInfo().suffix() == "png") &&
                               (iterator.fileInfo().baseName() == "cover" ||
                                iterator.fileInfo().baseName() == "folder")
                            )
                         {
                             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + \
-                                          "/media-art/album-" + doubleHash(m_artist, m_album) + iterator.fileInfo().suffix();
+                                          "/media-art/album-" + doubleHash(m_artist, m_album) + \
+                                          iterator.fileInfo().suffix();
                             qDebug() << "PROCESSING FILE: " << iterator.filePath() ;
                             QFile::copy(iterator.filePath(), th2);
                         }
