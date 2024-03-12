@@ -218,7 +218,7 @@ void DataReader::readFile(QString file)
                     // suffix jpg or png, basename cover or folder
                     if (iterator.fileInfo().isFile()) {
                         if (  ( iterator.fileInfo().suffix() == "jpg"  ||
-                                iterator.fileInfo().suffix() == "jpeg" || ) &&
+                                iterator.fileInfo().suffix() == "jpeg" ) &&
                               ( iterator.fileInfo().baseName() == "cover" ||
                                 iterator.fileInfo().baseName() == "folder" )
                               )
