@@ -22,7 +22,6 @@
 
 #include <QCryptographicHash>
 #include <QDir>
-#include <QImage>
 #include <QDirIterator>
 #include <QString>
 #include <QStringList>
@@ -219,9 +218,7 @@ void DataReader::readFile(QString file)
                     // suffix jpg or png, basename cover or folder
                     if (iterator.fileInfo().isFile()) {
                         if (  (iterator.fileInfo().suffix() == "jpg"  ||
-                               iterator.fileInfo().suffix() == "jpeg" ||
-                               iterator.fileInfo().suffix() == "png"
-                              ) &&
+                               iterator.fileInfo().suffix() == "jpeg" ) &&
                               (iterator.fileInfo().baseName() == "cover" ||
                                iterator.fileInfo().baseName() == "folder")
                            )
