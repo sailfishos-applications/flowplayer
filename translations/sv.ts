@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="sv">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="sv">
 <context>
     <name>AboutPage</name>
     <message>
@@ -853,7 +851,7 @@
     <message>
         <location filename="../qml/pages/PickFolder.qml" line="7"/>
         <source>Select folder</source>
-        <translation type="unfinished">Välj mapp</translation>
+        <translation>Välj mapp</translation>
     </message>
 </context>
 <context>
