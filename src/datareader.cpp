@@ -1,9 +1,11 @@
 #include "datareader.h"
+#include "globalutils.h"
 
 #include <mpegfile.h>
 #include <flacfile.h>
 #include <tlist.h>
 #include <vorbisfile.h>
+#include <opusfile.h>
 #include <mp4file.h>
 #include <wavfile.h>
 #include <speexfile.h>
@@ -24,6 +26,7 @@
 #include <QStringList>
 #include <QSettings>
 #include <QDebug>
+#include <QStandardPaths>
 
 extern bool databaseWorking;
 extern bool isDBOpened;
@@ -165,6 +168,8 @@ TagLib::File* DataReader::getFileByMimeType(QString file)
         return new TagLib::FLAC::File(file.toUtf8());
     } else if(str.endsWith(".ogg")) {
         return new TagLib::Ogg::Vorbis::File(file.toUtf8());
+    } else if(str.endsWith(".opus")) {
+        return new TagLib::Ogg::Opus::File(file.toUtf8());
     } else if(str.endsWith(".wav")) {
         return new TagLib::RIFF::WAV::File(file.toUtf8());
     } else if(str.endsWith(".m4a")) {
@@ -182,6 +187,10 @@ TagLib::File* DataReader::getFileByMimeType(QString file)
 
 void DataReader::readFile(QString file)
 {
+    // Is oFile used somewhere? (I failed to find a location.)
+    // If not, what is this new line good for?  For details, see PR #75.
+    QString oFile = file;
+
     file.remove("file://");
     TagLib::File* tf = getFileByMimeType(file);
 
@@ -199,6 +208,31 @@ void DataReader::readFile(QString file)
             m_tracknum = QString::number(tagFile->tag()->track());
 
             if (m_title=="") m_title = QFileInfo(file).baseName();
+
+            // if we have artist and album, we check for a cover image.
+            if (m_artist != "" && m_album != "") {
+                QFileInfo info(file);
+                QDirIterator iterator(info.dir());
+                while (iterator.hasNext()) {
+                    iterator.next();
+                    // we are explicit about two common factors, the type JPEG (ToDo: add PNG
+                    // throughout all C++ source files, see issue #78), and basename cover or folder
+                    if (iterator.fileInfo().isFile()) {
+                        if (  (iterator.fileInfo().suffix() == "jpeg" ||
+                               iterator.fileInfo().suffix() == "jpg") &&
+                              // See ToDo above: (… ||
+                              //                  iterator.fileInfo().suffix() == "png") &&
+                              (iterator.fileInfo().baseName() == "cover" ||
+                               iterator.fileInfo().baseName() == "folder")  ) {
+                            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) +
+                                          "/media-art/album-" + doubleHash(m_artist, m_album) + ".jpeg";
+                            qDebug() << "COPYING FILE ART: " << iterator.filePath() << m_artist << m_album;
+                            QFile::copy(iterator.filePath(), th2);
+                        }
+                    }
+                }
+            }
+
             if (m_artist=="") m_artist = tr("Unknown artist");
             if (m_album=="") m_album = tr("Unknown album");
 
@@ -252,6 +286,7 @@ void DataReader::run()
                      iterator.filePath().toLower().endsWith(".m4a") ||
                      iterator.filePath().toLower().endsWith(".flac") ||
                      iterator.filePath().toLower().endsWith(".ogg") ||
+                     iterator.filePath().toLower().endsWith(".opus") ||
                      iterator.filePath().toLower().endsWith(".wma") ||
                      iterator.filePath().toLower().endsWith(".asg") ||
                      iterator.filePath().toLower().endsWith(".wav") )

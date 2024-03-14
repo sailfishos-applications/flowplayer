@@ -1,6 +1,10 @@
+* Thu Mar 14 2024 olf <Olf0@users.noreply.github.com> - 0.3.4
+- Support Opus codec (#67) by @rubdos
+- Add local cover art when importing tracks (#75) by @poetaster with contributions by @dcaliste and @Olf0
+
 * Mon Feb 26 2024 olf <Olf0@users.noreply.github.com> - 0.3.3
 - Slightly overhaul `AboutPage.qml` (#58, #59)
-- Avoid creating QSettings too early (#65, #69) by @llewelld & @dcaliste, closes issue #64
+- Avoid creating QSettings too early (#65, #69) by @llewelld & @dcaliste, closes issues #63 & #64
 - Let `TS`→`QM` file translation work on OBS (#68), fixes a common issue
 
 * Thu Feb 08 2024 olf <Olf0@users.noreply.github.com> - 0.3.2

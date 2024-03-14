@@ -430,7 +430,7 @@ ApplicationWindow
         // Hard coded. FIXME: JB#22001.
         desktopEntry: "jolla-mediaplayer"
         supportedUriSchemes: ["file", "http", "https"]
-        supportedMimeTypes: ["audio/x-wav", "audio/mp4", "audio/mpeg", "audio/x-vorbis+ogg"]
+        supportedMimeTypes: ["audio/x-wav", "audio/mp4", "audio/mpeg", "audio/x-vorbis+ogg", "audio/ogg", "audio/opus"]
 
         // Mpris2 Player Interface
         canControl: currentSongInfo !== []

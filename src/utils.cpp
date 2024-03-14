@@ -83,7 +83,7 @@ void Utils::readLyrics(QString artist, QString song)
     QString sng = cleanItem(song);
     if ( ( art!="" ) && ( sng!="" ) )
     {
-        QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
+        QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
         if ( QFileInfo(th1).exists() )
         {
@@ -116,10 +116,10 @@ QString Utils::thumbnail(QString artist, QString album, QString count)
     QString art = count=="1"? artist : album;
     QString alb = album;
 
-    QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
 
     if (!QFileInfo(th1).exists()) {
-        QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(alb, alb) + ".jpeg";
+        QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(alb, alb) + ".jpeg";
         if (QFileInfo(th2).exists())
             return th2;
     }
@@ -355,11 +355,11 @@ void Utils::downloaded(QNetworkReply *respuesta)
 void Utils::saveLyrics(QString artist, QString song, QString lyrics)
 {
     QDir d;
-    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics");
+    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/lyrics");
 
     QString art = cleanItem(artist);
     QString sng = cleanItem(song);
-    QString f = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
+    QString f = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
     if ( QFileInfo(f).exists() )
         QFile::remove(f);
@@ -377,11 +377,11 @@ void Utils::saveLyrics(QString artist, QString song, QString lyrics)
 void Utils::saveLyrics2(QString artist, QString song, QString lyrics)
 {
     QDir d;
-    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics");
+    d.mkdir(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/lyrics");
 
     QString art = cleanItem(artist);
     QString sng = cleanItem(song);
-    QString f = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
+    QString f = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/lyrics/"+art+"-"+sng+".txt";
 
     if ( QFileInfo(f).exists() )
         QFile::remove(f);
@@ -421,10 +421,10 @@ void Utils::Finished(int requestId, bool)
             QImage img;
             img.loadFromData(bytes);
 
-            QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-" + doubleHash(albumArtArtist, albumArtAlbum) + ".jpeg";
-            if ( QFileInfo(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg").exists() )
+            QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-" + doubleHash(albumArtArtist, albumArtAlbum) + ".jpeg";
+            if ( QFileInfo(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/preview.jpeg").exists() )
                 removePreview();
-            img.save(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg");
+            img.save(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/preview.jpeg");
             downloadedAlbumArt = th1;
             emit coverDownloaded();
         }
@@ -434,7 +434,7 @@ void Utils::Finished(int requestId, bool)
 
 void Utils::removePreview()
 {
-    QFile f(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/preview.jpeg");
+    QFile f(QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/preview.jpeg");
     f.remove();
 }
 
@@ -697,6 +697,7 @@ void Utils::getFolderItems(QString path)
             emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "folder");
         else if (fileInfo.fileName().endsWith(".mp3") || fileInfo.fileName().endsWith(".m4a") ||
                  fileInfo.fileName().endsWith(".wma") || fileInfo.fileName().endsWith(".ogg") ||
+                 fileInfo.fileName().endsWith(".opus") ||
                  fileInfo.fileName().endsWith(".flac") || fileInfo.fileName().endsWith(".wav") ||
                  fileInfo.fileName().endsWith(".asf"))
             emit appendFile(fileInfo.fileName(), fileInfo.absoluteFilePath(), "sounds");
