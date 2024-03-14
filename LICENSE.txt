@@ -375,6 +375,7 @@ Accurate notices of copyright ownership:
 - (C) 2024 Tomasz Sterna (smokku) <tomasz@sterna.link>
 - (C) 2024 David Llewellyn-Jones (llewelld / flypig) <david@flypig.co.uk>
 - (C) 2024 Ruben de Smet (rubdos) <ruben.de.smet@rubdos.be>
+- (C) 2024 Mark Washeim (poetaster) <blueprint@poetaster.de>
 
 Exhibit B - "Incompatible With Secondary Licenses" Notice
 ---------------------------------------------------------
