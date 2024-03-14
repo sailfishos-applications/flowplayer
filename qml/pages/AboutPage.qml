@@ -82,7 +82,8 @@ Page {
                       "(C) 2023, 2024 Damien Caliste (dcaliste)" + "<br />" +
                       "(C) 2024 Tomasz Sterna (smokku)" + "<br />" +
                       "(C) 2024 David Llewellyn-Jones (llewelld / flypig)" + "<br />" +
-                      "(C) 2024 Ruben de Smet (rubdos)"
+                      "(C) 2024 Ruben de Smet (rubdos)" + "<br />" +
+                      "(C) 2024 Mark Washeim (poetaster)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
