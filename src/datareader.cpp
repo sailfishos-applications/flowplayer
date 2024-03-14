@@ -20,7 +20,6 @@
 #include <xmfile.h>
 
 
-#include <QCryptographicHash>
 #include <QDir>
 #include <QDirIterator>
 #include <QString>
@@ -211,23 +210,21 @@ void DataReader::readFile(QString file)
             // if we have artist and album, we check for a cover image.
             if (m_artist != "" && m_album != "") {
                 QFileInfo info(file);
-                QDirIterator iterator(info.dir().path(), QDirIterator::Subdirectories);
+                QDirIterator iterator(info.dir());
                 while (iterator.hasNext()) {
                     iterator.next();
-                    // we are explicit about two common factors, the suffix `jpeg` (ToDo: add `jpg` and `png`
+                    // we are explicit about two common factors, the type JPEG (ToDo: add PNG
                     // throughout all C++ source files, see issue #78), and basename cover or folder
                     if (iterator.fileInfo().isFile()) {
-                        if (  iterator.fileInfo().suffix() == "jpeg" &&
-                              // See ToDo above: (… || iterator.fileInfo().suffix() == "jpg" ||
+                        if (  (iterator.fileInfo().suffix() == "jpeg" ||
+                               iterator.fileInfo().suffix() == "jpg") &&
+                              // See ToDo above: (… ||
                               //                  iterator.fileInfo().suffix() == "png") &&
                               (iterator.fileInfo().baseName() == "cover" ||
-                               iterator.fileInfo().baseName() == "folder")
-                           )
-                        {
+                               iterator.fileInfo().baseName() == "folder")  ) {
                             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) +
-                                          "/media-art/album-" + doubleHash(m_artist, m_album) +
-                                          iterator.fileInfo().suffix();
-                            qDebug() << "PROCESSING FILE: " << iterator.filePath();
+                                          "/media-art/album-" + doubleHash(m_artist, m_album) + ".jpeg";
+                            qDebug() << "COPYING FILE ART: " << iterator.filePath() << m_artist << m_album;
                             QFile::copy(iterator.filePath(), th2);
                         }
                     }
