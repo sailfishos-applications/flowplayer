@@ -29,7 +29,7 @@ bool namefileLessThan(const QStringList &d1, const QStringList &d2)
 
 QString Datos::getThumbnail(QString data, int index)
 {
-    QString th1 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ data + ".jpeg";
+    QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ data + ".jpeg";
 
     /*QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/flowplayer/62/album-"+ data + ".jpeg";
 
@@ -320,7 +320,7 @@ void Datos::DatosPrivate::populateItems()
                 item->band = q->listado[i][3];
                 item->songs = q->listado[i][4];
                 item->hash = doubleHash(item->acount=="1"? item->artist : item->title, item->title);
-                item->coverart = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ item->hash + ".jpeg";
+                item->coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ item->hash + ".jpeg";
                 item->isSelected = false;
             } else if (groupFilter=="artist") {
                 item->artist = q->listado[i][1]=="1"? tr("1 album") : tr("%1 albums").arg( q->listado[i][1].toInt());

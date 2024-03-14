@@ -78,10 +78,10 @@ void Missing::loadData()
 
         if (dato1!=tr("Unknown album") && dato2!=tr("Unknown artist"))
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(dato2, dato1) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(dato2, dato1) + ".jpeg";
             if ( ! QFileInfo(th2).exists() )
             {
-                QString th3 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(dato1, dato1); + ".jpeg";
+                QString th3 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(dato1, dato1); + ".jpeg";
                 if ( ! QFileInfo(th3).exists() )
                 {
                     //qDebug() << dato1 << " doesn't exist. Adding to list";

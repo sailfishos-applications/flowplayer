@@ -357,7 +357,7 @@ void CoverSearch::paintImg(QString image, int index)
 
 void CoverSearch::saveImage(QString artist, QString album, QString imagepath)
 {
-    QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
 
     QImage image(imagepath);
     image.save(th2, "JPEG");

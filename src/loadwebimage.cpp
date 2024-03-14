@@ -80,7 +80,7 @@ bool WebThread::checkInternal()
 
         if (QFileInfo(dir + "/folder.jpg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/folder.jpg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -89,7 +89,7 @@ bool WebThread::checkInternal()
 
         else if (QFileInfo(dir + "/folder.jpeg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/folder.jpeg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -98,7 +98,7 @@ bool WebThread::checkInternal()
 
         else if (QFileInfo(dir + "/cover.jpg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/cover.jpg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -107,7 +107,7 @@ bool WebThread::checkInternal()
 
         if (QFileInfo(dir + "/Folder.jpg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/Folder.jpg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -116,7 +116,7 @@ bool WebThread::checkInternal()
 
         else if (QFileInfo(dir + "/Folder.jpeg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/Folder.jpeg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -125,7 +125,7 @@ bool WebThread::checkInternal()
 
         else if (QFileInfo(dir + "/Cover.jpg").exists())
         {
-            QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
+            QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(artist, album) + ".jpeg";
             QImage image(dir + "/Cover.jpg");
             image.save(th2, "JPEG");
             emit imgLoaded(th2, files[0][2].toInt());
@@ -292,7 +292,7 @@ QString WebThread::saveToDisk(QIODevice *reply)
 
     QString art = files[0][0];
     QString alb = files[0][1];
-    QString th2 = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
+    QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(art, alb) + ".jpeg";
 
     QImage image = QImage::fromData(reply->readAll());
     image.save(th2, "JPEG");
@@ -304,7 +304,7 @@ QString WebThread::saveToDiskExtern(QIODevice *reply)
 {
     QImage image = QImage::fromData(reply->readAll());
 
-    QString path = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/flowplayer/" + hash(curImage) + ".jpeg";
+    QString path = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/flowplayer/" + hash(curImage) + ".jpeg";
 
     image.save(path, "JPEG");
 
