@@ -6,4 +6,8 @@ Exec=flowplayer
 Name=FlowPlayer
 
 [X-Sailjail]
-Sandboxing=Disabled
+OrganizationName=sailfishos-applications
+# ApplicationName does not have to be identical to Name
+ApplicationName=flowplayer
+# Add the required permissions here
+Permissions=UserDirs;Audio;Bluetooth;Internet;RemovableMedia
