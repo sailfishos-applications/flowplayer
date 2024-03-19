@@ -1395,7 +1395,7 @@
         <translation>(ràdio)</translation>
     </message>
     <message>
-        <location filename="../qml/flowplayer.qml" line="321"/>
+        <location filename="../qml/flowplayer.qml" line="322"/>
         <source>Cover not found</source>
         <translation>No s&apos;ha trobat la caràtula</translation>
     </message>

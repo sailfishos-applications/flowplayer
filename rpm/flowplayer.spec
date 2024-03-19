@@ -39,7 +39,7 @@ Source0:    %{url}/archive/%{release}/%{version}/%{name}-%{version}.tar.gz
 # https://en.opensuse.org/openSUSE:Packaging_checks#Building_Packages_in_spite_of_errors
 Source99:   %{name}.rpmlintrc
 Requires:   sailfishsilica-qt5 >= 0.10.9
-Requires:   qml(org.nemomobile.mpris)
+Requires:   qml(Amber.Mpris)
 Requires:   qml(org.nemomobile.policy)
 Requires:   qml(org.nemomobile.thumbnailer)
 Requires:   qml(com.jolla.mediaplayer)

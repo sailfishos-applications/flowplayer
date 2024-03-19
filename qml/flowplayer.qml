@@ -1,8 +1,7 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import FlowPlayer 1.0
-//import QtMultimedia 5.0
-import org.nemomobile.mpris 1.0
+import Amber.Mpris 1.0
 import com.jolla.mediaplayer 1.0
 import "pages"
 
@@ -156,16 +155,17 @@ ApplicationWindow
 
     onCurrentSongInfoChanged: {
         var metadata
-        if (currentSongInfo!==[]) {
+        if (currentSongInfo) {
             metadata = {
                 'url'       : currentSongInfo.url,
-                'title'     : currentSongInfo.title!==""? currentSongInfo.title : qsTr("(radio)"),
-                'artist'    : currentSongInfo.artist!==""? currentSongInfo.artist : currentSongInfo.name,
+                'title'     : currentSongInfo.title ? currentSongInfo.title : qsTr("(radio)"),
+                'artist'    : currentSongInfo.artist ? currentSongInfo.artist : currentSongInfo.name,
                 'album'     : currentSongInfo.album,
                 'genre'     : "",
                 'track'     : queueList.currentIndex,
                 'trackCount': queueList.count,
-                'duration'  : currentSongInfo.duration * 1000
+                'duration'  : currentSongInfo.duration * 1000,
+                'imageUrl'  : currentSongInfo.imageurl ? currentSongInfo.imageurl : utils.thumbnail(currentSongInfo.artist, currentSongInfo.album),
             }
         }
         mprisPlayer.localMetadata = metadata
@@ -426,9 +426,8 @@ ApplicationWindow
         serviceName: "flowplayer"
 
         // Mpris2 Root Interface
-        identity: "flowplayer"
-        // Hard coded. FIXME: JB#22001.
-        desktopEntry: "jolla-mediaplayer"
+        identity: "FlowPlayer"
+        desktopEntry: "flowplayer"
         supportedUriSchemes: ["file", "http", "https"]
         supportedMimeTypes: ["audio/x-wav", "audio/mp4", "audio/mpeg", "audio/x-vorbis+ogg", "audio/ogg", "audio/opus"]
 
@@ -481,6 +480,10 @@ ApplicationWindow
         }
         //onOpenUriRequested: playUrl(url)
 
+        onPositionRequested: {
+            mprisPlayer.position = player.position * 1000
+        }
+
         /*onLoopStatusRequested: {
             if (loopStatus == Mpris.None) {
                 repeatSwitch.checked = false
@@ -491,25 +494,18 @@ ApplicationWindow
         //onShuffleRequested: shuffleSwitch.checked = shuffle
 
         onLocalMetadataChanged: {
-            if (!localMetadata.url)
-                return
-
-            var metadata = {}
-
             if (localMetadata && 'url' in localMetadata) {
-                metadata[Mpris.metadataToString(Mpris.Url)] = localMetadata['url'] // Url
-                metadata[Mpris.metadataToString(Mpris.TrackId)] = "/com/jolla/mediaplayer/" + Qt.md5(localMetadata['url'].toString()) // DBus object path
-                metadata[Mpris.metadataToString(Mpris.Length)] = localMetadata['duration'] * 1000 // Microseconds
-                metadata[Mpris.metadataToString(Mpris.Album)] = localMetadata['album'] // String
-                metadata[Mpris.metadataToString(Mpris.Artist)] = [localMetadata['artist']] // List of strings
-                metadata[Mpris.metadataToString(Mpris.Genre)] = [localMetadata['genre']] // List of strings
-                metadata[Mpris.metadataToString(Mpris.Title)] = localMetadata['title'] // String
-                metadata[Mpris.metadataToString(Mpris.TrackNumber)] = localMetadata['track'] // Int
+                mprisPlayer.metaData.url = localMetadata.url
+                mprisPlayer.metaData.trackId = "/com/jolla/mediaplayer/" + Qt.md5(localMetadata['url'].toString()) // DBus object path
+                mprisPlayer.metaData.duration = localMetadata.duration // milliseconds
+                mprisPlayer.metaData.albumTitle = localMetadata.album
+                mprisPlayer.metaData.albumArtist = localMetadata.artist
+                mprisPlayer.metaData.contributingArtist = localMetadata.artist
+                mprisPlayer.metaData.genre = [localMetadata.genre] // List of strings
+                mprisPlayer.metaData.title = localMetadata.title
+                mprisPlayer.metaData.trackNumber = localMetadata.track
+                mprisPlayer.metaData.artUrl = localMetadata.imageUrl
             }
-            mprisPlayer.metadata = metadata
-
-
-
         }
     }
 
