@@ -5,7 +5,8 @@
 <br />
 
 #### Features:
-- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a list of features will be much appreciated.*
+- Gap-less playback, optionally
+- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a full list of features will be much appreciated.*
 
 <sup>Note that the functionality and / or ability to … may be broken (this is [known for internet radio](https://github.com/sailfishos-applications/flowplayer/issues/62)) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
