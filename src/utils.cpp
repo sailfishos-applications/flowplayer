@@ -101,7 +101,7 @@ void Utils::readLyrics(QString artist, QString song)
         }
         else
         {
-            currentLyrics =  tr("No lyrics founded");
+            currentLyrics =  tr("No lyrics found");
             m_noLyrics = true;
         }
     }
@@ -230,9 +230,9 @@ void Utils::downloaded(QNetworkReply *respuesta)
             x = tmp.indexOf("<");
             tmp.remove(x,tmp.length()-x);
             tmp = tmp.trimmed();
-            //qDebug() << "Image founded... downloading... " << tmp;
+            //qDebug() << "Image found... downloading... " << tmp;
             if (tmp=="") {
-                banner = tr("Album cover not founded");
+                banner = tr("Album cover not found");
                 emit bannerChanged();
                 return;
             }
@@ -253,7 +253,7 @@ void Utils::downloaded(QNetworkReply *respuesta)
             qDebug() << str;
             if ( str.contains("was not found on this server") )
             {
-                currentLyrics = tr("No lyrics founded");
+                currentLyrics = tr("No lyrics found");
                 m_noLyrics = true;
             }
             else
@@ -280,7 +280,7 @@ void Utils::downloaded(QNetworkReply *respuesta)
                 currentLyrics = tmp.replace("\n", "<br>");
 
                 if (currentLyrics.contains("<div ")) {
-                    currentLyrics = tr("No lyrics founded");
+                    currentLyrics = tr("No lyrics found");
                     m_noLyrics = true;
                 } else {
                     m_noLyrics = false;
@@ -288,7 +288,7 @@ void Utils::downloaded(QNetworkReply *respuesta)
             }
             else
             {
-                currentLyrics = tr("No lyrics founded");
+                currentLyrics = tr("No lyrics found");
                 m_noLyrics = true;
             }
             m_lyricsonline = true;
@@ -317,7 +317,7 @@ void Utils::downloaded(QNetworkReply *respuesta)
             }
             else
             {
-                currentLyrics = tr("No lyrics founded");
+                currentLyrics = tr("No lyrics found");
                 m_noLyrics = true;
             }
             m_lyricsonline = true;
@@ -341,7 +341,7 @@ void Utils::downloaded(QNetworkReply *respuesta)
             }
             else
             {
-                currentLyrics = tr("No lyrics founded");
+                currentLyrics = tr("No lyrics found");
                 m_noLyrics = true;
             }
             m_lyricsonline = true;
