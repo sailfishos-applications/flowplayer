@@ -5,7 +5,8 @@
 <br />
 
 #### Features:
-- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a list of features will be much appreciated.*
+- Gap-less playback, optionally
+- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a full list of features will be much appreciated.*
 
 <sup>Note that the functionality and / or ability to … may be broken (this is [known for internet radio](https://github.com/sailfishos-applications/flowplayer/issues/62)) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
@@ -36,7 +37,7 @@ If you want to translate FlowPlayer to a language it does not support yet or imp
 
 The original [FlowPlayer for SailfishOS (2015 - 2016)](https://openrepos.net/content/cepiperez/flowplayer-0#content) started as a port of [FlowPlayer for MeeGo-Harmattan (2014)](https://openrepos.net/content/cepiperez/flowplayer#content).  Both were solely written by [Matias Perez (CepiPerez)](https://github.com/CepiPerez).  In 2021 Matias [released the source code of FlowPlayer](https://github.com/sailfishos-applications/flowplayer/commits/master?after=c4f36e1cb3a80b7c7b220a379c9bdaca3a300113+49) by creating this git repository at GitHub.
 
-In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects, such as this README, a [new OpenRepos page](https://openrepos.net/content/olf/flowplayer#content), the [Transifex integration](https://github.com/sailfishos-applications/flowplayer/pull/7), making the spec file suitable for [the Sailfish-OBS](https://build.sailfishos.org/) and [the SailfishOS:Chum community repository](https://build.sailfishos.org/project/show/sailfishos:chum) etc.
+In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects, such as this README, a [new OpenRepos page](https://openrepos.net/content/olf/flowplayer#content), the [Transifex integration](https://github.com/sailfishos-applications/flowplayer/pull/7), making the spec file suitable for [the SailfishOS-OBS](https://build.sailfishos.org/) and [the SailfishOS:Chum community repository](https://github.com/sailfishos-chum/main/blob/main/Metadata.md) etc.
 
 <br />
 
@@ -46,6 +47,7 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 #### Contributors
 - [Damien Caliste (dcaliste)](https://github.com/dcaliste)
 - [David Llewellyn-Jones (llewelld / flypig)](https://github.com/llewelld)
+- [Mark Washeim (poetaster)](https://github.com/poetaster)
 - [olf (Olf0)](https://github.com/Olf0)
 - [Ruben de Smet (rubdos)](https://github.com/rubdos)
 - [Tomasz Sterna (smokku)](https://github.com/smokku)
