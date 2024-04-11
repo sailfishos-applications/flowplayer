@@ -1,5 +1,7 @@
-* Fri Mar 15 2024 olf <Olf0@users.noreply.github.com> - 0.3.5
-- 
+* Fri Apr 12 2024 olf <Olf0@users.noreply.github.com> - 0.3.5
+- Add SailJail configuration (#77), originally by @poetaster
+- Add Estonian translation (#86) by @tuplasuhveli
+- Fix some source strings (#87, #88) by @tuplasuhveli
 
 * Thu Mar 14 2024 olf <Olf0@users.noreply.github.com> - 0.3.4
 - Support Opus codec (#67) by @rubdos
