@@ -17,12 +17,12 @@
         <translation>Bidragande parter:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="96"/>
         <source>If you want to create a new translation or improve an extant one:</source>
         <translation>Om du vill skapa en ny översättning eller förbättra en befintlig:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
         <translation>Du kan stödja den ursprungliga utvecklaren av FlowPlayer genom att donera:</translation>
     </message>
@@ -217,7 +217,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
-        <source>Cover no found</source>
+        <source>Cover not found</source>
         <translation>Inget omslag hittades</translation>
     </message>
 </context>
@@ -331,8 +331,8 @@
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
-        <source>There&apos;s no missing covers in your music collection</source>
-        <translation>Det saknas inga omslag i din musiksamling</translation>
+        <source>There are no missing covers in your music collection</source>
+        <translation>Det saknas inga omslagsbilder i din musiksamling</translation>
     </message>
 </context>
 <context>
@@ -1371,8 +1371,8 @@
         <location filename="../src/utils.cpp" line="291"/>
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
-        <source>No lyrics founded</source>
-        <translation>Inga texter hittades</translation>
+        <source>No lyrics found</source>
+        <translation>Ingen text hittades</translation>
     </message>
     <message>
         <location filename="../src/utils.cpp" line="209"/>
@@ -1381,8 +1381,8 @@
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
-        <source>Album cover not founded</source>
-        <translation>Inget omslag hittades</translation>
+        <source>Album cover not found</source>
+        <translation>Omslagsbild hittades inte</translation>
     </message>
 </context>
 <context>
