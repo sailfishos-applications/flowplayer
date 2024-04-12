@@ -32,7 +32,7 @@ CoverBackground {
         //x: Theme.paddingMedium
         itemimg: playingRadio? currentSongInfo.imageurl : utils.thumbnail(currentSongInfo.artist, currentSongInfo.album)
         textSize: Theme.fontSizeSmall
-        text: playingRadio? currentSongInfo.name : qsTr("Cover no found")
+        text: playingRadio? currentSongInfo.name : qsTr("Cover not found")
         opacity: showBigCover? 0.4 : 1
     }
 

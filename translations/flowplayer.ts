@@ -19,12 +19,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="96"/>
         <source>If you want to create a new translation or improve an extant one:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -219,7 +219,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
-        <source>Cover no found</source>
+        <source>Cover not found</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -333,7 +333,7 @@
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
-        <source>There&apos;s no missing covers in your music collection</source>
+        <source>There are no missing covers in your music collection</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1373,7 +1373,7 @@
         <location filename="../src/utils.cpp" line="291"/>
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
-        <source>No lyrics founded</source>
+        <source>No lyrics found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1383,7 +1383,7 @@
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
-        <source>Album cover not founded</source>
+        <source>Album cover not found</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
