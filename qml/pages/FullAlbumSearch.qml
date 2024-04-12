@@ -131,7 +131,7 @@ Page {
         ViewPlaceholder {
             enabled: songlist.count===0 && loaded
             Behavior on opacity { FadeAnimation {} }
-            text: qsTr("There's no missing covers in your music collection")
+            text: qsTr("There are no missing covers in your music collection")
         }
 
     }
