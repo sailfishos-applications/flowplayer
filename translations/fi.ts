@@ -1133,12 +1133,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="160"/>
         <source>Albums</source>
-        <translation>Albumin mukaan</translation>
+        <translation>Albumi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="161"/>
         <source>Artists</source>
-        <translation>Esittäjän mukaan</translation>
+        <translation>Esittäjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="183"/>
