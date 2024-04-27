@@ -1148,7 +1148,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="185"/>
         <source>Title</source>
-        <translation>Nimen mukaan</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="186"/>
