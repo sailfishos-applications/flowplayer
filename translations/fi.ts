@@ -1143,7 +1143,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="183"/>
         <source>Sort songs by</source>
-        <translation>Järjestä kappaleet</translation>
+        <translation>Kappaleiden lajitteluperuste</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="185"/>
