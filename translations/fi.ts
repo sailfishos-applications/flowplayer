@@ -1158,7 +1158,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="187"/>
         <source>Filename</source>
-        <translation>Tiedostonimen mukaan</translation>
+        <translation>Tiedostonimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="210"/>
