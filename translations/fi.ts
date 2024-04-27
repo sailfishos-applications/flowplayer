@@ -1128,7 +1128,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="158"/>
         <source>Sort albums by</source>
-        <translation>Järjestä albumit</translation>
+        <translation>Albumeiden lajitteluperuste</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="160"/>
