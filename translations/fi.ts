@@ -665,7 +665,7 @@
         <location filename="../qml/pages/Metadata.qml" line="102"/>
         <location filename="../qml/pages/Metadata.qml" line="103"/>
         <source>Title</source>
-        <translation>Nimen mukaan</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Metadata.qml" line="114"/>
