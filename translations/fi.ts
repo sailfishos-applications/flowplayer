@@ -665,7 +665,7 @@
         <location filename="../qml/pages/Metadata.qml" line="102"/>
         <location filename="../qml/pages/Metadata.qml" line="103"/>
         <source>Title</source>
-        <translation>Nimen mukaan</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Metadata.qml" line="114"/>
@@ -1128,37 +1128,37 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="158"/>
         <source>Sort albums by</source>
-        <translation>Järjestä albumit</translation>
+        <translation>Albumeiden lajitteluperuste</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="160"/>
         <source>Albums</source>
-        <translation>Albumin mukaan</translation>
+        <translation>Albumi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="161"/>
         <source>Artists</source>
-        <translation>Esittäjän mukaan</translation>
+        <translation>Esittäjä</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="183"/>
         <source>Sort songs by</source>
-        <translation>Järjestä kappaleet</translation>
+        <translation>Kappaleiden lajitteluperuste</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="185"/>
         <source>Title</source>
-        <translation>Nimen mukaan</translation>
+        <translation>Nimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="186"/>
         <source>Track number</source>
-        <translation>Kappalenumeron mukaan</translation>
+        <translation>Kappalenumero</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="187"/>
         <source>Filename</source>
-        <translation>Tiedostonimen mukaan</translation>
+        <translation>Tiedostonimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="210"/>
