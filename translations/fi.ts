@@ -4,7 +4,7 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="28"/>
         <source>About</source>
-        <translation>Tietoja</translation>
+        <translation>Tietoja sovelluksesta</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
