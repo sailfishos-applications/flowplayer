@@ -5,6 +5,8 @@
 **
 ****************************************************************************/
 
+// This file bears some issues, see issue #102 //
+
 import QtQuick 2.0
 import org.nemomobile.lipstick 0.1
 import Sailfish.Silica 1.0
