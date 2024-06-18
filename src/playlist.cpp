@@ -24,14 +24,14 @@ int Playlist::current()
 
 QString Playlist::active() const
 {
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString t = sets.value("Active", "false").toString();
     return t;
 }
 
 QString Playlist::unknown() const
 {
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString t = sets.value("Unknown", "false").toString();
     return t;
 }
@@ -416,7 +416,7 @@ void Playlist::changeUnknown(bool active)
 {
     //qDebug() << "CHANGING UKNOWN: " << active;
 
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     sets.setValue("Unknown", active);
     sets.sync();
 }
@@ -425,7 +425,7 @@ void Playlist::changeMode(QString mode)
 {
     //qDebug() << "CHANGING MODE: " << mode;
 
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     sets.setValue("Mode", mode);
     sets.sync();
 }

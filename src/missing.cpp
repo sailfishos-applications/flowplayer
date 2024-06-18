@@ -8,7 +8,6 @@
 #include <QImage>
 #include <QStringList>
 #include <QXmlStreamReader>
-#include <QSettings>
 #include <QStandardPaths>
 
 bool namefileLess(const QStringList &d1, const QStringList &d2)

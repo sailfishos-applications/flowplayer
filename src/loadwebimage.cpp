@@ -7,7 +7,6 @@
 #include <qfileinfo.h>
 #include <qdir.h>
 #include <QImage>
-#include <QSettings>
 #include <QDebug>
 #include <QDateTime>
 #include <QStandardPaths>
