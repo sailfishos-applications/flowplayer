@@ -267,7 +267,7 @@ void DataReader::run()
     favFiles.clear();
     map.clear();
 
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
 
