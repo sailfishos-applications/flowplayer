@@ -1,14 +1,36 @@
 # FlowPlayer for SailfishOS
 
-**FlowPlayer is a music player with lyrics support, online radio and 10-band equalizer.**
+**FlowPlayer is a beautiful music player for SailfishOS.**
+<br />
+## Features
+### Input
+- ASF, FLAC, M4A, MP3, Ogg Vorbis / Opus (?), WAV and WMA
+### Playing
+- Gapless playback
+
+- Playlists
+
+- Play queue (?)
+
+- 10-band equalizer
+
+### Interface
+- Different album view modes
+
+- Media controls on home screen and lock screen
+
+- Metadata editor
+
+- Available in Catalan, Danish, Dutch, English, Estonian, Finnish, French, German, Italian, Russian, Spanish and Swedish
+### Misc
+- Lyrics support
+
+### Deprecated features
+- Online radio
+
+- Last.fm scrobbling (?)
 
 <br />
-
-#### Features:
-- Gap-less playback, optionally
-- *A pull request for [the README.md](https://github.com/sailfishos-applications/flowplayer/blob/devel/README.md) which provides a full list of features will be much appreciated.*
-
-<sup>Note that the functionality and / or ability to … may be broken (this is [known for internet radio](https://github.com/sailfishos-applications/flowplayer/issues/62)) due to API changes in recent SailfishOS releases.</sup><br />
 Pull requests with fixes, improvements and enhancements are welcome!
 
 <br />
@@ -54,4 +76,3 @@ In 2023 [olf (Olf0)](https://github.com/Olf0) overhauled infrastructure aspects,
 <br />
 
 ### License: [MPL 2.0](https://spdx.org/licenses/MPL-2.0-no-copyleft-exception.html)
-
