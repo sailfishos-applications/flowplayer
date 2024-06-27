@@ -3,31 +3,27 @@
 **FlowPlayer is a beautiful music player for SailfishOS.**
 <br />
 ## Features
-### Input
-- ASF, FLAC, M4A, MP3, Ogg Vorbis / Opus (?), WAV and WMA
-### Playing
-- Gapless playback
 
+#### Supported file formats
+- ASF, FLAC, M4A, MP3, Ogg Vorbis / Opus, WAV and WMA
+
+#### Playing
+- Gapless playback (can be disabled)
 - Playlists
-
 - Play queue (?)
-
 - 10-band equalizer
 
-### Interface
-- Different album view modes
-
+#### Interface
+- Multiple album view modes
 - Media controls on home screen and lock screen
-
 - Metadata editor
-
 - Available in Catalan, Danish, Dutch, English, Estonian, Finnish, French, German, Italian, Russian, Spanish and Swedish
-### Misc
+
+#### Misc
 - Lyrics support
 
-### Deprecated features
+#### Deprecated features
 - Online radio
-
 - Last.fm scrobbling (?)
 
 <br />
