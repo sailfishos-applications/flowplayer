@@ -107,8 +107,6 @@ public slots:
 
     void setOrientation(QString val);
 
-    void startMafw(QString artist, QString title);
-
     void createAlbumArt(QString imagepath);
     void removeAlbumArt();
 

@@ -43,40 +43,6 @@ void Utils::favSong(QString filename, bool fav)
     executeQuery(QString("update tracks set fav=%1 where url='%2'").arg(val).arg(filename));
 }
 
-void Utils::startMafw(QString artist, QString title)
-{
-
-    /*QDBusInterface iface("com.nokia.maemo.meegotouch.MusicSuiteInterface", "/",
-                         "com.nokia.maemo.meegotouch.MusicSuiteInterface",
-                         QDBusConnection::systemBus(), this);
-
-    qDebug() << "SENDING DBUS SIGNAL " << title << artist;
-    iface.call("mediaChanged", "0", title, artist);
-
-    QString RENDERER_UUID = "mafw_gst_renderer";
-    qDebug() << "HELLO WORLD";
-    //MafwMessageHandler::initMafwLogging(true);
-    MafwRegistry* registry = MafwRegistry::instance();
-    MafwShared* shared = MafwShared::instance();
-    bool initialized = shared->initTracking(registry);
-    qDebug() << "MafwShared initialization result was: " << initialized;
-
-    QList<MafwSource*> sources = MafwRegistry::instance()->sources();
-    qDebug() << sources.count() << " sources found.";
-    //Then list names and uuids for each source.
-    qDebug() << "Name - Uuid";
-
-    registry = MafwRegistry::instance();
-    MafwRenderer* renderer = registry->renderer(RENDERER_UUID);
-    if (renderer)
-    {
-        renderer->play(QUrl("file:///home/nemo/MyDocs/Music/Alexisonfire/Alexisonfire/Adelleda.mp3"));
-    }*/
-
-
-
-}
-
 void Utils::readLyrics(QString artist, QString song)
 {
     QString art = cleanItem(artist);
