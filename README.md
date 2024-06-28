@@ -9,9 +9,9 @@
 
 #### Playing
 - Playlists
-- Play queue (?)
+- Play queue
 - 10-band equalizer
-- Gapless playback (can be disabled)
+- Gapless playback (optional)
 
 #### User interface
 - Multiple album view modes
@@ -24,7 +24,7 @@
 
 #### Deprecated features
 - Online radio
-- Last.fm scrobbling (?)
+- Last.fm scrobbling
 
 <br />
 Pull requests with fixes, improvements and enhancements are welcome!
