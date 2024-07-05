@@ -258,10 +258,10 @@ void Playlist::addAlbumToList(QString artist, QString album, QString various)
 
 void Playlist::saveList(QString list)
 {
-    //qDebug() << "Saving playlist :" << list;
+    //qDebug() << "Saving playlist: " << list;
 
     /*QString archivo;
-    archivo = "/home/nemo/.config/cepiperez/playlists/" + list + ".xml";
+    archivo = QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/playlists/" + list + ".xml";
     QFile file( archivo );
     file.open( QIODevice::Truncate | QIODevice::Text | QIODevice::ReadWrite);
     QTextStream out(&file);
@@ -352,7 +352,7 @@ void Playlist::clearList(QString list)
     listado.clear();
     //saveList(list);
     /*QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    QString path("/home/nemo/.config/cepiperez/flowplayer.db");
+    QString path(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.db");
     db.setDatabaseName(path);
     db.open();
 
