@@ -7,6 +7,8 @@
 #include <sailfishapp.h>
 #include <QObject>
 #include <QTextCodec>
+#include <QSettings>
+#include <QStandardPaths>
 
 #include "playlistmanager.h"
 #include "utils.h"
@@ -34,7 +36,7 @@ int main(int argc, char *argv[])
     QString lang;
     QTranslator translator;
 
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     lang = settings.value("Language", "undefined").toString();
 
     if (lang=="undefined")

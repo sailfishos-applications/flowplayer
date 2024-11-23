@@ -7,6 +7,7 @@
 #include <QStringList>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QSettings>
 #include <QStandardPaths>
 
 #define BING_ID "A16EECFD14108C2794E4BC29D4DE59C308685B4A"
@@ -165,7 +166,7 @@ void CoverSearch::remove(const QString &file)
     QString nf = file;
     if ( nf.startsWith("//") )
         nf.remove(0, 1);
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList entries = settings.value("CoverSearch","").toStringList();
     QStringList newfiles;
     for (int i=0; i< entries.count(); ++i)

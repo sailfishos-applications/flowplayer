@@ -43,40 +43,6 @@ void Utils::favSong(QString filename, bool fav)
     executeQuery(QString("update tracks set fav=%1 where url='%2'").arg(val).arg(filename));
 }
 
-void Utils::startMafw(QString artist, QString title)
-{
-
-    /*QDBusInterface iface("com.nokia.maemo.meegotouch.MusicSuiteInterface", "/",
-                         "com.nokia.maemo.meegotouch.MusicSuiteInterface",
-                         QDBusConnection::systemBus(), this);
-
-    qDebug() << "SENDING DBUS SIGNAL " << title << artist;
-    iface.call("mediaChanged", "0", title, artist);
-
-    QString RENDERER_UUID = "mafw_gst_renderer";
-    qDebug() << "HELLO WORLD";
-    //MafwMessageHandler::initMafwLogging(true);
-    MafwRegistry* registry = MafwRegistry::instance();
-    MafwShared* shared = MafwShared::instance();
-    bool initialized = shared->initTracking(registry);
-    qDebug() << "MafwShared initialization result was: " << initialized;
-
-    QList<MafwSource*> sources = MafwRegistry::instance()->sources();
-    qDebug() << sources.count() << " sources found.";
-    //Then list names and uuids for each source.
-    qDebug() << "Name - Uuid";
-
-    registry = MafwRegistry::instance();
-    MafwRenderer* renderer = registry->renderer(RENDERER_UUID);
-    if (renderer)
-    {
-        renderer->play(QUrl("file:///home/nemo/MyDocs/Music/Alexisonfire/Alexisonfire/Adelleda.mp3"));
-    }*/
-
-
-
-}
-
 void Utils::readLyrics(QString artist, QString song)
 {
     QString art = cleanItem(artist);
@@ -440,81 +406,81 @@ void Utils::removePreview()
 
 void Utils::setSettings(QString set, QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue(set, val);
     settings.sync();
 }
 
 QString Utils::readSettings(QString set, QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value(set, val).toString();
 }
 
 QString Utils::showReflection()
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("ShowReflection", "true").toString();
 }
 
 QString Utils::viewmode() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("ViewMode", "grid").toString();
 }
 
 QString Utils::paging() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("Paging", "multiple").toString();
 }
 
 QString Utils::scrobble() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("Scrobble", "false").toString();
 }
 
 QString Utils::order() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("SortOrder", "album").toString();
 }
 
 QString Utils::lang() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("LastFMlang", "en").toString();
 }
 
 QString Utils::updatestart() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("UpdateOnStartup", "no").toString();
 }
 
 QString Utils::autosearch() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("AutoSearchLyrics", "yes").toString();
 }
 
 QString Utils::cleanqueue() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("CleanQueue", "yes").toString();
 }
 
 QString Utils::workoffline() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("WorkOffline", "no").toString();
 }
 
 
 void Utils::setViewMode(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("ViewMode", val);
     settings.sync();
     emit viewmodeChanged();
@@ -522,7 +488,7 @@ void Utils::setViewMode(QString val)
 
 void Utils::setPaging(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("Paging", val);
     settings.sync();
     emit pagingChanged();
@@ -530,7 +496,7 @@ void Utils::setPaging(QString val)
 
 void Utils::setScrobble(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("Scrobble", val);
     settings.sync();
     emit scrobbleChanged();
@@ -538,7 +504,7 @@ void Utils::setScrobble(QString val)
 
 void Utils::setOrder(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("SortOrder", val);
     settings.sync();
     emit orderChanged();
@@ -546,7 +512,7 @@ void Utils::setOrder(QString val)
 
 void Utils::setLang(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("LastFMlang", val);
     settings.sync();
     emit langChanged();
@@ -554,7 +520,7 @@ void Utils::setLang(QString val)
 
 void Utils::setUpdateStart(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("UpdateOnStartup", val);
     settings.sync();
     emit updateChanged();
@@ -562,7 +528,7 @@ void Utils::setUpdateStart(QString val)
 
 void Utils::setAutoSearch(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("AutoSearchLyrics", val);
     settings.sync();
     emit autosearchChanged();
@@ -570,7 +536,7 @@ void Utils::setAutoSearch(QString val)
 
 void Utils::setCleanQueue(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("CleanQueue", val);
     settings.sync();
     emit queueChanged();
@@ -578,7 +544,7 @@ void Utils::setCleanQueue(QString val)
 
 void Utils::setWorkOffline(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("WorkOffline", val);
     settings.sync();
     emit workofflineChanged();
@@ -586,13 +552,13 @@ void Utils::setWorkOffline(QString val)
 
 QString Utils::orientation() const
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("Orientation", "auto").toString();
 }
 
 void Utils::setOrientation(QString val)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     settings.setValue("Orientation", val);
     settings.sync();
     emit orientationChanged();
@@ -607,7 +573,7 @@ QString Utils::plainLyrics(QString text)
 
 QString Utils::version()
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     return settings.value("Firmware", "PR10").toString();
 }
 
@@ -644,7 +610,7 @@ void Utils::removeAlbumArt()
 
 void Utils::getFolders()
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
 
@@ -708,7 +674,7 @@ void Utils::getFolderItems(QString path)
 
 void Utils::addFolderToList(QString path)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
     folders.append(path);
@@ -720,7 +686,7 @@ void Utils::addFolderToList(QString path)
 
 void Utils::removeFolder(QString path)
 {
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
     folders.removeAll(path);

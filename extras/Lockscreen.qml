@@ -5,7 +5,9 @@
 **
 ****************************************************************************/
 
-// This file bears some issues, see issue #102 //
+/***********************************************
+** This file bears some issues, see issue #102.
+***********************************************/
 
 import QtQuick 2.0
 import org.nemomobile.lipstick 0.1
@@ -434,6 +436,7 @@ MouseArea {
                     onTextChanged: {
                         setDefaultMarqueeOffset()
                         if (text!=="") {
+                            // Do not worry about this hardcoded path, see issues #101 and #102.
                             coverArt.source = "/home/nemo/.cache/currentAlbumArt.jpeg";
                             coverArt.sourceSize.width = 0
                             coverArt.sourceSize.height = 0
