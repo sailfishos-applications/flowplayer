@@ -187,10 +187,6 @@ TagLib::File* DataReader::getFileByMimeType(QString file)
 
 void DataReader::readFile(QString file)
 {
-    // Is oFile used somewhere? (I failed to find a location.)
-    // If not, what is this new line good for?  For details, see PR #75.
-    QString oFile = file;
-
     file.remove("file://");
     TagLib::File* tf = getFileByMimeType(file);
 
@@ -271,7 +267,7 @@ void DataReader::run()
     favFiles.clear();
     map.clear();
 
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QStringList folders = settings.value("Folders","").toString().split("<separator>");
     folders.removeAll("");
 

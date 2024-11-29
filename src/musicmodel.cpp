@@ -57,7 +57,7 @@ void MusicModel::loadData(QString artist, QString album, QString various)
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";

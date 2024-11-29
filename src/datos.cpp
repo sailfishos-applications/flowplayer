@@ -233,7 +233,7 @@ void Datos::addFilterToQueue()
     }*/
 
     QString norder;
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString order = settings.value("TrackOrder", "title").toString();
 
     if (order=="title") norder="title";
@@ -429,7 +429,7 @@ QString Datos::getArtistsCovers()
             dato1.append(coverart);
     }
 
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     int first = settings.value("LastArtistItem", 0).toInt();
 
     if (first >= dato1.count()) {
@@ -463,7 +463,7 @@ QString Datos::getAlbumsCovers()
             dato1.append(coverart);
     }
 
-    QSettings settings;
+    QSettings settings(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     int first = settings.value("LastAlbumItem", 0).toInt();
 
     if (first >= dato1.count()) {

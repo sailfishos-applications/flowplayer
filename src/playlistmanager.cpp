@@ -1,6 +1,7 @@
 #include "playlistmanager.h"
 
 #include <QSettings>
+#include <QStandardPaths>
 #include <QFileInfo>
 #include <QXmlStreamReader>
 #include <QDir>
@@ -89,7 +90,7 @@ void PlaylistManager::addAlbumToList(QString list, QString artist, QString album
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";
@@ -431,7 +432,7 @@ void PlaylistManager::loadAlbum(QString artist, QString album, QString various)
 
     if (!isDBOpened) openDatabase();
 
-    QSettings sets;
+    QSettings sets(QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation) + "/flowplayer.conf", QSettings::NativeFormat);
     QString torder = sets.value("TrackOrder", "title").toString();
     QString order;
     if (torder=="title") order="title";
