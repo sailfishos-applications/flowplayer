@@ -83,7 +83,8 @@ Page {
                       "(C) 2024 Tomasz Sterna (smokku)" + "<br />" +
                       "(C) 2024 David Llewellyn-Jones (llewelld / flypig)" + "<br />" +
                       "(C) 2024 Ruben de Smet (rubdos)" + "<br />" +
-                      "(C) 2024 Mark Washeim (poetaster)"
+                      "(C) 2024 Mark Washeim (poetaster)" + "<br />" +
+                      "(C) 2024 Elmeri Länsiharju (tuplasuhveli)"
                 font.pixelSize: Theme.fontSizeSmall
             }
 
