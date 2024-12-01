@@ -22,7 +22,7 @@
 - Metadata editor
 - Lyrics support
 
-#### Deprecated features
+#### Currently broken features
 - Online radio
 - Last.fm scrobbling
 
