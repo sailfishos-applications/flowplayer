@@ -30,6 +30,7 @@
 Pull requests with fixes, improvements and enhancements are welcome!
 
 <br />
+<br />
 
 ## Translating FlowPlayer (l10n / i18n)
 
