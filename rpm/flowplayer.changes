@@ -1,4 +1,7 @@
-* Thu Nov 28 2024 olf <Olf0@users.noreply.github.com> - 0.3.6
+* Sun Dec 01 2024 olf <Olf0@users.noreply.github.com> - 0.3.7
+- 
+
+* Fri Nov 29 2024 olf <Olf0@users.noreply.github.com> - 0.3.6
 - Update translations: SV (#90 by @eson57), DE (#91), ET (#92)
 - Add Finnish (FI) translation (#94, #95, #96) by @tuplasuhveli
 - Clean up multiple code sections (#100, #104, #107)
