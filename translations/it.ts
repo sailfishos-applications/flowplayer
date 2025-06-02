@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="it">
 <context>
     <name>AboutPage</name>
     <message>
@@ -11,22 +9,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Original author:</source>
-        <translation type="unfinished"></translation>
+        <translation>Autore originale:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>Contributors:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contributori:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="96"/>
         <source>If you want to create a new translation or improve an extant one:</source>
-        <translation type="unfinished"></translation>
+        <translation>Se vuoi creare una nuova traduzione o migliorare una già esistente:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
-        <translation type="unfinished"></translation>
+        <translation>Puoi supportare l&apos;autore originale di FlowPlayer con una donazione:</translation>
     </message>
 </context>
 <context>
@@ -110,12 +108,12 @@
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="46"/>
         <source>Search artist image</source>
-        <translation type="unfinished"></translation>
+        <translation>Cerca immagine artista</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="47"/>
         <source>Unknown artist</source>
-        <translation type="unfinished">Artista sconosciuto</translation>
+        <translation>Artista sconosciuto</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="55"/>
@@ -207,7 +205,7 @@
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
         <source>Download artist image</source>
-        <translation type="unfinished"></translation>
+        <translation>Scarica immagine artista</translation>
     </message>
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="76"/>
@@ -219,7 +217,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
-        <source>Cover no found</source>
+        <source>Cover not found</source>
         <translation>Copertina non trovata</translation>
     </message>
 </context>
@@ -333,7 +331,7 @@
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
-        <source>There&apos;s no missing covers in your music collection</source>
+        <source>There are no missing covers in your music collection</source>
         <translation>Non ci sono copertine mancanti nella tua raccolta</translation>
     </message>
 </context>
@@ -853,7 +851,7 @@
     <message>
         <location filename="../qml/pages/PickFolder.qml" line="7"/>
         <source>Select folder</source>
-        <translation type="unfinished">Seleziona cartella</translation>
+        <translation>Seleziona cartella</translation>
     </message>
 </context>
 <context>
@@ -1045,7 +1043,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="40"/>
         <source>About</source>
-        <translation type="unfinished">Info</translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="51"/>
@@ -1055,7 +1053,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="55"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Generale</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="63"/>
@@ -1110,22 +1108,22 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="130"/>
         <source>Active cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Cover attiva</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="134"/>
         <source>Use album art as background</source>
-        <translation type="unfinished"></translation>
+        <translation>Usa copertina album come sfondo</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="143"/>
         <source>Show previous button</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostra pulsante precedente</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="153"/>
         <source>List management</source>
-        <translation type="unfinished"></translation>
+        <translation>Gestione lista</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="158"/>
@@ -1170,7 +1168,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="218"/>
         <source>Lyrics</source>
-        <translation type="unfinished">Testo</translation>
+        <translation>Testo</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="223"/>
@@ -1185,7 +1183,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="239"/>
         <source>Extras</source>
-        <translation type="unfinished"></translation>
+        <translation>Extra</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="243"/>
@@ -1195,7 +1193,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="252"/>
         <source>Collection</source>
-        <translation type="unfinished"></translation>
+        <translation>Raccolta</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="264"/>
@@ -1218,12 +1216,12 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
         <source>Unknown artist</source>
-        <translation type="unfinished">Artista sconosciuto</translation>
+        <translation>Artista sconosciuto</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
         <source>Unknown album</source>
-        <translation type="unfinished">Album sconosciuto</translation>
+        <translation>Album sconosciuto</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="79"/>
@@ -1373,7 +1371,7 @@
         <location filename="../src/utils.cpp" line="291"/>
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
-        <source>No lyrics founded</source>
+        <source>No lyrics found</source>
         <translation>Testo non trovato</translation>
     </message>
     <message>
@@ -1383,7 +1381,7 @@
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
-        <source>Album cover not founded</source>
+        <source>Album cover not found</source>
         <translation>Copertina album non trovata</translation>
     </message>
 </context>
