@@ -459,12 +459,12 @@
         <location filename="../qml/pages/LastFM.qml" line="596"/>
         <location filename="../qml/pages/LastFM.qml" line="614"/>
         <source>The track could not be found</source>
-        <translation>Track kan niet worden gevonden</translation>
+        <translation>Het nummer kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="694"/>
         <source>Not logged yet</source>
-        <translation>Niet ingelogd</translation>
+        <translation>Nog niet aangemeld</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="695"/>
