@@ -231,7 +231,7 @@
     <message>
         <location filename="../src/datareader.cpp" line="237"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
