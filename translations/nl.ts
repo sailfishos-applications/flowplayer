@@ -452,7 +452,7 @@
         <location filename="../qml/pages/LastFM.qml" line="595"/>
         <location filename="../qml/pages/LastFM.qml" line="613"/>
         <source>Error fetching track information</source>
-        <translation>Fout bij het ophalen van informatie over de track</translation>
+        <translation>Fout bij het ophalen van de nummerinformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="574"/>
