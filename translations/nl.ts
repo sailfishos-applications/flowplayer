@@ -376,7 +376,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="239"/>
         <source>No track information available</source>
-        <translation>Track informatie niet beschikbaar</translation>
+        <translation>Er is geen nummerinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="282"/>
