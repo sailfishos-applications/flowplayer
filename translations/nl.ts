@@ -872,7 +872,7 @@
     <message>
         <location filename="../src/playlistmanager.cpp" line="345"/>
         <source>Custom playlists</source>
-        <translation>Handmatige afspeellijsten</translation>
+        <translation>Aangepaste afspeellijsten</translation>
     </message>
 </context>
 <context>
@@ -900,12 +900,12 @@
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="104"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="139"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="175"/>
