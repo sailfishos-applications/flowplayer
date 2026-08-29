@@ -381,7 +381,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="282"/>
         <source>Fetching artist information</source>
-        <translation>Informatie ophalen over de artiest</translation>
+        <translation>Informatie over de artiest wordt opgehaald</translation>
     </message>
 </context>
 <context>
@@ -392,7 +392,7 @@
         <location filename="../qml/pages/LastFM.qml" line="198"/>
         <location filename="../qml/pages/LastFM.qml" line="268"/>
         <source>Fetching artist information</source>
-        <translation>Informatie ophalen over de artiest</translation>
+        <translation>Informatie over de artiest wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="118"/>
