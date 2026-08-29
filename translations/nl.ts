@@ -1281,12 +1281,12 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="52"/>
         <source>Tracks</source>
-        <translation>Tracks</translation>
+        <translation>Nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="119"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="130"/>
@@ -1296,7 +1296,7 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
