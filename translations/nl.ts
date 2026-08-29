@@ -537,7 +537,7 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="217"/>
         <source>Reload picture</source>
-        <translation>Herlaad afbeeldingen</translation>
+        <translation>Afbeelding herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="224"/>
