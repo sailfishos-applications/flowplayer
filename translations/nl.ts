@@ -1163,12 +1163,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="210"/>
         <source>Clear queue on exit</source>
-        <translation>Wis wachtrij bij sluiten</translation>
+        <translation>Wachtrij wissen bij sluiten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="218"/>
         <source>Lyrics</source>
-        <translation>Lyrics</translation>
+        <translation>Songteksten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="223"/>
