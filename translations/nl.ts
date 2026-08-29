@@ -565,7 +565,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="41"/>
         <source>Show search field</source>
-        <translation>Toon zoekveld</translation>
+        <translation>Zoekveld tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="94"/>
@@ -591,7 +591,7 @@
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="44"/>
         <source>Add folder</source>
-        <translation>Voeg map toe</translation>
+        <translation>Map toevoegen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="50"/>
