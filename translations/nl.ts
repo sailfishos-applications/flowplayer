@@ -1211,7 +1211,7 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="71"/>
         <source>Search cover</source>
-        <translation>Zoek cover</translation>
+        <translation>Albumhoes zoeken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
@@ -1221,13 +1221,13 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="79"/>
         <location filename="../qml/pages/SongListView.qml" line="120"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="89"/>
