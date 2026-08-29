@@ -75,7 +75,7 @@
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="50"/>
         <source>Edit station</source>
-        <translation>Bewerk station</translation>
+        <translation>Station bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="50"/>
