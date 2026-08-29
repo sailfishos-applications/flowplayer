@@ -1314,7 +1314,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="170"/>
         <source>Updating music collection</source>
-        <translation>Updaten muziek collectie</translation>
+        <translation>Muziekverzameling wordt bijgewerkt</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="177"/>
@@ -1334,7 +1334,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="282"/>
         <source>Tracks</source>
-        <translation>Tracks</translation>
+        <translation>Nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="300"/>
