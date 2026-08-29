@@ -410,7 +410,7 @@
         <location filename="../qml/pages/LastFM.qml" line="594"/>
         <location filename="../qml/pages/LastFM.qml" line="612"/>
         <source>Fetching track information</source>
-        <translation>Informatie ophalen over de track</translation>
+        <translation>Informatie over het nummer wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="269"/>
