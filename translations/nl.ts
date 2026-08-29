@@ -392,7 +392,7 @@
         <location filename="../qml/pages/LastFM.qml" line="198"/>
         <location filename="../qml/pages/LastFM.qml" line="268"/>
         <source>Fetching artist information</source>
-        <translation>Informatie over de artiest wordt opgehaald</translation>
+        <translation>Artiestinformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="118"/>
@@ -400,7 +400,7 @@
         <location filename="../qml/pages/LastFM.qml" line="333"/>
         <location filename="../qml/pages/LastFM.qml" line="420"/>
         <source>Fetching album information</source>
-        <translation>Informatie over het album wordt opgehaald</translation>
+        <translation>Albuminformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="133"/>
