@@ -346,7 +346,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="60"/>
         <source>The artist could not be found</source>
-        <translation>Artiest kan niet worden gevonden</translation>
+        <translation>De artiest kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="125"/>
