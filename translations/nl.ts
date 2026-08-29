@@ -366,7 +366,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="200"/>
         <source>Error fetching track information</source>
-        <translation>Fout bij het ophalen van informatie over het nummer</translation>
+        <translation>Fout bij het ophalen van de nummerinformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="214"/>
