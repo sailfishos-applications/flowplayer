@@ -851,7 +851,7 @@
     <message>
         <location filename="../qml/pages/PickFolder.qml" line="7"/>
         <source>Select folder</source>
-        <translation>Selecteer map</translation>
+        <translation>Map selecteren</translation>
     </message>
 </context>
 <context>
