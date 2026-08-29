@@ -341,7 +341,7 @@
         <location filename="../src/lfm.cpp" line="48"/>
         <location filename="../src/lfm.cpp" line="108"/>
         <source>Error fetching artist information</source>
-        <translation>Fout bij het ophalen van informatie over de artiest</translation>
+        <translation>Fout bij het ophalen van de artiestinformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="60"/>
