@@ -1258,12 +1258,12 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="228"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="228"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummers</translation>
     </message>
 </context>
 <context>
@@ -1271,12 +1271,12 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="32"/>
         <source>Hide search field</source>
-        <translation>Verberg zoekveld</translation>
+        <translation>Zoekveld verbergen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="32"/>
         <source>Show search field</source>
-        <translation>Toon zoekveld</translation>
+        <translation>Zoekveld tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="52"/>
