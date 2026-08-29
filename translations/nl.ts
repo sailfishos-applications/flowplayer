@@ -958,12 +958,12 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="100"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="100"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummers</translation>
     </message>
 </context>
 <context>
