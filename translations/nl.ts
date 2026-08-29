@@ -910,7 +910,7 @@
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="175"/>
         <source>Playlist is empty</source>
-        <translation>Afspelllijst is leeg</translation>
+        <translation>Afspeelllijst is leeg</translation>
     </message>
 </context>
 <context>
