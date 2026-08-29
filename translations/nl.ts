@@ -1301,7 +1301,7 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
         <source>Add to favorites</source>
-        <translation>Voeg aan favorieten</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="182"/>
