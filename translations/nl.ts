@@ -542,7 +542,7 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="224"/>
         <source>Reload info</source>
-        <translation>Herlaad info</translation>
+        <translation>Info herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="245"/>
@@ -560,7 +560,7 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="41"/>
         <source>Hide search field</source>
-        <translation>Verberg zoekveld</translation>
+        <translation>Zoekveld verbergen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="41"/>
