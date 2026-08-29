@@ -1025,7 +1025,7 @@
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="66"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="77"/>
@@ -1035,7 +1035,7 @@
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="81"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
 </context>
 <context>
