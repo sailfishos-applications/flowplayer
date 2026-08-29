@@ -469,12 +469,12 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="695"/>
         <source>Login error. Try again</source>
-        <translation>Fout bij het inloggen. Probeer het opnieuw</translation>
+        <translation>Fout bij het aanmelden. Probeer het opnieuw</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="696"/>
         <source>Logged as </source>
-        <translation>Ingelogd als</translation>
+        <translation>Aangemeld als</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="712"/>
