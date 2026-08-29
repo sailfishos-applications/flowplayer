@@ -1153,7 +1153,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="186"/>
         <source>Track number</source>
-        <translation>Track nummer</translation>
+        <translation>Tracknummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="187"/>
