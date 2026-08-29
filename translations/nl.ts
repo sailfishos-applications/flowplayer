@@ -928,7 +928,7 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="51"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="65"/>
@@ -938,7 +938,7 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="72"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="90"/>
@@ -953,7 +953,7 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="99"/>
         <source>No tracks</source>
-        <translation>Geen tracks</translation>
+        <translation>Geen nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="100"/>
