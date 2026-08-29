@@ -119,7 +119,7 @@
         <location filename="../qml/pages/AlbumListView.qml" line="55"/>
         <location filename="../qml/pages/AlbumListView.qml" line="107"/>
         <source>Add to playlist</source>
-        <translation>Toevoegen aan afspeellijst </translation>
+        <translation>Toevoegen aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="65"/>
@@ -130,7 +130,7 @@
         <location filename="../qml/pages/AlbumListView.qml" line="85"/>
         <location filename="../qml/pages/AlbumListView.qml" line="185"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="85"/>
