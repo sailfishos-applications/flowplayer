@@ -1203,7 +1203,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="278"/>
         <source>Update collection</source>
-        <translation>Update collectie</translation>
+        <translation>Verzameling bijwerken</translation>
     </message>
 </context>
 <context>
