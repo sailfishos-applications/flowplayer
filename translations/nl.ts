@@ -828,7 +828,7 @@
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="57"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="68"/>
@@ -838,7 +838,7 @@
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="75"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="131"/>
