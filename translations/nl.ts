@@ -332,7 +332,7 @@
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
         <source>There are no missing covers in your music collection</source>
-        <translation>Er ontbreekt geen covers in je muziek collectie</translation>
+        <translation>Er ontbreken geen albumhoezen in je muziekverzameling</translation>
     </message>
 </context>
 <context>
