@@ -512,12 +512,12 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="115"/>
         <source>Search in A-Z Lyrics</source>
-        <translation>Zoek in A-Z Lyrics</translation>
+        <translation>Zoeken op A-Z Lyrics</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="124"/>
         <source>Search in Lyric Wiki</source>
-        <translation>Zoek in Lyric Wiki</translation>
+        <translation>Zoeken op Lyric Wiki</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="133"/>
