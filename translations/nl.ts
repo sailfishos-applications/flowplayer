@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="nl">
 <context>
     <name>AboutPage</name>
     <message>
@@ -11,22 +9,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Original author:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oorspronkelijke auteur:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>Contributors:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijdragers:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="96"/>
         <source>If you want to create a new translation or improve an extant one:</source>
-        <translation type="unfinished"></translation>
+        <translation>Als je een nieuwe vertaling wil bijdragen, of een bestaande verbeteren:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
-        <translation type="unfinished"></translation>
+        <translation>Je kunt de oorspronkelijke auteur van FlowPlayer steunen met een donatie:</translation>
     </message>
 </context>
 <context>
@@ -49,12 +47,12 @@
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="85"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="96"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="136"/>
@@ -77,7 +75,7 @@
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="50"/>
         <source>Edit station</source>
-        <translation>Bewerk station</translation>
+        <translation>Station bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="50"/>
@@ -88,13 +86,13 @@
         <location filename="../qml/pages/AddRadio.qml" line="59"/>
         <location filename="../qml/pages/AddRadio.qml" line="60"/>
         <source>Station name</source>
-        <translation>Station naam</translation>
+        <translation>Naam van station</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="70"/>
         <location filename="../qml/pages/AddRadio.qml" line="71"/>
         <source>Station url</source>
-        <translation>Station url</translation>
+        <translation>URL van station</translation>
     </message>
 </context>
 <context>
@@ -110,7 +108,7 @@
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="46"/>
         <source>Search artist image</source>
-        <translation>Zoek artiest afbeelding</translation>
+        <translation>Artiestafbeelding zoeken</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="47"/>
@@ -121,7 +119,7 @@
         <location filename="../qml/pages/AlbumListView.qml" line="55"/>
         <location filename="../qml/pages/AlbumListView.qml" line="107"/>
         <source>Add to playlist</source>
-        <translation>Toevoegen aan afspeellijst </translation>
+        <translation>Toevoegen aan afspeellijst</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="65"/>
@@ -132,13 +130,13 @@
         <location filename="../qml/pages/AlbumListView.qml" line="85"/>
         <location filename="../qml/pages/AlbumListView.qml" line="185"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="85"/>
         <location filename="../qml/pages/AlbumListView.qml" line="185"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="171"/>
@@ -176,7 +174,7 @@
     <message>
         <location filename="../qml/pages/AlbumMetadata.qml" line="61"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumMetadata.qml" line="69"/>
@@ -202,12 +200,12 @@
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
         <source>Download album cover</source>
-        <translation>Download album cover</translation>
+        <translation>Albumhoes downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
         <source>Download artist image</source>
-        <translation>Download artiest afbeelding</translation>
+        <translation>Artiestafbeelding downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="76"/>
@@ -219,8 +217,8 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
-        <source>Cover no found</source>
-        <translation>Cover niet gevonden</translation>
+        <source>Cover not found</source>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 <context>
@@ -233,7 +231,7 @@
     <message>
         <location filename="../src/datareader.cpp" line="237"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
@@ -264,7 +262,7 @@
     <message>
         <location filename="../qml/pages/DownloadingListDelegate.qml" line="31"/>
         <source>No cover</source>
-        <translation>Geen cover</translation>
+        <translation>Geen albumhoes</translation>
     </message>
 </context>
 <context>
@@ -282,18 +280,18 @@
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="43"/>
         <source>Edit preset</source>
-        <translation>Bewerk preset</translation>
+        <translation>Voorinstelling bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="43"/>
         <source>Save preset</source>
-        <translation>Preset opslaan</translation>
+        <translation>Voorinstelling opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="52"/>
         <location filename="../qml/pages/EditPreset.qml" line="53"/>
         <source>Preset name</source>
-        <translation>Naam preset</translation>
+        <translation>Naam van voorinstelling</translation>
     </message>
 </context>
 <context>
@@ -301,7 +299,7 @@
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="53"/>
         <source>Save preset</source>
-        <translation>Preset opslaan</translation>
+        <translation>Voorinstelling opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="72"/>
@@ -311,7 +309,7 @@
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="91"/>
         <source>Preset</source>
-        <translation>Preset</translation>
+        <translation>Voorinstelling</translation>
     </message>
 </context>
 <context>
@@ -329,12 +327,12 @@
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="100"/>
         <source>Download album covers</source>
-        <translation>Download album covers</translation>
+        <translation>Albumhoezen downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
-        <source>There&apos;s no missing covers in your music collection</source>
-        <translation>Er ontbreekt geen covers in je muziek collectie</translation>
+        <source>There are no missing covers in your music collection</source>
+        <translation>Er ontbreken geen albumhoezen in je muziekverzameling</translation>
     </message>
 </context>
 <context>
@@ -343,47 +341,47 @@
         <location filename="../src/lfm.cpp" line="48"/>
         <location filename="../src/lfm.cpp" line="108"/>
         <source>Error fetching artist information</source>
-        <translation>Fout bij het ophalen van informatie over de artiest</translation>
+        <translation>Fout bij het ophalen van de artiestinformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="60"/>
         <source>The artist could not be found</source>
-        <translation>Artiest kan niet worden gevonden</translation>
+        <translation>De artiest kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="125"/>
         <source>Error fetching album information</source>
-        <translation>Fout bij het ophalen van informatie over de album</translation>
+        <translation>Fout bij het ophalen van de albuminformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="137"/>
         <source>The album could not be found</source>
-        <translation>Album kan niet worden gevonden</translation>
+        <translation>Het album kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="164"/>
         <source>No album information available</source>
-        <translation>Album informatie niet beschikbaar</translation>
+        <translation>Er is geen albuminformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="200"/>
         <source>Error fetching track information</source>
-        <translation>Fout bij het ophalen van informatie over de track</translation>
+        <translation>Fout bij het ophalen van de nummerinformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="214"/>
         <source>The track could not be found</source>
-        <translation>Track kan niet worden gevonden</translation>
+        <translation>Nummer kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="239"/>
         <source>No track information available</source>
-        <translation>Track informatie niet beschikbaar</translation>
+        <translation>Er is geen nummerinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="282"/>
         <source>Fetching artist information</source>
-        <translation>Informatie ophalen over de artiest</translation>
+        <translation>Artiestinformatie wordt opgehaald</translation>
     </message>
 </context>
 <context>
@@ -394,7 +392,7 @@
         <location filename="../qml/pages/LastFM.qml" line="198"/>
         <location filename="../qml/pages/LastFM.qml" line="268"/>
         <source>Fetching artist information</source>
-        <translation>Informatie ophalen over de artiest</translation>
+        <translation>Artiestinformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="118"/>
@@ -402,7 +400,7 @@
         <location filename="../qml/pages/LastFM.qml" line="333"/>
         <location filename="../qml/pages/LastFM.qml" line="420"/>
         <source>Fetching album information</source>
-        <translation>Informatie ophalen over de album</translation>
+        <translation>Albuminformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="133"/>
@@ -412,71 +410,71 @@
         <location filename="../qml/pages/LastFM.qml" line="594"/>
         <location filename="../qml/pages/LastFM.qml" line="612"/>
         <source>Fetching track information</source>
-        <translation>Informatie ophalen over de track</translation>
+        <translation>Nummerinformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="269"/>
         <source>No artist information available</source>
-        <translation>Artiest informatie niet beschikbaar</translation>
+        <translation>Er is geen artiestinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="270"/>
         <source>Error fetching artist information</source>
-        <translation>Fout bij het ophalen van informatie over de artiest</translation>
+        <translation>Fout bij het ophalen van de artiestinformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="271"/>
         <source>The artist could not be found</source>
-        <translation>Artiest kan niet worden gevonden</translation>
+        <translation>De artiest kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="421"/>
         <source>No album information available</source>
-        <translation>Album informatie niet beschikbaar</translation>
+        <translation>Er is geen albuminformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="422"/>
         <source>Error fetching album information</source>
-        <translation>Fout bij het ophalen van informatie over de album</translation>
+        <translation>Fout bij het ophalen van de albuminformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="423"/>
         <source>The album could not be found</source>
-        <translation>Album kan niet worden gevonden</translation>
+        <translation>Het album kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="572"/>
         <source>No track information available</source>
-        <translation>Track informatie niet beschikbaar</translation>
+        <translation>Er is geen nummerinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="573"/>
         <location filename="../qml/pages/LastFM.qml" line="595"/>
         <location filename="../qml/pages/LastFM.qml" line="613"/>
         <source>Error fetching track information</source>
-        <translation>Fout bij het ophalen van informatie over de track</translation>
+        <translation>Fout bij het ophalen van de nummerinformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="574"/>
         <location filename="../qml/pages/LastFM.qml" line="596"/>
         <location filename="../qml/pages/LastFM.qml" line="614"/>
         <source>The track could not be found</source>
-        <translation>Track kan niet worden gevonden</translation>
+        <translation>Het nummer kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="694"/>
         <source>Not logged yet</source>
-        <translation>Niet ingelogd</translation>
+        <translation>Nog niet aangemeld</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="695"/>
         <source>Login error. Try again</source>
-        <translation>Fout bij het inloggen. Probeer het opnieuw</translation>
+        <translation>Fout bij het aanmelden. Probeer het opnieuw</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="696"/>
         <source>Logged as </source>
-        <translation>Ingelogd als</translation>
+        <translation>Aangemeld als</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="712"/>
@@ -491,7 +489,7 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="745"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Aanmelden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="765"/>
@@ -509,27 +507,27 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="106"/>
         <source>Search in ChartLyrics</source>
-        <translation>Zoek in ChartLyrics</translation>
+        <translation>Zoeken op ChartLyrics</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="115"/>
         <source>Search in A-Z Lyrics</source>
-        <translation>Zoek in A-Z Lyrics</translation>
+        <translation>Zoeken op A-Z Lyrics</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="124"/>
         <source>Search in Lyric Wiki</source>
-        <translation>Zoek in Lyric Wiki</translation>
+        <translation>Zoeken op Lyric Wiki</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="133"/>
         <source>Save lyrics</source>
-        <translation>Lyrics opslaan</translation>
+        <translation>Songtekst opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="155"/>
         <source>Lyrics</source>
-        <translation>Lyrics</translation>
+        <translation>Songtekst</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="185"/>
@@ -539,12 +537,12 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="217"/>
         <source>Reload picture</source>
-        <translation>Herlaad afbeeldingen</translation>
+        <translation>Afbeelding herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="224"/>
         <source>Reload info</source>
-        <translation>Herlaad info</translation>
+        <translation>Info herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="245"/>
@@ -562,12 +560,12 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="41"/>
         <source>Hide search field</source>
-        <translation>Verberg zoekveld</translation>
+        <translation>Zoekveld verbergen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="41"/>
         <source>Show search field</source>
-        <translation>Toon zoekveld</translation>
+        <translation>Zoekveld tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="94"/>
@@ -593,7 +591,7 @@
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="44"/>
         <source>Add folder</source>
-        <translation>Voeg map toe</translation>
+        <translation>Map toevoegen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="50"/>
@@ -603,12 +601,12 @@
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="61"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="72"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="118"/>
@@ -626,7 +624,7 @@
     <message>
         <location filename="../src/meta.cpp" line="64"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
@@ -649,7 +647,7 @@
     <message>
         <location filename="../qml/pages/Metadata.qml" line="68"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/Metadata.qml" line="76"/>
@@ -686,7 +684,7 @@
     <message>
         <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../src/missing.cpp" line="79"/>
@@ -699,7 +697,7 @@
     <message>
         <location filename="../src/musicmodel.cpp" line="53"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../src/musicmodel.cpp" line="54"/>
@@ -718,7 +716,7 @@
     <message>
         <location filename="../src/myplaylist.cpp" line="73"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
@@ -747,7 +745,7 @@
         <location filename="../qml/pages/NewPlaylist.qml" line="95"/>
         <location filename="../qml/pages/NewPlaylist.qml" line="96"/>
         <source>Playlist name</source>
-        <translation>Naam afspelllijst</translation>
+        <translation>Naam van afspeelllijst</translation>
     </message>
 </context>
 <context>
@@ -762,7 +760,7 @@
         <location filename="../qml/pages/NowPlaying.qml" line="34"/>
         <location filename="../qml/pages/NowPlaying.qml" line="118"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="258"/>
@@ -772,12 +770,12 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="266"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="280"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="280"/>
@@ -792,7 +790,7 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="305"/>
         <source>Reload info</source>
-        <translation>Herlaad info</translation>
+        <translation>Info herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="314"/>
@@ -802,7 +800,7 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="393"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="502"/>
@@ -830,7 +828,7 @@
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="57"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="68"/>
@@ -840,7 +838,7 @@
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="75"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/OnlineRadios.qml" line="131"/>
@@ -853,7 +851,7 @@
     <message>
         <location filename="../qml/pages/PickFolder.qml" line="7"/>
         <source>Select folder</source>
-        <translation type="unfinished">Selecteer map</translation>
+        <translation>Map selecteren</translation>
     </message>
 </context>
 <context>
@@ -866,7 +864,7 @@
     <message>
         <location filename="../src/playlist.cpp" line="161"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
@@ -874,7 +872,7 @@
     <message>
         <location filename="../src/playlistmanager.cpp" line="345"/>
         <source>Custom playlists</source>
-        <translation>Handmatige afspeellijsten</translation>
+        <translation>Aangepaste afspeellijsten</translation>
     </message>
 </context>
 <context>
@@ -902,17 +900,17 @@
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="104"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="139"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/PlaylistPage.qml" line="175"/>
         <source>Playlist is empty</source>
-        <translation>Afspelllijst is leeg</translation>
+        <translation>Afspeelllijst is leeg</translation>
     </message>
 </context>
 <context>
@@ -930,7 +928,7 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="51"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="65"/>
@@ -940,7 +938,7 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="72"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="90"/>
@@ -955,17 +953,17 @@
     <message>
         <location filename="../qml/pages/Playlists.qml" line="99"/>
         <source>No tracks</source>
-        <translation>Geen tracks</translation>
+        <translation>Geen nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="100"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Playlists.qml" line="100"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummers</translation>
     </message>
 </context>
 <context>
@@ -1004,7 +1002,7 @@
     <message>
         <location filename="../qml/pages/SelectPlaylist.qml" line="44"/>
         <source>Select playlist</source>
-        <translation>Selecteer afspeellijst</translation>
+        <translation>Afspeellijst selecteren</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPlaylist.qml" line="65"/>
@@ -1022,12 +1020,12 @@
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="53"/>
         <source>Presets</source>
-        <translation>Presets</translation>
+        <translation>Voorinstellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="66"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="77"/>
@@ -1037,7 +1035,7 @@
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="81"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
 </context>
 <context>
@@ -1090,7 +1088,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="109"/>
         <source>Albums view mode</source>
-        <translation>Albums weegavemodus</translation>
+        <translation>Weergavemodus voor albums</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="111"/>
@@ -1100,7 +1098,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="112"/>
         <source>Grid</source>
-        <translation>Rooster</translation>
+        <translation>Raster</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="113"/>
@@ -1110,27 +1108,27 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="130"/>
         <source>Active cover</source>
-        <translation>Actieve cover</translation>
+        <translation>Actieve hoes</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="134"/>
         <source>Use album art as background</source>
-        <translation>Gebruik album art als achtergrond</translation>
+        <translation>Albumhoes gebruiken als achtergrond</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="143"/>
         <source>Show previous button</source>
-        <translation>Toon vorige knop</translation>
+        <translation>Knop ‘Vorige’ tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="153"/>
         <source>List management</source>
-        <translation>Lijst beheerder</translation>
+        <translation>Lijstbeheer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="158"/>
         <source>Sort albums by</source>
-        <translation>Sorteer albums door</translation>
+        <translation>Albums rangschikken op</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="160"/>
@@ -1145,7 +1143,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="183"/>
         <source>Sort songs by</source>
-        <translation>Sorteer tracks door</translation>
+        <translation>Liedjes rangschikken op</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="185"/>
@@ -1155,7 +1153,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="186"/>
         <source>Track number</source>
-        <translation>Track nummer</translation>
+        <translation>Tracknummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="187"/>
@@ -1165,37 +1163,37 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="210"/>
         <source>Clear queue on exit</source>
-        <translation>Wis wachtrij bij sluiten</translation>
+        <translation>Wachtrij wissen bij sluiten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="218"/>
         <source>Lyrics</source>
-        <translation>Lyrics</translation>
+        <translation>Songteksten</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="223"/>
         <source>Fetch lyrics automatically</source>
-        <translation>Haal lyrics automatisch op</translation>
+        <translation>Songtekst automatisch ophalen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="231"/>
         <source>Save lyrics automatically</source>
-        <translation>Lyrics automatisch opslaan</translation>
+        <translation>Songtekst automatisch opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="239"/>
         <source>Extras</source>
-        <translation>Extras</translation>
+        <translation>Extra’s</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="243"/>
         <source>Gapless playback</source>
-        <translation>Gapless playback</translation>
+        <translation>Afspelen zonder pauzes</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="252"/>
         <source>Collection</source>
-        <translation>Collectie</translation>
+        <translation>Verzameling</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="264"/>
@@ -1205,7 +1203,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="278"/>
         <source>Update collection</source>
-        <translation>Update collectie</translation>
+        <translation>Verzameling bijwerken</translation>
     </message>
 </context>
 <context>
@@ -1213,7 +1211,7 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="71"/>
         <source>Search cover</source>
-        <translation>Zoek cover</translation>
+        <translation>Albumhoes zoeken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
@@ -1223,13 +1221,13 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="72"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="79"/>
         <location filename="../qml/pages/SongListView.qml" line="120"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="89"/>
@@ -1240,17 +1238,17 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="139"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="139"/>
         <source>Add to favorites</source>
-        <translation>Voeg aan favorieten</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="216"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="224"/>
@@ -1260,12 +1258,12 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="228"/>
         <source>1 track</source>
-        <translation>1 track</translation>
+        <translation>1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="228"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummers</translation>
     </message>
 </context>
 <context>
@@ -1273,22 +1271,22 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="32"/>
         <source>Hide search field</source>
-        <translation>Verberg zoekveld</translation>
+        <translation>Zoekveld verbergen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="32"/>
         <source>Show search field</source>
-        <translation>Toon zoekveld</translation>
+        <translation>Zoekveld tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="52"/>
         <source>Tracks</source>
-        <translation>Tracks</translation>
+        <translation>Nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="119"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="130"/>
@@ -1298,12 +1296,12 @@
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="139"/>
         <source>Add to favorites</source>
-        <translation>Voeg aan favorieten</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongsPage.qml" line="182"/>
@@ -1316,7 +1314,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="170"/>
         <source>Updating music collection</source>
-        <translation>Updaten muziek collectie</translation>
+        <translation>Muziekverzameling wordt bijgewerkt</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="177"/>
@@ -1336,7 +1334,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="282"/>
         <source>Tracks</source>
-        <translation>Tracks</translation>
+        <translation>Nummers</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="300"/>
@@ -1351,7 +1349,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="192"/>
         <source>Download album covers</source>
-        <translation>Download album covers</translation>
+        <translation>Albumhoezen downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="199"/>
@@ -1373,18 +1371,18 @@
         <location filename="../src/utils.cpp" line="291"/>
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
-        <source>No lyrics founded</source>
-        <translation>Geen lyrics gevonden</translation>
+        <source>No lyrics found</source>
+        <translation>Geen songtekst gevonden</translation>
     </message>
     <message>
         <location filename="../src/utils.cpp" line="209"/>
         <source>Error fetching lyrics</source>
-        <translation>Fout bij het ophalen van de lyrics</translation>
+        <translation>Fout bij het ophalen van de songtekst</translation>
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
-        <source>Album cover not founded</source>
-        <translation>Album cover niet gevonden</translation>
+        <source>Album cover not found</source>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 <context>
@@ -1397,7 +1395,7 @@
     <message>
         <location filename="../qml/flowplayer.qml" line="321"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 </TS>
