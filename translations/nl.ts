@@ -1108,7 +1108,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="130"/>
         <source>Active cover</source>
-        <translation>Actieve cover</translation>
+        <translation>Actieve hoes</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="134"/>
