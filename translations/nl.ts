@@ -770,12 +770,12 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="266"/>
         <source>Edit metadata</source>
-        <translation>Bewerk metadata</translation>
+        <translation>Metadata bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="280"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="280"/>
