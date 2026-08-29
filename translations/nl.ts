@@ -790,7 +790,7 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="305"/>
         <source>Reload info</source>
-        <translation>Herlaad info</translation>
+        <translation>Info herladen</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="314"/>
@@ -800,7 +800,7 @@
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="393"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="502"/>
