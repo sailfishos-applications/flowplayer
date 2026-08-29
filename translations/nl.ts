@@ -760,7 +760,7 @@
         <location filename="../qml/pages/NowPlaying.qml" line="34"/>
         <location filename="../qml/pages/NowPlaying.qml" line="118"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../qml/pages/NowPlaying.qml" line="258"/>
