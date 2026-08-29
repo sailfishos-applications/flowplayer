@@ -327,7 +327,7 @@
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="100"/>
         <source>Download album covers</source>
-        <translation>Download album covers</translation>
+        <translation>Albumhoezen downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
