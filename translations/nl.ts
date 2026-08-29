@@ -1098,7 +1098,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="112"/>
         <source>Grid</source>
-        <translation>Rooster</translation>
+        <translation>Raster</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="113"/>
