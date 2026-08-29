@@ -1002,7 +1002,7 @@
     <message>
         <location filename="../qml/pages/SelectPlaylist.qml" line="44"/>
         <source>Select playlist</source>
-        <translation>Selecteer afspeellijst</translation>
+        <translation>Afspeellijst selecteren</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPlaylist.qml" line="65"/>
@@ -1020,7 +1020,7 @@
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="53"/>
         <source>Presets</source>
-        <translation>Presets</translation>
+        <translation>Voorinstellingen</translation>
     </message>
     <message>
         <location filename="../qml/pages/SelectPreset.qml" line="66"/>
