@@ -1349,7 +1349,7 @@
     <message>
         <location filename="../qml/pages/StartPage.qml" line="192"/>
         <source>Download album covers</source>
-        <translation>Download album covers</translation>
+        <translation>Albumhoezen downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/StartPage.qml" line="199"/>
