@@ -1238,17 +1238,17 @@
     <message>
         <location filename="../qml/pages/SongListView.qml" line="139"/>
         <source>Remove from favorites</source>
-        <translation>Verwijder uit favorieten</translation>
+        <translation>Verwijderen uit favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="139"/>
         <source>Add to favorites</source>
-        <translation>Voeg aan favorieten</translation>
+        <translation>Toevoegen aan favorieten</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="216"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/SongListView.qml" line="224"/>
