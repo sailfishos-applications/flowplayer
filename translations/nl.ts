@@ -351,12 +351,12 @@
     <message>
         <location filename="../src/lfm.cpp" line="125"/>
         <source>Error fetching album information</source>
-        <translation>Fout bij het ophalen van informatie over de album</translation>
+        <translation>Fout bij het ophalen van informatie over het album</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="137"/>
         <source>The album could not be found</source>
-        <translation>Album kan niet worden gevonden</translation>
+        <translation>Het album kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="164"/>
