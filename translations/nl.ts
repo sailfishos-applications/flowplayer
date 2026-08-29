@@ -410,12 +410,12 @@
         <location filename="../qml/pages/LastFM.qml" line="594"/>
         <location filename="../qml/pages/LastFM.qml" line="612"/>
         <source>Fetching track information</source>
-        <translation>Informatie over het nummer wordt opgehaald</translation>
+        <translation>Nummerinformatie wordt opgehaald</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="269"/>
         <source>No artist information available</source>
-        <translation>Er is een artiestinformatie beschikbaar</translation>
+        <translation>Er is geen artiestinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="270"/>
