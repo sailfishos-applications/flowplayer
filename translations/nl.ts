@@ -1173,17 +1173,17 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="223"/>
         <source>Fetch lyrics automatically</source>
-        <translation>Haal lyrics automatisch op</translation>
+        <translation>Songtekst automatisch ophalen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="231"/>
         <source>Save lyrics automatically</source>
-        <translation>Lyrics automatisch opslaan</translation>
+        <translation>Songtekst automatisch opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="239"/>
         <source>Extras</source>
-        <translation>Extras</translation>
+        <translation>Extra’s</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="243"/>
