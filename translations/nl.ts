@@ -86,13 +86,13 @@
         <location filename="../qml/pages/AddRadio.qml" line="59"/>
         <location filename="../qml/pages/AddRadio.qml" line="60"/>
         <source>Station name</source>
-        <translation>Station naam</translation>
+        <translation>Naam van station</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddRadio.qml" line="70"/>
         <location filename="../qml/pages/AddRadio.qml" line="71"/>
         <source>Station url</source>
-        <translation>Station url</translation>
+        <translation>URL van station</translation>
     </message>
 </context>
 <context>
