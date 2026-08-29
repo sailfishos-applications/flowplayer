@@ -108,7 +108,7 @@
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="46"/>
         <source>Search artist image</source>
-        <translation>Zoek artiest afbeelding</translation>
+        <translation>Artiestafbeelding zoeken</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="47"/>
