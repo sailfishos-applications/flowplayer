@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="nl">
+<?xml version="1.0" ?><!DOCTYPE TS><TS version="2.1" language="nl">
 <context>
     <name>AboutPage</name>
     <message>
@@ -11,22 +9,22 @@
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="63"/>
         <source>Original author:</source>
-        <translation type="unfinished"></translation>
+        <translation>Oorspronkelijke auteur:</translation>
     </message>
     <message>
         <location filename="../qml/pages/AboutPage.qml" line="75"/>
         <source>Contributors:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bijdragers:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="95"/>
+        <location filename="../qml/pages/AboutPage.qml" line="96"/>
         <source>If you want to create a new translation or improve an extant one:</source>
-        <translation type="unfinished"></translation>
+        <translation>Als je een nieuwe vertaling wil bijdragen, of een bestaande verbeteren:</translation>
     </message>
     <message>
-        <location filename="../qml/pages/AboutPage.qml" line="118"/>
+        <location filename="../qml/pages/AboutPage.qml" line="119"/>
         <source>You can support the original author of FlowPlayer by donating:</source>
-        <translation type="unfinished"></translation>
+        <translation>Je kunt de oorspronkelijke auteur van FlowPlayer steunen met een donatie:</translation>
     </message>
 </context>
 <context>
@@ -219,7 +217,7 @@
     <name>CoverPage</name>
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
-        <source>Cover no found</source>
+        <source>Cover not found</source>
         <translation>Cover niet gevonden</translation>
     </message>
 </context>
@@ -333,7 +331,7 @@
     </message>
     <message>
         <location filename="../qml/pages/FullAlbumSearch.qml" line="134"/>
-        <source>There&apos;s no missing covers in your music collection</source>
+        <source>There are no missing covers in your music collection</source>
         <translation>Er ontbreekt geen covers in je muziek collectie</translation>
     </message>
 </context>
@@ -853,7 +851,7 @@
     <message>
         <location filename="../qml/pages/PickFolder.qml" line="7"/>
         <source>Select folder</source>
-        <translation type="unfinished">Selecteer map</translation>
+        <translation>Selecteer map</translation>
     </message>
 </context>
 <context>
@@ -1373,7 +1371,7 @@
         <location filename="../src/utils.cpp" line="291"/>
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
-        <source>No lyrics founded</source>
+        <source>No lyrics found</source>
         <translation>Geen lyrics gevonden</translation>
     </message>
     <message>
@@ -1383,7 +1381,7 @@
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
-        <source>Album cover not founded</source>
+        <source>Album cover not found</source>
         <translation>Album cover niet gevonden</translation>
     </message>
 </context>
