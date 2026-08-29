@@ -1113,12 +1113,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="134"/>
         <source>Use album art as background</source>
-        <translation>Gebruik album art als achtergrond</translation>
+        <translation>Albumhoes gebruiken als achtergrond</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="143"/>
         <source>Show previous button</source>
-        <translation>Toon vorige knop</translation>
+        <translation>Knop ‘Vorige’ tonen</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="153"/>
