@@ -435,12 +435,12 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="422"/>
         <source>Error fetching album information</source>
-        <translation>Fout bij het ophalen van informatie over de album</translation>
+        <translation>Fout bij het ophalen van de albuminformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="423"/>
         <source>The album could not be found</source>
-        <translation>Album kan niet worden gevonden</translation>
+        <translation>Het album kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="572"/>
