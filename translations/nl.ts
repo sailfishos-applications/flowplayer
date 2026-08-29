@@ -280,12 +280,12 @@
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="43"/>
         <source>Edit preset</source>
-        <translation>Bewerk preset</translation>
+        <translation>Voorinstelling bewerken</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="43"/>
         <source>Save preset</source>
-        <translation>Preset opslaan</translation>
+        <translation>Voorinstelling opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/EditPreset.qml" line="52"/>
