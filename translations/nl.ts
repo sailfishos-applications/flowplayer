@@ -1372,17 +1372,17 @@
         <location filename="../src/utils.cpp" line="320"/>
         <location filename="../src/utils.cpp" line="344"/>
         <source>No lyrics found</source>
-        <translation>Geen lyrics gevonden</translation>
+        <translation>Geen songtekst gevonden</translation>
     </message>
     <message>
         <location filename="../src/utils.cpp" line="209"/>
         <source>Error fetching lyrics</source>
-        <translation>Fout bij het ophalen van de lyrics</translation>
+        <translation>Fout bij het ophalen van de songtekst</translation>
     </message>
     <message>
         <location filename="../src/utils.cpp" line="235"/>
         <source>Album cover not found</source>
-        <translation>Album cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 <context>
