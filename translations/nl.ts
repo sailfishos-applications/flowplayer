@@ -647,7 +647,7 @@
     <message>
         <location filename="../qml/pages/Metadata.qml" line="68"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/Metadata.qml" line="76"/>
