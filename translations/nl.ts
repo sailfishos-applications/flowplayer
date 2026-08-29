@@ -136,7 +136,7 @@
         <location filename="../qml/pages/AlbumListView.qml" line="85"/>
         <location filename="../qml/pages/AlbumListView.qml" line="185"/>
         <source>%1 tracks</source>
-        <translation>%1 tracks</translation>
+        <translation>%1 nummer</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumListView.qml" line="171"/>
