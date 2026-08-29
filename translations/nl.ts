@@ -291,7 +291,7 @@
         <location filename="../qml/pages/EditPreset.qml" line="52"/>
         <location filename="../qml/pages/EditPreset.qml" line="53"/>
         <source>Preset name</source>
-        <translation>Naam preset</translation>
+        <translation>Naam van voorinstelling</translation>
     </message>
 </context>
 <context>
