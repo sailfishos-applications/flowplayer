@@ -864,7 +864,7 @@
     <message>
         <location filename="../src/playlist.cpp" line="161"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
