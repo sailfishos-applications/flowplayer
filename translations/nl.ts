@@ -262,7 +262,7 @@
     <message>
         <location filename="../qml/pages/DownloadingListDelegate.qml" line="31"/>
         <source>No cover</source>
-        <translation>Geen cover</translation>
+        <translation>Geen albumhoes</translation>
     </message>
 </context>
 <context>
