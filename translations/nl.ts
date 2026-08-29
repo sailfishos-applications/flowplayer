@@ -684,7 +684,7 @@
     <message>
         <location filename="../src/missing.cpp" line="79"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../src/missing.cpp" line="79"/>
@@ -697,7 +697,7 @@
     <message>
         <location filename="../src/musicmodel.cpp" line="53"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
     <message>
         <location filename="../src/musicmodel.cpp" line="54"/>
@@ -716,7 +716,7 @@
     <message>
         <location filename="../src/myplaylist.cpp" line="73"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
