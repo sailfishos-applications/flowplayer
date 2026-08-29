@@ -1123,12 +1123,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="153"/>
         <source>List management</source>
-        <translation>Lijst beheerder</translation>
+        <translation>Lijstbeheer</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="158"/>
         <source>Sort albums by</source>
-        <translation>Sorteer albums door</translation>
+        <translation>Albums rangschikken op</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="160"/>
