@@ -522,12 +522,12 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="133"/>
         <source>Save lyrics</source>
-        <translation>Lyrics opslaan</translation>
+        <translation>Songtekst opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="155"/>
         <source>Lyrics</source>
-        <translation>Lyrics</translation>
+        <translation>Songtekst</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="185"/>
