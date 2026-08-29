@@ -205,7 +205,7 @@
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
         <source>Download artist image</source>
-        <translation>Download artiest afbeelding</translation>
+        <translation>Artiestafbeelding downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="76"/>
