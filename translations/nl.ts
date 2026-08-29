@@ -1088,7 +1088,7 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="109"/>
         <source>Albums view mode</source>
-        <translation>Albums weegavemodus</translation>
+        <translation>Weergavemodus voor albums</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="111"/>
