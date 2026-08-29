@@ -47,12 +47,12 @@
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="85"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="96"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/AddFolder.qml" line="136"/>
