@@ -420,12 +420,12 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="270"/>
         <source>Error fetching artist information</source>
-        <translation>Fout bij het ophalen van informatie over de artiest</translation>
+        <translation>Fout bij het ophalen van de artiestinformatie</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="271"/>
         <source>The artist could not be found</source>
-        <translation>Artiest kan niet worden gevonden</translation>
+        <translation>De artiest kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="421"/>
