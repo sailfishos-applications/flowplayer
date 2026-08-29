@@ -351,7 +351,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="125"/>
         <source>Error fetching album information</source>
-        <translation>Fout bij het ophalen van informatie over het album</translation>
+        <translation>Fout bij het ophalen van de albuminformatie</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="137"/>
