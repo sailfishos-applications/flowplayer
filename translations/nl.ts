@@ -366,12 +366,12 @@
     <message>
         <location filename="../src/lfm.cpp" line="200"/>
         <source>Error fetching track information</source>
-        <translation>Fout bij het ophalen van informatie over de track</translation>
+        <translation>Fout bij het ophalen van informatie over het nummer</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="214"/>
         <source>The track could not be found</source>
-        <translation>Track kan niet worden gevonden</translation>
+        <translation>Nummer kan niet worden gevonden</translation>
     </message>
     <message>
         <location filename="../src/lfm.cpp" line="239"/>
