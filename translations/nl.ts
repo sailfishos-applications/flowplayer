@@ -445,7 +445,7 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="572"/>
         <source>No track information available</source>
-        <translation>Track informatie niet beschikbaar</translation>
+        <translation>Er is geen nummerinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="573"/>
