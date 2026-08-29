@@ -218,7 +218,7 @@
     <message>
         <location filename="../qml/pages/CoverPage.qml" line="35"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 <context>
