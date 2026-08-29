@@ -174,7 +174,7 @@
     <message>
         <location filename="../qml/pages/AlbumMetadata.qml" line="61"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
     <message>
         <location filename="../qml/pages/AlbumMetadata.qml" line="69"/>
@@ -200,7 +200,7 @@
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
         <source>Download album cover</source>
-        <translation>Download album cover</translation>
+        <translation>Albumhoes downloaden</translation>
     </message>
     <message>
         <location filename="../qml/pages/CoverDownload.qml" line="61"/>
