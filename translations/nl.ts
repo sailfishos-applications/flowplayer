@@ -601,12 +601,12 @@
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="61"/>
         <source>Deleting</source>
-        <translation>Verwijderen</translation>
+        <translation>Wordt verwijderd</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="72"/>
         <source>Remove</source>
-        <translation>Verwijder</translation>
+        <translation>Verwijderen</translation>
     </message>
     <message>
         <location filename="../qml/pages/ManageFolders.qml" line="118"/>
@@ -624,7 +624,7 @@
     <message>
         <location filename="../src/meta.cpp" line="64"/>
         <source>Unknown album</source>
-        <translation>Onbekende album</translation>
+        <translation>Onbekend album</translation>
     </message>
 </context>
 <context>
