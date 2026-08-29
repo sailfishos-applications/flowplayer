@@ -299,7 +299,7 @@
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="53"/>
         <source>Save preset</source>
-        <translation>Preset opslaan</translation>
+        <translation>Voorinstelling opslaan</translation>
     </message>
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="72"/>
@@ -309,7 +309,7 @@
     <message>
         <location filename="../qml/pages/Equalizer.qml" line="91"/>
         <source>Preset</source>
-        <translation>Preset</translation>
+        <translation>Voorinstelling</translation>
     </message>
 </context>
 <context>
