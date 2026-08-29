@@ -507,7 +507,7 @@
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="106"/>
         <source>Search in ChartLyrics</source>
-        <translation>Zoek in ChartLyrics</translation>
+        <translation>Zoeken op ChartLyrics</translation>
     </message>
     <message>
         <location filename="../qml/pages/Lyrics.qml" line="115"/>
