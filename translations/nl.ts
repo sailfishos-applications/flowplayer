@@ -415,7 +415,7 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="269"/>
         <source>No artist information available</source>
-        <translation>Artiest informatie niet beschikbaar</translation>
+        <translation>Er is een artiestinformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="270"/>
