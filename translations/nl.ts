@@ -489,7 +489,7 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="745"/>
         <source>Login</source>
-        <translation>Login</translation>
+        <translation>Aanmelden</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="765"/>
