@@ -381,7 +381,7 @@
     <message>
         <location filename="../src/lfm.cpp" line="282"/>
         <source>Fetching artist information</source>
-        <translation>Informatie over de artiest wordt opgehaald</translation>
+        <translation>Artiestinformatie wordt opgehaald</translation>
     </message>
 </context>
 <context>
