@@ -1188,12 +1188,12 @@
     <message>
         <location filename="../qml/pages/Settings.qml" line="243"/>
         <source>Gapless playback</source>
-        <translation>Gapless playback</translation>
+        <translation>Afspelen zonder pauzes</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="252"/>
         <source>Collection</source>
-        <translation>Collectie</translation>
+        <translation>Verzameling</translation>
     </message>
     <message>
         <location filename="../qml/pages/Settings.qml" line="264"/>
