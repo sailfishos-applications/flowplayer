@@ -745,7 +745,7 @@
         <location filename="../qml/pages/NewPlaylist.qml" line="95"/>
         <location filename="../qml/pages/NewPlaylist.qml" line="96"/>
         <source>Playlist name</source>
-        <translation>Naam afspelllijst</translation>
+        <translation>Naam van afspeelllijst</translation>
     </message>
 </context>
 <context>
