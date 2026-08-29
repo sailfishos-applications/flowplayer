@@ -1395,7 +1395,7 @@
     <message>
         <location filename="../qml/flowplayer.qml" line="321"/>
         <source>Cover not found</source>
-        <translation>Cover niet gevonden</translation>
+        <translation>Albumhoes niet gevonden</translation>
     </message>
 </context>
 </TS>
