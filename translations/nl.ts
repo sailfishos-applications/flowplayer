@@ -430,7 +430,7 @@
     <message>
         <location filename="../qml/pages/LastFM.qml" line="421"/>
         <source>No album information available</source>
-        <translation>Album informatie niet beschikbaar</translation>
+        <translation>Er is geen albuminformatie beschikbaar</translation>
     </message>
     <message>
         <location filename="../qml/pages/LastFM.qml" line="422"/>
