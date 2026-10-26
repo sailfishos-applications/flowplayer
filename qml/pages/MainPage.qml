@@ -15,9 +15,18 @@ Page {
     onStatusChanged: {
         if (status===PageStatus.Active) {
             console.log("CURRENT: " + lastGroup)
+            // Show the covers downloaded meanwhile
+            if (reloadCovers) {
+                reloadCovers = false
+                if (lastGroup==="artists")
+                    misdatos.loadArtists()
+                else
+                    misdatos.loadAlbums(utils.order)
+            }
         }
     }
 
+    property bool reloadCovers: false
     property bool showSearch: false
     property string searchValue: ""
     property bool enableSearch: false
@@ -37,6 +46,14 @@ Page {
 
         PullDownMenu {
             visible: utils.viewmode!=="flow"
+            MenuItem {
+                visible: lastGroup==="albums" || lastGroup==="artists"
+                text: lastGroup==="artists" ? qsTr("Download artist images") : qsTr("Download album covers")
+                onClicked: {
+                    reloadCovers = true
+                    pageStack.push("FullAlbumSearch.qml", {"kind": lastGroup})
+                }
+            }
             MenuItem {
                 text: showSearch? qsTr("Hide search field") : qsTr("Show search field")
                 onClicked: {

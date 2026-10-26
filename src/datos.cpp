@@ -326,6 +326,11 @@ void Datos::DatosPrivate::populateItems()
                 item->artist = q->listado[i][1]=="1"? tr("1 album") : tr("%1 albums").arg( q->listado[i][1].toInt());
                 item->hash = hash(item->title.toLower());
                 item->coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-"+ item->hash + ".jpeg";
+                if (!QFileInfo(item->coverart).exists()) {
+                    QString albumCover = artistAlbumCover(item->title);
+                    if (!albumCover.isEmpty())
+                        item->coverart = albumCover;
+                }
             } else {
                 item->artist = q->listado[i][1];
                 item->album = q->listado[i][2];
@@ -425,7 +430,9 @@ QString Datos::getArtistsCovers()
 
     while( query.next() ) {
         QString coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(query.value(0).toString()) + ".jpeg";
-        if (QFileInfo(coverart).exists())
+        if (!QFileInfo(coverart).exists())
+            coverart = artistAlbumCover(unescapeFromDb(query.value(0).toString()));
+        if (!coverart.isEmpty())
             dato1.append(coverart);
     }
 

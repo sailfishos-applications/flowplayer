@@ -189,10 +189,10 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Download album covers")
+                text: qsTr("Download all covers")
                 onClicked: {
                     mainloaded = false
-                    pageStack.push("FullAlbumSearch.qml")
+                    pageStack.push("FullAlbumSearch.qml", {"kind": "all"})
                 }
             }
             MenuItem {
@@ -328,11 +328,11 @@ Page {
 
 
             SimpleDelegate {
-                title: qsTr("Download album covers")
+                title: qsTr("Download all covers")
                 iconimage: "image://theme/icon-m-health"
                 onClicked: {
                     mainloaded = false
-                    pageStack.push("FullAlbumSearch.qml")
+                    pageStack.push("FullAlbumSearch.qml", {"kind": "all"})
                 }
             }
 

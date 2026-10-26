@@ -1,4 +1,9 @@
 #include "globalutils.h"
+#include "mydatabase.h"
+
+#include <QFileInfo>
+#include <QHash>
+#include <QStandardPaths>
 
 #define QT_GALLERY_MEDIA_ART_ILLEGAL_CHARACTERS \
     "\\(.*\\)|\\{.*\\}|\\[.*\\]|<.*>|[\\(\\)_\\{\\}\\[\\]\\!@#$\\^&\\*\\+\\=\\|\\\\/\"'\\?~`]"
@@ -69,4 +74,54 @@ QString cleanItem(QString data)
     }
     data = data.remove(QRegExp("\\W")).remove(" ");
     return data;
+}
+
+// Values in the tracks table are stored escaped (see DataReader::reemplazar1)
+QString escapeForDb(QString data)
+{
+    data.replace("&","&amp;");
+    data.replace("<","&lt;");
+    data.replace(">","&gt;");
+    data.replace("\"","&quot;");
+    data.replace("\'","&apos;");
+    return data;
+}
+
+QString unescapeFromDb(QString data)
+{
+    data.replace("&lt;", "<");
+    data.replace("&gt;", ">");
+    data.replace("&quot;", "\"");
+    data.replace("&apos;", "\'");
+    data.replace("&amp;", "&");
+    return data;
+}
+
+// Cover of the artist's newest album, shown when there is no artist image
+QString artistAlbumCover(QString artist)
+{
+    // The artist list is rebuilt on every filter change
+    static QHash<QString, QString> found;
+    if (found.contains(artist) && QFileInfo(found.value(artist)).exists())
+        return found.value(artist);
+
+    QString base = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-";
+
+    QSqlQuery query = getQuery(QString("select album from tracks where artist='%1' group by album order by max(year) desc")
+                               .arg(escapeForDb(artist)));
+    while (query.next())
+    {
+        QString album = unescapeFromDb(query.value(0).toString());
+
+        QString cover = base + doubleHash(artist, album) + ".jpeg";
+        if (!QFileInfo(cover).exists())
+            cover = base + doubleHash(album, album) + ".jpeg";
+
+        if (QFileInfo(cover).exists())
+        {
+            found.insert(artist, cover);
+            return cover;
+        }
+    }
+    return "";
 }

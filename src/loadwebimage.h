@@ -8,7 +8,14 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QBuffer>
+#include <QElapsedTimer>
+#include <QTimer>
+#include <QMap>
 
+QNetworkRequest webRequest(const QUrl &url);
+QUrl wikidataPhotosUrl(const QStringList &ids);
+QMap<QString, QString> wikidataPhotos(const QByteArray &reply);
+QString luceneEscape(QString data);
 
 class WebThread : public QThread
 {
@@ -37,6 +44,7 @@ public slots:
     void downloadImageExtern(QString link, int index);
     void downloadImage(QString link);
     void checkAll();
+    void sendMusicBrainzQuery();
     void run();
     void cancel();
     bool checkInternal();
@@ -49,6 +57,19 @@ private:
     QBuffer *buffer;
     QByteArray bytes;
     int Request;
+    QElapsedTimer lastMusicBrainzQuery;
+    QTimer *musicBrainzDelay;
+    QString searchAlbum, artistIds, musicBrainzUrl;
+    QStringList photoIds;
+    QStringList coverLinks;
+    int retries;
+    bool artistSearched;
+
+    void nextFile();
+    void notFound(int current);
+    void queryArtist();
+    void queryPhoto(const QStringList &ids);
+    void queryMusicBrainz();
 
 };
 

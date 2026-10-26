@@ -29,7 +29,7 @@ QString Missing::getThumbnail(QString data)
 struct MissingItem
 {
     QString artist, title, acount, songs, band, coverart, hash;
-    bool isSelected;
+    bool isSelected, isArtist;
 
 };
 
@@ -58,14 +58,14 @@ Missing::MissingPrivate::~MissingPrivate()
 }
 
 
-void Missing::loadData()
+void Missing::loadData(QString kind)
 {
     listado.clear();
 
     QSqlQuery query = getQuery(QString("select album, artist, count(distinct artist) as acount, "
                             "count(distinct title) as songs from tracks group by album order by album, year"));
 
-    while( query.next() )
+    while( kind != "artists" && query.next() )
     {
         QString dato1, dato2, dato3, dato4, dato5;
         dato1 = reemplazar2(query.value(0).toString());
@@ -80,7 +80,7 @@ void Missing::loadData()
             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(dato2, dato1) + ".jpeg";
             if ( ! QFileInfo(th2).exists() )
             {
-                QString th3 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(dato1, dato1); + ".jpeg";
+                QString th3 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(dato1, dato1) + ".jpeg";
                 if ( ! QFileInfo(th3).exists() )
                 {
                     //qDebug() << dato1 << " doesn't exist. Adding to list";
@@ -94,6 +94,24 @@ void Missing::loadData()
                         listado.append(l1);
 
                 }
+            }
+        }
+    }
+
+    // Artists without an image of their own
+    if (kind != "albums")
+    {
+        QSqlQuery artists = getQuery("select artist from tracks group by artist order by artist collate nocase");
+        while( artists.next() )
+        {
+            QString artist = reemplazar2(artists.value(0).toString());
+            QString image = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-" + hash(artist) + ".jpeg";
+            if (artist != tr("Unknown artist") && !QFileInfo(image).exists())
+            {
+                // Same columns as an album row, plus the "artist" marker
+                QStringList l1;
+                l1 << artist << artist << "1" << tr("Artist image") << "1" << "artist";
+                listado.append(l1);
             }
         }
     }
@@ -163,6 +181,7 @@ void Missing::MissingPrivate::populateItems()
         item->hash = "";
         item->coverart =  "";
         item->isSelected = true;
+        item->isArtist = q->lista[i].value(5) == "artist";
         //qDebug() << q->lista[k];
         items.append(item);
     }
@@ -201,6 +220,7 @@ Missing::Missing(QObject * parent) :
     roles.insert(CoverRole , "coverart");
     roles.insert(HashRole , "hash");
     roles.insert(SelRole , "isSelected");
+    roles.insert(IsArtistRole , "isArtist");
     d->q->setRoleNames(roles);
 
     pepe = new WebThread();
@@ -283,6 +303,8 @@ QVariant Missing::data(const QModelIndex & index , int role) const
         return item->hash; break;
     case SelRole:
         return item->isSelected; break;
+    case IsArtistRole:
+        return item->isArtist; break;
 
     default:
         return QVariant();

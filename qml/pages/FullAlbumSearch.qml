@@ -9,6 +9,9 @@ Page {
 
     property bool loaded: false
 
+    // "albums", "artists" or "all"
+    property string kind: "albums"
+
     property bool searchFinished: true
     property bool downloadFinished: false
 
@@ -36,7 +39,7 @@ Page {
 
     onStatusChanged: {
         if (status===PageStatus.Active) {
-            missing.loadData()
+            missing.loadData(kind)
         }
         if (status===PageStatus.Deactivating) {
             missing.clearList()
@@ -72,6 +75,10 @@ Page {
                     for ( var i=0; i<songlist.count; ++i ) {
                         songlist.currentIndex = i
                         songlist.currentItem.loadSel = true
+                        if (songlist.currentItem.myData.isArtist) {
+                            missing.addMissing(songlist.currentItem.myData.title, "", i)
+                            continue
+                        }
                         var art = songlist.currentItem.myData.artist
                         if (songlist.currentItem.myData.artist!==songlist.currentItem.myData.band)
                             art = songlist.currentItem.myData.title
@@ -97,7 +104,8 @@ Page {
             //spacing: Theme.paddingLarge
 
             Header {
-                title: qsTr("Download album covers")
+                title: kind==="artists" ? qsTr("Download artist images") :
+                       kind==="all" ? qsTr("Download all covers") : qsTr("Download album covers")
             }
 
             SilicaListView {
@@ -131,7 +139,8 @@ Page {
         ViewPlaceholder {
             enabled: songlist.count===0 && loaded
             Behavior on opacity { FadeAnimation {} }
-            text: qsTr("There are no missing covers in your music collection")
+            text: kind==="artists" ? qsTr("There are no missing artist images in your music collection") :
+                                     qsTr("There are no missing covers in your music collection")
         }
 
     }

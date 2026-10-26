@@ -28,7 +28,7 @@ public:
     enum MissingRole
     {
         ArtistRole  = Qt::UserRole + 1,
-        TitleRole, AcountRole, SongsRole, BandRole, CoverRole, HashRole, SelRole
+        TitleRole, AcountRole, SongsRole, BandRole, CoverRole, HashRole, SelRole, IsArtistRole
     };
 
     explicit Missing(QObject * parent = 0);
@@ -71,7 +71,7 @@ public slots:
     void paintImg(QString image, int index);
     void paintFinished();
     void reloadImage(int index);
-    void loadData();
+    void loadData(QString kind = "albums");
     void addData(QString artist, QString title, QString acount, QString band, QString songs);
     void removeData(QString url);
     void sortData();

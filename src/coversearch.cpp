@@ -5,10 +5,18 @@
 #include <QDir>
 #include <QString>
 #include <QStringList>
+#include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QSettings>
 #include <QStandardPaths>
+#include <QTimer>
+
+// Search words without Lucene syntax characters, e.g. "Artist - Album"
+static QString searchWords(QString text)
+{
+    return text.replace(QRegExp("[-+&|!(){}\\[\\]^\"~*?:\\\\/]"), " ").simplified();
+}
 
 #define BING_ID "A16EECFD14108C2794E4BC29D4DE59C308685B4A"
 
@@ -29,7 +37,8 @@ public:
     CoverSearch * const q;
     QStringList foundedCovers;
     QString searchArt, searchAlb, searchData;
-    int searchTry, curDown;
+    QStringList searchIds;
+    int searchTry, curDown, retries;
 
 };
 
@@ -185,16 +194,38 @@ void CoverSearch::searchCover(QString artist, QString album, QString data)
     d->searchAlb = album;
     d->searchData = data;
     d->searchTry = 1;
+    d->retries = 0;
 
     disconnect(datos, 0, 0, 0);
     connect(datos, SIGNAL(finished(QNetworkReply*)), this, SLOT(downloaded(QNetworkReply*)));
-    QString url = "http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f338c7458e7d1a9a6204221ff904ba1";
-    reply = datos->get(QNetworkRequest(QUrl(url+"&artist="+d->searchArt+"&album="+d->searchAlb)));
+
+    // Artist photos: find the artist on MusicBrainz, then its Wikidata image
+    if (album.isEmpty())
+    {
+        d->searchTry = 10;
+        QString url = "https://musicbrainz.org/ws/2/artist/?fmt=json&limit=5&query=";
+        url += QUrl::toPercentEncoding(searchWords(data));
+        reply = datos->get(webRequest(QUrl::fromEncoded(url.toLatin1())));
+        return;
+    }
+
+    QString url = "https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=7f338c7458e7d1a9a6204221ff904ba1";
+    url += "&artist=" + QUrl::toPercentEncoding(d->searchArt) + "&album=" + QUrl::toPercentEncoding(d->searchAlb);
+    reply = datos->get(QNetworkRequest(QUrl::fromEncoded(url.toLatin1())));
 
 }
 
 void CoverSearch::downloaded(QNetworkReply *respuesta)
 {
+    // MusicBrainz answers 503 when it is busy: ask again a bit later
+    if (respuesta->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt() == 503 && d->retries < 3)
+    {
+        ++d->retries;
+        QUrl url = respuesta->request().url();
+        QTimer::singleShot(3000 * d->retries, this, [this, url]() { reply = datos->get(webRequest(url)); });
+        return;
+    }
+
     if ( d->searchTry == 1 )
     {
         d->foundedCovers.clear();
@@ -209,26 +240,32 @@ void CoverSearch::downloaded(QNetworkReply *respuesta)
             //qDebug() << datos1;
             QString tmp = datos1;
             int x = tmp.indexOf("<image size=\"mega\">");
-            tmp.remove(0,x+19);
-            x = tmp.indexOf("<");
-            tmp.remove(x,tmp.length()-x);
-            tmp = tmp.trimmed();
-            qDebug() << "Image founded... downloading... " << tmp;
-            if (tmp!="") {
-                d->foundedCovers.append(tmp);
+            if (x >= 0)
+            {
+                tmp.remove(0,x+19);
+                x = tmp.indexOf("<");
+                tmp.remove(x,tmp.length()-x);
+                tmp = tmp.trimmed();
+                qDebug() << "Image founded... downloading... " << tmp;
+                if (tmp.startsWith("http")) {
+                    d->foundedCovers.append(tmp);
+                }
             }
         }
 
         d->searchTry = 2;
-        //QString url = "http://api.bing.net/xml.aspx?Appid=8818f55e-2fe5-4ce3-a617-0b8ba8419f65&query=" +
-        //        d->searchData + "&sources=image"; //&Image.Filters=Size:medium";
 
-        QString url = "https://www.googleapis.com/customsearch/v1?cx=017908193050600132175%3Ayspmyfc3vkg&";
-        url += "q=" + d->searchData + "&searchType=image&imgSize=large&start=1";
-        url += "&fields=items%2Flink%2Curl&key=AIzaSyClwjXKlbh7fQnrNajj3x1YEkxfHSqQqsE";
-        //url += "&artist="+QUrl::toPercentEncoding(d->searchArt)+"&album="+QUrl::toPercentEncoding(d->searchAlb)+"&search=Search";
+        // Exact artist and album first, then whatever matches the words of
+        // the search field (spelling differences, user edits)
+        QString query = "(releasegroup:\"" + luceneEscape(d->searchAlb) + "\" AND artist:\""
+                        + luceneEscape(d->searchArt) + "\")^3";
+        if (!searchWords(d->searchData).isEmpty())
+            query += " OR (" + searchWords(d->searchData) + ")";
 
-        reply = datos->get(QNetworkRequest(QUrl(url)));
+        QString url = "https://musicbrainz.org/ws/2/release-group/?fmt=json&limit=10&query=";
+        url += QUrl::toPercentEncoding(query);
+
+        reply = datos->get(webRequest(QUrl::fromEncoded(url.toLatin1())));
 
     }
     else if ( d->searchTry == 2 )
@@ -239,50 +276,12 @@ void CoverSearch::downloaded(QNetworkReply *respuesta)
         }
         else
         {
-            QString datoshtml = respuesta->readAll();
-            //qDebug() << datoshtml;
-            /*QStringList rawmatches;
-            QString tmp;
-            QRegExp rx;
-            int pos = 0;
-            int count = 0;
+            QJsonDocument jsonResponse = QJsonDocument::fromJson(respuesta->readAll());
 
-            rx.setPattern("<ul title=\"Cover Arts\">(.*)</ul>");
-            rx.setMinimal(true);
-            while ((pos = rx.indexIn(datoshtml, pos)) != -1) {
-                 ++count;
-                 rawmatches.append(datoshtml.mid(pos, rx.matchedLength()));
-                 pos += rx.matchedLength();
-            }
-
-            rx.setPattern("<li>(.*)</li>");
-            QStringList::iterator i;
-            for (i = rawmatches.begin(); i != rawmatches.end(); ++i) {
-                pos = 0;
-                while ((pos = rx.indexIn(*i, pos)) != -1)
-                {
-                    ++count;
-                    tmp = (*i).mid(pos, rx.matchedLength());
-                    pos += rx.matchedLength();
-                    int j = tmp.indexOf("<a href");
-                    tmp.remove(0, j+9);
-                    j = tmp.indexOf("\">");
-                    tmp.remove(j, tmp.length() - j);
-                    d->foundedCovers.append(tmp);
-                }
-            }*/
-
-            QJsonDocument jsonResponse = QJsonDocument::fromJson(datoshtml.toUtf8());
-
-            foreach(const QVariant &itemJson, jsonResponse.object().toVariantMap()["items"].toList())
+            foreach(const QJsonValue &group, jsonResponse.object().value("release-groups").toArray())
             {
-                QVariantMap itemMap = itemJson.toMap();
-                d->foundedCovers.append(itemMap["link"].toString());
+                d->foundedCovers.append("https://coverartarchive.org/release-group/" + group.toObject().value("id").toString() + "/front-250");
             }
-
-            //for (int i=0; i<map.count(); ++i)
-            //    d->foundedCovers.append(map.v);
-
 
             if ( d->foundedCovers.count() > 0 )
             {
@@ -291,29 +290,88 @@ void CoverSearch::downloaded(QNetworkReply *respuesta)
                 d->curDown = 0;
                 d->searchTry = 3;
                 QString url = d->foundedCovers.at(0);
-                reply = datos->get(QNetworkRequest(QUrl(url)));
+                reply = datos->get(webRequest(QUrl(url)));
 
             }
 
         }
         emit searchFinished();
     }
+    else if ( d->searchTry == 10 )
+    {
+        d->foundedCovers.clear();
+
+        QStringList ids;
+        if (respuesta->error() == QNetworkReply::NoError)
+        {
+            foreach (const QJsonValue &artist, QJsonDocument::fromJson(respuesta->readAll()).object().value("artists").toArray())
+                ids.append(artist.toObject().value("id").toString());
+        }
+
+        if (ids.isEmpty())
+        {
+            emit searchFinished();
+            return;
+        }
+
+        d->searchTry = 11;
+        d->searchIds = ids;
+        reply = datos->get(webRequest(wikidataPhotosUrl(ids)));
+    }
+    else if ( d->searchTry == 11 )
+    {
+        // Best matching artists first
+        if (respuesta->error() == QNetworkReply::NoError)
+        {
+            QMap<QString, QString> photos = wikidataPhotos(respuesta->readAll());
+            foreach (const QString &id, d->searchIds)
+            {
+                if (photos.contains(id))
+                    d->foundedCovers.append(photos.value(id));
+            }
+        }
+
+        if ( d->foundedCovers.count() > 0 )
+        {
+            d->populateItems();
+
+            d->curDown = 0;
+            d->searchTry = 3;
+            reply = datos->get(webRequest(QUrl(d->foundedCovers.at(0))));
+        }
+
+        emit searchFinished();
+    }
     else if ( d->searchTry == 3 )
     {
-        QImage image = QImage::fromData(reply->readAll());
+        QImage image;
+        if (respuesta->error() == QNetworkReply::NoError)
+            image = QImage::fromData(respuesta->readAll());
         QString path = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/" + hash(d->foundedCovers.at(0)) + ".jpeg";
-        image.save(path, "JPEG");
-        d->items.at(d->curDown)->art = path;
-        emit(d->q->dataChanged(d->q->index(d->curDown) , d->q->index(d->curDown)));
+
+        if (!image.isNull() && image.save(path, "JPEG"))
+        {
+            d->items.at(d->curDown)->art = path;
+            emit(d->q->dataChanged(d->q->index(d->curDown) , d->q->index(d->curDown)));
+            d->curDown = d->curDown +1;
+        }
+        else
+        {
+            // Not every release group has cover art
+            qDebug() << "Cover not available:" << d->foundedCovers.at(0) << respuesta->error();
+            d->q->beginRemoveRows(QModelIndex(), d->curDown, d->curDown);
+            delete d->items.takeAt(d->curDown);
+            d->q->endRemoveRows();
+            emit(d->q->countChanged());
+        }
 
         if (d->foundedCovers.count()>0)
             d->foundedCovers.removeFirst();
 
         if (d->foundedCovers.count()>0) {
-            d->curDown = d->curDown +1;
             d->searchTry = 3;
             QString url = d->foundedCovers.at(0);
-            reply = datos->get(QNetworkRequest(QUrl(url)));
+            reply = datos->get(webRequest(QUrl(url)));
         } else {
             emit downloadFinished();
         }

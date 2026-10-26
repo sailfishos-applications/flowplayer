@@ -96,6 +96,11 @@ QString Utils::thumbnail(QString artist, QString album, QString count)
 QString Utils::thumbnailArtist(QString artist)
 {
     QString th1 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/artist-"+ hash(artist) + ".jpeg";
+    if (!QFileInfo(th1).exists()) {
+        QString albumCover = artistAlbumCover(artist);
+        if (!albumCover.isEmpty())
+            return albumCover;
+    }
     return th1;
 }
 
