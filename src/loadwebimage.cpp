@@ -72,7 +72,7 @@ bool WebThread::checkInternal()
     QString artist = files[0][0];
     QString album = files[0][1];
 
-    QSqlQuery query = getQuery(QString("select url from tracks where artist='%1' and album='%2' limit 1").arg(artist).arg(album));
+    QSqlQuery query = getQuery(QString("select url from tracks where albumartist='%1' collate nocase and album='%2' collate nocase limit 1").arg(artist).arg(album));
     while( query.next() )
     {
         QString dir = QFileInfo(query.value(0).toString()).path();

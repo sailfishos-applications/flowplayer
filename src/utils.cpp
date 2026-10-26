@@ -88,6 +88,15 @@ QString Utils::thumbnail(QString artist, QString album, QString count)
         QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(alb, alb) + ".jpeg";
         if (QFileInfo(th2).exists())
             return th2;
+
+        // Tracks credited "X feat. Y" share the cover of the album artist
+        QSqlQuery query = getQuery(QString("select albumartist from tracks where artist='%1' and album='%2' limit 1")
+                                   .arg(reemplazar1(artist)).arg(reemplazar1(album)));
+        if (query.next()) {
+            QString th3 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(reemplazar2(query.value(0).toString()), alb) + ".jpeg";
+            if (QFileInfo(th3).exists())
+                return th3;
+        }
     }
 
     return th1;

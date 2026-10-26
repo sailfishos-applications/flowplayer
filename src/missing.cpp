@@ -62,8 +62,8 @@ void Missing::loadData()
 {
     listado.clear();
 
-    QSqlQuery query = getQuery(QString("select album, artist, count(distinct artist) as acount, "
-                            "count(distinct title) as songs from tracks group by album order by album, year"));
+    QSqlQuery query = getQuery(QString("select album, albumartist, count(distinct lower(albumartist)) as acount, "
+                            "count(distinct title) as songs from tracks group by album collate nocase order by album, year"));
 
     while( query.next() )
     {

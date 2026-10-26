@@ -1,6 +1,9 @@
 #include "meta.h"
+#include "globalutils.h"
 #include <QFileInfo>
 #include <QUrl>
+
+#include <taglib/tpropertymap.h>
 
 #include <mpegfile.h>
 #include <flacfile.h>
@@ -52,6 +55,14 @@ void Meta::setFile(QString file, QString update)
     }
 }
 
+static QString albumArtistFor(TagLib::FileRef *file, const QString &artist)
+{
+    TagLib::StringList albumArtists = file->file()->properties()["ALBUMARTIST"];
+    if (!albumArtists.isEmpty() && !albumArtists.front().isEmpty())
+        return QString::fromUtf8(albumArtists.front().toCString(true)).trimmed();
+    return groupArtist(artist);
+}
+
 void Meta::setData(QString title, QString artist, QString album, QString year)
 {
     title = title.trimmed();
@@ -64,9 +75,9 @@ void Meta::setData(QString title, QString artist, QString album, QString year)
     if (album=="") album = tr("Unknown album");
 
 
-    QString qr = QString("UPDATE tracks SET title='%1', artist='%2', album='%3', year=%4 where url='%5'")
+    QString qr = QString("UPDATE tracks SET title='%1', artist='%2', album='%3', year=%4, albumartist='%6' where url='%5'")
                 .arg(reemplazar1(title)).arg(reemplazar1(artist)).arg(reemplazar1(album))
-                .arg(year.toInt()).arg(currentFile);
+                .arg(year.toInt()).arg(currentFile).arg(reemplazar1(albumArtistFor(tagFile, artist)));
     executeQuery(qr);
 
     qr = QString("UPDATE playlists SET title='%1', artist='%2', album='%3', year=%4 where url='%5'")
@@ -101,8 +112,9 @@ void Meta::setAlbumData(QString artist, QString album, QString year)
     album = album.trimmed();
     year = year.trimmed();
 
-    QString qr = QString("UPDATE tracks SET artist='%1', album='%2', year=%3 where url='%4'")
-                .arg(reemplazar1(artist)).arg(reemplazar1(album)).arg(year.toInt()).arg(currentFile);
+    QString qr = QString("UPDATE tracks SET artist='%1', album='%2', year=%3, albumartist='%5' where url='%4'")
+                .arg(reemplazar1(artist)).arg(reemplazar1(album)).arg(year.toInt()).arg(currentFile)
+                .arg(reemplazar1(albumArtistFor(tagFile, artist)));
     executeQuery(qr);
 
     qr = QString("UPDATE playlists SET artist='%1', album='%2' where url='%3'")

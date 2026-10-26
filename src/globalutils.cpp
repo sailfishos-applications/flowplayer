@@ -70,3 +70,13 @@ QString cleanItem(QString data)
     data = data.remove(QRegExp("\\W")).remove(" ");
     return data;
 }
+
+// Artist an album is listed under when there is no album artist tag:
+// drops "feat." credits so guest tracks stay with the main artist
+QString groupArtist(QString artist)
+{
+    QString res = artist;
+    res.remove(QRegExp("\\s*[\\(\\[]?\\b(feat\\.?|ft\\.|featuring)\\s.*$|\\s*;.*$", Qt::CaseInsensitive));
+    res = res.simplified();
+    return res.isEmpty() ? artist.simplified() : res;
+}

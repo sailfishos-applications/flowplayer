@@ -4,8 +4,36 @@
 #include <QDir>
 #include <QStandardPaths>
 
+#include "globalutils.h"
+
 extern bool isDBOpened;
 extern bool databaseWorking;
+
+// Fill the albumartist column of a library scanned before it existed
+static void fillAlbumArtists()
+{
+    QStringList artists;
+    QSqlQuery query = getQuery("select distinct artist from tracks");
+    while (query.next())
+        artists.append(query.value(0).toString());
+
+    database.transaction();
+    foreach (const QString &artist, artists)
+    {
+        // Stored escaped, see DataReader::reemplazar1()
+        QString albumArtist = artist;
+        albumArtist.replace("&lt;", "<").replace("&gt;", ">").replace("&quot;", "\"").replace("&apos;", "\'").replace("&amp;", "&");
+        albumArtist = groupArtist(albumArtist);
+        albumArtist.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace("\"", "&quot;").replace("\'", "&apos;");
+
+        QSqlQuery update(database);
+        update.prepare("update tracks set albumartist=? where artist=?");
+        update.addBindValue(albumArtist);
+        update.addBindValue(artist);
+        update.exec();
+    }
+    database.commit();
+}
 
 void openDatabase()
 {
@@ -26,6 +54,8 @@ void openDatabase()
     if (database.open()) {
         isDBOpened = true;
         executeQuery("alter table tracks add fav integer");
+        if (executeQuery("alter table tracks add albumartist text"))
+            fillAlbumArtists();
     } else {
         qWarning() << "cannot open database" << database.databaseName() << database.lastError().text();
     }

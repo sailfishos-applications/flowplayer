@@ -103,7 +103,7 @@ void Datos::loadArtists()
     qDebug() << "LOADING MUSIC DATABASE FOR ARTISTS";
     if (!isDBOpened) openDatabase();
 
-    QSqlQuery query = getQuery(QString("select artist, count(distinct album) as acount from tracks group by artist order by artist collate nocase"));
+    QSqlQuery query = getQuery(QString("select albumartist, count(distinct lower(album)) as acount from tracks group by albumartist collate nocase order by albumartist collate nocase"));
 
     while( query.next() )
     {
@@ -141,9 +141,9 @@ void Datos::loadAlbums(QString order)
     if (order=="album") fil = "album";
     else fil = "band";
 
-    QSqlQuery query = getQuery(QString("select album, artist, count(distinct artist) as acount, count(distinct title) as songs, "
-                            "(case when count(distinct artist)=1 then artist else '%1' end) as band "
-                            "from tracks group by album order by %2, year collate nocase").arg(tr("Various artists")).arg(fil));
+    QSqlQuery query = getQuery(QString("select album, albumartist, count(distinct lower(albumartist)) as acount, count(distinct title) as songs, "
+                            "(case when count(distinct lower(albumartist))=1 then albumartist else '%1' end) as band "
+                            "from tracks group by album collate nocase order by %2, year collate nocase").arg(tr("Various artists")).arg(fil));
 
     while( query.next() )
     {
@@ -321,6 +321,10 @@ void Datos::DatosPrivate::populateItems()
                 item->songs = q->listado[i][4];
                 item->hash = doubleHash(item->acount=="1"? item->artist : item->title, item->title);
                 item->coverart = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ item->hash + ".jpeg";
+                // Albums split by "feat." credits used to be listed as various artists
+                QString oldCover = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/media-art/album-"+ doubleHash(item->title, item->title) + ".jpeg";
+                if (!QFileInfo(item->coverart).exists() && QFileInfo(oldCover).exists())
+                    item->coverart = oldCover;
                 item->isSelected = false;
             } else if (groupFilter=="artist") {
                 item->artist = q->listado[i][1]=="1"? tr("1 album") : tr("%1 albums").arg( q->listado[i][1].toInt());
@@ -404,7 +408,7 @@ void Datos::startup()
 
 QString Datos::dataInfo()
 {
-    QSqlQuery query = getQuery("select count(distinct album) as albums, count(distinct artist) as artists, count(distinct url) as songs from tracks");
+    QSqlQuery query = getQuery("select count(distinct lower(album)) as albums, count(distinct lower(albumartist)) as artists, count(distinct url) as songs from tracks");
 
     QString dato1 = "0", dato2 = "0", dato3 = "0";
 
@@ -419,7 +423,7 @@ QString Datos::dataInfo()
 
 QString Datos::getArtistsCovers()
 {
-    QSqlQuery query = getQuery("select artist from tracks group by artist order by artist collate nocase");
+    QSqlQuery query = getQuery("select albumartist from tracks group by albumartist collate nocase order by albumartist collate nocase");
 
     QStringList dato1;
 
@@ -449,8 +453,8 @@ QString Datos::getArtistsCovers()
 
 QString Datos::getAlbumsCovers()
 {
-    QSqlQuery query = getQuery("select artist, album, count(distinct artist) as acount "
-                               "from tracks group by album order by album collate nocase");
+    QSqlQuery query = getQuery("select albumartist, album, count(distinct lower(albumartist)) as acount "
+                               "from tracks group by album collate nocase order by album collate nocase");
 
     QStringList dato1;
 
@@ -458,6 +462,8 @@ QString Datos::getAlbumsCovers()
         QString hash = doubleHash(query.value(2).toString()=="1"? query.value(0).toString() :
                                                                   query.value(1).toString(), query.value(1).toString());
         QString coverart = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ hash + ".jpeg";
+        if (!QFileInfo(coverart).exists())
+            coverart = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + "/media-art/album-"+ doubleHash(query.value(1).toString(), query.value(1).toString()) + ".jpeg";
 
         if (QFileInfo(coverart).exists())
             dato1.append(coverart);

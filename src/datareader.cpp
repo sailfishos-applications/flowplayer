@@ -18,6 +18,7 @@
 #include <mpcfile.h>
 #include <modfile.h>
 #include <xmfile.h>
+#include <tpropertymap.h>
 
 
 #include <QDir>
@@ -43,7 +44,7 @@ void DataReader::openDB()
     if (isDBOpened)
     {
         executeQuery("create table tracks (url text, artist text, album text, "
-                   "title text, year integer, tracknum integer, duration integer, fav integer)");
+                   "title text, year integer, tracknum integer, duration integer, fav integer, albumartist text)");
 
         executeQuery("create table playlists (playlist text, url text, artist text, album text, "
                    "title text, duration integer)");
@@ -61,7 +62,7 @@ void DataReader::openDB()
 }
 
 void DataReader::insertData(QString url, QString artist, QString album,
-                            QString title, int year, int tracknum, int duration)
+                            QString title, int year, int tracknum, int duration, QString albumArtist)
 {
 
     QVariantMap m;
@@ -72,6 +73,7 @@ void DataReader::insertData(QString url, QString artist, QString album,
     m.insert("year", year);
     m.insert("tracknum", tracknum);
     m.insert("duration", duration);
+    m.insert("albumartist", albumArtist);
 
     if (favFiles.indexOf(url)>-1)
         m.insert("fav", "1");
@@ -101,14 +103,14 @@ void DataReader::saveData()
 
     if (!isDBOpened) openDatabase();
 
-    QString qr = "insert into tracks";
+    QString qr = "insert into tracks (url, artist, album, title, year, tracknum, duration, fav, albumartist)";
 
     for (int i=0; i<map.count(); ++i)
     {
         if (i==0)
         {
             qr += QString(" select '%1' as url, '%2' as artist, '%3' as album, '%4' as title, "
-                    "%5 as year, %6 as tracknum, %7 as duration, '%8' as fav")
+                    "%5 as year, %6 as tracknum, %7 as duration, '%8' as fav, '%9' as albumartist")
                     .arg(map.at(i).value("url","").toString())
                     .arg(map.at(i).value("artist","").toString())
                     .arg(map.at(i).value("album","").toString())
@@ -116,11 +118,12 @@ void DataReader::saveData()
                     .arg(map.at(i).value("year",0).toInt())
                     .arg(map.at(i).value("tracknum",0).toInt())
                     .arg(map.at(i).value("duration",0).toInt())
-                    .arg(map.at(i).value("fav","").toString());
+                    .arg(map.at(i).value("fav","").toString())
+                    .arg(map.at(i).value("albumartist","").toString());
         }
         else
         {
-            qr += QString(" union select '%1', '%2','%3', '%4',%5, %6, %7, '%8'")
+            qr += QString(" union select '%1', '%2','%3', '%4',%5, %6, %7, '%8', '%9'")
                           .arg(map.at(i).value("url","").toString())
                           .arg(map.at(i).value("artist","").toString())
                           .arg(map.at(i).value("album","").toString())
@@ -128,7 +131,8 @@ void DataReader::saveData()
                           .arg(map.at(i).value("year",0).toInt())
                           .arg(map.at(i).value("tracknum",0).toInt())
                           .arg(map.at(i).value("duration",0).toInt())
-                          .arg(map.at(i).value("fav","").toInt());
+                          .arg(map.at(i).value("fav","").toInt())
+                          .arg(map.at(i).value("albumartist","").toString());
         }
     }
 
@@ -205,6 +209,13 @@ void DataReader::readFile(QString file)
 
             if (m_title=="") m_title = QFileInfo(file).baseName();
 
+            // Artist the album is listed under
+            QString albumArtist;
+            TagLib::StringList albumArtists = tf->properties()["ALBUMARTIST"];
+            if (!albumArtists.isEmpty())
+                albumArtist = QString::fromUtf8(albumArtists.front().toCString(true)).trimmed();
+            if (albumArtist=="") albumArtist = groupArtist(m_artist);
+
             // if we have artist and album, we check for a cover image.
             if (m_artist != "" && m_album != "") {
                 QFileInfo info(file);
@@ -221,7 +232,7 @@ void DataReader::readFile(QString file)
                               (iterator.fileInfo().baseName() == "cover" ||
                                iterator.fileInfo().baseName() == "folder")  ) {
                             QString th2 = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) +
-                                          "/media-art/album-" + doubleHash(m_artist, m_album) + ".jpeg";
+                                          "/media-art/album-" + doubleHash(albumArtist, m_album) + ".jpeg";
                             qDebug() << "COPYING FILE ART: " << iterator.filePath() << m_artist << m_album;
                             QFile::copy(iterator.filePath(), th2);
                         }
@@ -231,13 +242,14 @@ void DataReader::readFile(QString file)
 
             if (m_artist=="") m_artist = tr("Unknown artist");
             if (m_album=="") m_album = tr("Unknown album");
+            if (albumArtist=="") albumArtist = m_artist;
 
             TagLib::AudioProperties *properties = tf->audioProperties();
 
             m_duration = QString::number(properties->length());
 
             insertData(reemplazar1(file), reemplazar1(m_artist), reemplazar1(m_album),
-                       reemplazar1(m_title), m_year.toInt(), m_tracknum.toInt(), m_duration.toInt());
+                       reemplazar1(m_title), m_year.toInt(), m_tracknum.toInt(), m_duration.toInt(), reemplazar1(albumArtist));
 
         }
         else

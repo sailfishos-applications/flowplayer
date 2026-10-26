@@ -221,12 +221,12 @@ void Playlist::addAlbumToList(QString artist, QString album, QString various)
     QString qr;
     if (various=="1")
     {
-        qr = QString("select artist, album, title, duration, url from tracks where album='%1' and artist='%2'")
+        qr = QString("select artist, album, title, duration, url from tracks where album='%1' collate nocase and albumartist='%2' collate nocase")
                 .arg(album).arg(artist);
     }
     else
     {
-        qr = QString("select artist, album, title, duration, url from tracks where album='%1'");
+        qr = QString("select artist, album, title, duration, url from tracks where album='%1' collate nocase").arg(album);
     }
 
     QSqlQuery query = getQuery(qr);

@@ -46,7 +46,7 @@ private:
 public slots:
     void openDB();
     void insertData(QString url, QString artist, QString album,
-                    QString title, int year, int tracknum, int duration);
+                    QString title, int year, int tracknum, int duration, QString albumArtist);
     void saveData();
     void readFile(QString file);
     void addFile(QString file);

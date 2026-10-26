@@ -73,12 +73,12 @@ void MusicModel::loadData(QString artist, QString album, QString various)
 
     else if (various=="1")
         qr = QString("select title, artist, duration, tracknum, url, album, year "
-                     "from tracks where artist='%1' and album='%2' order by %3")
+                     "from tracks where albumartist='%1' collate nocase and album='%2' collate nocase order by %3")
                     .arg(artist).arg(album).arg(order);
 
     else
         qr = QString("select title, artist, duration, tracknum, url, album, year "
-                     "from tracks where album='%1' order by %3")
+                     "from tracks where album='%1' collate nocase order by %3")
                      .arg(album).arg(order);
 
 

@@ -106,15 +106,15 @@ void PlaylistManager::addAlbumToList(QString list, QString artist, QString album
 
         else if (song=="" && various=="1" && album!="")
             qr = QString("insert into queue (url, artist, album, title, duration) select url, artist, album, title, duration from tracks "
-                         "where album='%1' and artist='%2' order by %3 collate nocase").arg(xmlin(album)).arg(xmlin(artist)).arg(order);
+                         "where album='%1' collate nocase and albumartist='%2' collate nocase order by %3 collate nocase").arg(xmlin(album)).arg(xmlin(artist)).arg(order);
 
         else if (song=="" && various=="1" && album=="")
             qr = QString("insert into queue (url, artist, album, title, duration) select url, artist, album, title, duration from tracks "
-                         "where artist='%1' order by year, %2 collate nocase").arg(xmlin(artist)).arg(order);
+                         "where albumartist='%1' collate nocase order by year, %2 collate nocase").arg(xmlin(artist)).arg(order);
 
         else if (song=="" && various!="1" && album!="")
             qr = QString("insert into queue (url, artist, album, title, duration) select url, artist, album, title, duration from tracks "
-                         "where album='%1' order by %2 collate nocase").arg(xmlin(album)).arg(order);
+                         "where album='%1' collate nocase order by %2 collate nocase").arg(xmlin(album)).arg(order);
 
         else if (song!="")
             qr = QString("insert into queue (url, artist, album, title, duration) select url, artist, album, title, duration from tracks "
@@ -130,15 +130,15 @@ void PlaylistManager::addAlbumToList(QString list, QString artist, QString album
 
         else if (song=="" && various=="1" && album!="")
             qr = QString("insert into playlists (playlist, url, artist, album, title, duration) select '%1', url, artist, album, title, duration from tracks "
-                         "where album='%2' and artist='%3' order by %4 collate nocase").arg(list).arg(xmlin(album)).arg(xmlin(artist)).arg(order);
+                         "where album='%2' collate nocase and albumartist='%3' collate nocase order by %4 collate nocase").arg(list).arg(xmlin(album)).arg(xmlin(artist)).arg(order);
 
         else if (song=="" && various=="1" && album=="")
             qr = QString("insert into playlists (playlist, url, artist, album, title, duration) select '%1', url, artist, album, title, duration from tracks "
-                         "where artist='%2' order by year, %3 collate nocase").arg(list).arg(xmlin(artist)).arg(order);
+                         "where albumartist='%2' collate nocase order by year, %3 collate nocase").arg(list).arg(xmlin(artist)).arg(order);
 
         else if (song=="" && various!="1" && album!="")
             qr = QString("insert into playlists (playlist, url, artist, album, title, duration) select '%1', url, artist, album, title, duration from tracks "
-                         "where album='%2' order by %3 collate nocase").arg(list).arg(xmlin(album)).arg(order);
+                         "where album='%2' collate nocase order by %3 collate nocase").arg(list).arg(xmlin(album)).arg(order);
 
         else if (song!="")
             qr = QString("insert into playlists (playlist, url, artist, album, title, duration) select '%1', url, artist, album, title, duration from tracks "
@@ -400,7 +400,7 @@ void PlaylistManager::loadArtist(QString artist)
 
 
     QSqlQuery query = getQuery(QString("select album, count(distinct title) as songs from tracks "
-                                       "where artist='%1' group by album order by year").arg(artist));
+                                       "where albumartist='%1' collate nocase group by album collate nocase order by year").arg(artist));
 
     int totalsongs = 0;
 
@@ -448,12 +448,12 @@ void PlaylistManager::loadAlbum(QString artist, QString album, QString various)
 
     else if (various=="1")
         qr = QString("select artist, album, title, duration, url, tracknum, year, fav "
-                     "from tracks where artist='%1' and album='%2' order by %3 collate nocase")
+                     "from tracks where albumartist='%1' collate nocase and album='%2' collate nocase order by %3 collate nocase")
                     .arg(artist).arg(album).arg(order);
 
     else
         qr = QString("select artist, album, title, duration, url, tracknum, year, fav "
-                     "from tracks where album='%1' order by %2 collate nocase")
+                     "from tracks where album='%1' collate nocase order by %2 collate nocase")
                      .arg(album).arg(order);
 
 
