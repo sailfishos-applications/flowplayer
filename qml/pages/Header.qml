@@ -7,7 +7,12 @@ Item {
     property alias title: headerText.text
     property alias description: descText.text
 
-    height: col1.height + Theme.paddingLarge*2
+    // Keep the text below the display cutout (notch) in portrait, like PageHeader.
+    // Older Sailfish OS versions have no Screen.topCutout.
+    property real cutoutMargin: Screen.topCutout && pageStack.currentPage && pageStack.currentPage.isPortrait
+                                ? Screen.topCutout.height : 0
+
+    height: col1.height + Theme.paddingLarge*2 + cutoutMargin
     width: parent.width
 
     Column {
@@ -15,6 +20,7 @@ Item {
         width: parent.width
         anchors.topMargin: Theme.paddingLarge
         anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenterOffset: cutoutMargin/2
 
         Label {
             id: headerText
