@@ -3,23 +3,85 @@ import Sailfish.Silica 1.0
 import FlowPlayer 1.0
 
 CoverBackground {
+    id: cover
 
-    Image {
-        visible: !playerOpened
-        source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
-        anchors.top: parent.top
-        anchors.topMargin: Theme.paddingLarge*2
-        anchors.horizontalCenter: parent.horizontalCenter
-        opacity: 0.6
+    // Nothing playing: random album covers, like the Jolla media player
+    property var idleCovers: []
+    property bool showIdleCovers: !playerOpened && idleCovers.length > 0
+
+    function pickIdleCovers() {
+        var covers = albumsCovers.split("<||>").filter(function(c) { return c !== "" && c !== "../album.png" })
+        var picked = []
+        while (covers.length > 0 && picked.length < 3)
+            picked.push(covers.splice(Math.floor(Math.random() * covers.length), 1)[0])
+        idleCovers = picked
     }
 
-    Label {
-        visible: !playerOpened
-        anchors.centerIn: parent
+    // Filled once the library is loaded
+    property string allAlbumsCovers: albumsCovers
+    onAllAlbumsCoversChanged: pickIdleCovers()
+
+    onStatusChanged: {
+        if (status === Cover.Activating && !playerOpened)
+            pickIdleCovers()
+    }
+
+    Item {
+        id: idleCollage
+        anchors.fill: parent
+        visible: showIdleCovers
+
+        Image {
+            id: largeIdleCover
+            source: idleCovers.length > 0 ? idleCovers[0] : ""
+            width: parent.width
+            height: idleCovers.length > 1 ? width : parent.height
+            sourceSize.width: width
+            sourceSize.height: height
+            fillMode: Image.PreserveAspectCrop
+        }
+
+        Row {
+            visible: idleCovers.length > 1
+            anchors.top: largeIdleCover.bottom
+            anchors.bottom: parent.bottom
+            opacity: Theme.opacityLow
+
+            Repeater {
+                model: idleCovers.slice(1)
+                Image {
+                    source: modelData
+                    width: cover.width / (idleCovers.length - 1)
+                    height: parent.height
+                    sourceSize.width: width
+                    sourceSize.height: height
+                    fillMode: Image.PreserveAspectCrop
+                }
+            }
+        }
+    }
+
+    // Change the covers every few seconds while the cover is shown
+    Timer {
+        interval: 6000
+        repeat: true
+        running: showIdleCovers && cover.status === Cover.Active
+        onTriggered: changeIdleCovers.start()
+    }
+
+    SequentialAnimation {
+        id: changeIdleCovers
+        FadeAnimation { target: idleCollage; to: 0 }
+        ScriptAction { script: pickIdleCovers() }
+        FadeAnimation { target: idleCollage; to: 1 }
+    }
+
+    CoverPlaceholder {
+        visible: !playerOpened && !showIdleCovers
         text: "FlowPlayer"
-        font.pixelSize: Theme.fontSizeSmall
-        color: Theme.secondaryColor
-        opacity: 0.8
+        icon.source: "file:///usr/share/icons/hicolor/86x86/apps/flowplayer.png"
+        icon.width: Theme.iconSizeLauncher
+        icon.height: Theme.iconSizeLauncher
     }
 
     CoverArtList {
