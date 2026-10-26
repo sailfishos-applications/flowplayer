@@ -275,6 +275,20 @@ ApplicationWindow
 
     property bool playerOpened: miniPlayer.open || nowPlayingPage.status===PageStatus.Active
 
+    // Play every track of the library, shuffled
+    function shuffleAll() {
+        queueList.clear()
+        myplaylistmanager.queueAllShuffled()
+        myplaylistmanager.loadPlaylist("00000000000000000000")
+        if (queueList.count === 0)
+            return
+
+        // The queue itself is shuffled: play it in order
+        shuffle = false
+        nowPlayingPage.playSong(0)
+        miniPlayer.open = true
+    }
+
     function closeMiniplayer() {
         miniPlayer.open = false
     }

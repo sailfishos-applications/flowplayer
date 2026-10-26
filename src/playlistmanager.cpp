@@ -5,6 +5,10 @@
 #include <QFileInfo>
 #include <QXmlStreamReader>
 #include <QDir>
+#include <QMap>
+#include <algorithm>
+#include <ctime>
+#include <random>
 
 extern bool databaseWorking;
 extern bool isDBOpened;
@@ -261,6 +265,53 @@ void PlaylistManager::removeList(QString name)
     else
         executeQuery(QString("delete from playlists where playlist='%1'").arg(xmlin(name)));
 
+}
+
+// Every track in random order, each artist's tracks spread over the queue
+// (like iTunes or Spotify) so that one artist rarely plays twice in a row
+void PlaylistManager::queueAllShuffled()
+{
+    if (!isDBOpened) openDatabase();
+
+    QMap<QString, QList<QStringList> > artists;
+    QSqlQuery query = getQuery("select artist, album, title, duration, url from tracks");
+    while( query.next() )
+    {
+        QStringList track;
+        for (int i = 0; i < 5; ++i)
+            track.append(query.value(i).toString());
+        artists[track.at(0).toLower()].append(track);
+    }
+
+    // Spread each artist evenly, starting at a random point
+    std::mt19937 random(std::time(0));
+    std::uniform_real_distribution<double> randomOffset(0, 1);
+    QMultiMap<double, QStringList> shuffled;
+    foreach (QList<QStringList> tracks, artists)
+    {
+        std::shuffle(tracks.begin(), tracks.end(), random);
+        double offset = randomOffset(random);
+        for (int i = 0; i < tracks.count(); ++i)
+            shuffled.insert((i + offset) / tracks.count(), tracks.at(i));
+    }
+
+    // One transaction on the open connection: executeQuery() reopens the
+    // database for every statement, far too slow for a whole library
+    QSqlDatabase db = QSqlDatabase::database("flowplayer");
+    db.transaction();
+    QSqlQuery insert(db);
+    insert.exec("delete from queue");
+    insert.prepare("insert into queue (url, artist, album, title, duration) values (?, ?, ?, ?, ?)");
+    foreach (const QStringList &track, shuffled.values())
+    {
+        insert.addBindValue(track.at(4));
+        insert.addBindValue(track.at(0));
+        insert.addBindValue(track.at(1));
+        insert.addBindValue(track.at(2));
+        insert.addBindValue(track.at(3));
+        insert.exec();
+    }
+    db.commit();
 }
 
 void PlaylistManager::clearList(QString list)

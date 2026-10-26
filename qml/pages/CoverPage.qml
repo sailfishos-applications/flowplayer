@@ -115,6 +115,13 @@ CoverBackground {
             }
         }
     }
+
+    CoverActionList {
+        enabled: !playerOpened
+
+        CoverAction {
+            iconSource: "image://theme/icon-cover-shuffle"
+            onTriggered: shuffleAll()
+        }
+    }
 }
-
-

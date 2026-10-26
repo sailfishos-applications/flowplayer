@@ -39,6 +39,11 @@ Page {
                     enableSearch = false
                 }
             }
+            MenuItem {
+                text: qsTr("Shuffle all")
+                enabled: misdatos.count > 0
+                onClicked: shuffleAll()
+            }
         }
 
         model: misdatos
