@@ -103,28 +103,8 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Search in ChartLyrics")
+                text: qsTr("Search lyrics")
                 onClicked: {
-                    searchServer = "0"
-                    utils.setSettings("SearchServer", searchServer)
-                    fetchingLyrics = true
-                    utils.getLyrics(currentSongInfo.artist, currentSongInfo.title, searchServer)
-                }
-            }
-            MenuItem {
-                text: qsTr("Search in A-Z Lyrics")
-                onClicked: {
-                    searchServer = "1"
-                    utils.setSettings("SearchServer", searchServer)
-                    fetchingLyrics = true
-                    utils.getLyrics(currentSongInfo.artist, currentSongInfo.title, searchServer)
-                }
-            }
-            MenuItem {
-                text: qsTr("Search in Lyric Wiki")
-                onClicked: {
-                    searchServer = "2"
-                    utils.setSettings("SearchServer", searchServer)
                     fetchingLyrics = true
                     utils.getLyrics(currentSongInfo.artist, currentSongInfo.title, searchServer)
                 }
